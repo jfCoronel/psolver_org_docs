@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>pSolver</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="img/favicon.png" />
+	<meta name="description" content="Problem Solver" />
+	<meta name="keywords" content="pSolver" />
+	<meta name="author" content="Juan F. Coronel Toro" />
+	<link rel="stylesheet" type="text/css" href="./css/semantic.min.css">
+	<script src="./css/semantic.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+	<div class="ui container">
+		<h2><img style="margin-top: 10px;" src="img/logo_psolver.svg" width="48px" alt="Logo pSolver"> pSolver
+		</h2>
+
+		<div class="ui secondary pointing menu container">
+			<a href="index.html" class="item">HOME</a>
+			<a href="user manual.html" class="item">USER MANUAL</a>
+			<a href="history.html" class="item active">HISTORY</a>
+		</div>
+
+		<div class="ui main container">
+
+			<h1>History</h1>
+			<h4>Reverse time evolution (from bottom to top)</h4>
+
+			<p>Only changes since the first English version (version 4.0) are shown.</p>
+			
+			<div class="ui segment">
+				<h3>V 4.60 (10 March 2026)</h3>
+				<p>Contextual menus and simplification of the button bar</p>
+				<ul>
+					<li>Contextual menus for the problem components are added to facilitate editing and use of the application.</li>
+					<li>The button bar is simplified by removing the edit buttons, which can now be used from the contextual menu.</li>
+					<li>A button for managing global functions is added to the button bar.</li>
+					<li>Local functions are added to allow the definition of custom functions by the user.</li>
+					<li>The equation editor includes an "add function" button to assist in inserting global or local functions into the equation.</li>
+					<li>New problems have the option to automatically reset initial values after performing a calculation, enabled by default.</li>
+					<li>The editing value in the sidebar is changed to double click by default.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.53 (6 March 2026)</h3>
+				<p>Automatic initial values reset after calculation</p>
+				<ul>
+					<li>A global option is added to the problem to automatically reset the initial values after performing a calculation.</li>
+					<li>The button for global functions is moved to the equation editor, allowing an example of the function usage to be inserted in the equation.</li>
+					<li>An error is corrected when adding new users to courses, distinguishing whether the email was in uppercase or lowercase.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.52 (2 March 2026)</h3>
+				<p>Configurable Click or Double Click Editing</p>
+				<ul>
+					<li>The user configuration is updated to allow choosing between single or double click editing with the sidebar, and enabling quick editing with double click or ctrl + double click.</li>
+					<li>Some errors in the tooltips of the buttons are corrected.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.51 (11 February 2026)</h3>
+				<p>Local functions</p>
+				<ul>
+					<li>The possibility of adding local functions defined by the user to the problem is added. The user must enter the function code in javascript.</li>
+					<li>Local functions are saved with the problem itself.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.50 (11 February 2026)</h3>
+				<p>Global functions</p>
+				<ul>
+					<li>The possibility of activating predefined global functions for use in problems is added. These
+						functions can be activated from the general properties of the problem, and once activated they
+						will be available in all sections of the problem.</li>
+					<li>Added global functions: Gamma (Mathematics), FF_recpar, FF_recper, FF_dispar (3D shape factors),
+						Deltap_tub (Fluids, pressure drop in pipe)</li>
+					<li>An error is corrected where copying and pasting did not work correctly in editable fields.</li>
+					<li>An error is corrected where modifying the general properties of the problem did not turn the
+						save button red.</li>
+				</ul>
+			</div>
+			<div class="ui segment">
+				<h3>V 4.49 (13 January 2026)</h3>
+				<p>Edition of solution and statement from the task</p>
+				<ul>
+					<li>Two buttons are added to be able to edit the statement and the solution directly from the
+						task management.
+					</li>
+					<li>An error that generated multiple dialog boxes when the task is sent to the students is
+						corrected.
+					</li>
+					<li>An error is corrected when switching between the student tables and student variable tables when
+						some column was sorted.
+					</li>
+					<li>An error with ctrl+c and ctrl+v in the Safari browser and others based on WebKit is corrected.
+					</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.48 (9 January 2026)</h3>
+				<p>Save button</p>
+				<ul>
+					<li>A save button is added to the button bar to save changes made to the problem without having to
+						exit it.
+						The button will appear in red when there are unsaved changes.
+					</li>
+					<li>The background color of components with errors is now stronger to make it more visible.</li>
+					</li>
+					<li>It is checked that the user does not leave the text component empty, showing an error message if
+						they do.
+					</li>
+					<li>A memory save of the problem is made if the page is exited, the back button is pressed or
+						reloaded or the tab is closed, when re-entering it is automatically restored.
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.47 (9 January 2026)</h3>
+				<p>Improved task correction</p>
+				<ul>
+					<li>In task correction, two different tables can be viewed: one by student and another by variable.
+						This second table allows you to quickly see which variables have been answered correctly by all
+						students and which have not.
+					</li>
+					<li>Reordering of the buttons in the task correction table to improve usability.
+					</li>
+					<li>The correction tables in the task editor only apply to the students of the course that has that
+						task selected,
+						allowing the same task to be changed from course without the need to create another new task.
+					</li>
+					<li>A maintenance system is added to be able to delete old problems from inactive users from the
+						Firebase database</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.46 (10 December 2025)</h3>
+				<p>New problem copy management</p>
+				<ul>
+					<li>New policy for copying or duplicating problems: Activities cannot be copied,
+						statements and solutions can only be copied by teachers and normal problems
+						depending on whether they are private or not.</li>
+					<li>In the self-correction of activities, the solution ID is not visible, only the active or
+						inactive correct button appears.</li>
+					<li>Only own problems can be imported from a file, not those of another user.</li>
+					<li>Editing / Updating the user name directly in the user information that appears in the problem
+						list.</li>
+					<li>The creation date of the user information is removed and the number of problems is changed to
+						the
+						format n of n_max</li>
+					<li>Error in unit change written as " x = x/10 " did not work, nor gave an error, now it works.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.45 (1 December 2025)</h3>
+				<p>Course management with table</p>
+				<ul>
+					<li>Course management is changed to a table, with an update button and a message showing the date of
+						the last update.</li>
+					<li>The format of the buttons in the task editing is changed to small buttons.</li>
+					<li>Waiting message on the buttons of the course and task editors while the action is being
+						performed.</li>
+					<li>The name of the problem becomes an editable field when clicked or hovered over.</li>
+					<li>An error is corrected where double-clicking on a text did not focus the Quick Editor.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.44 (1 November 2025)</h3>
+				<p>Submit activity with button</p>
+				<ul>
+					<li>The link "Submit activity" is changed to a button.</li>
+					<li>The label and the submit button are placed to the right of the name, leaving
+						the description on the lower line.</li>
+					</li>
+					<li>The label that appeared on the paper showing the submission date of the activity is removed.
+					</li>
+					<li>An error is corrected in which equations were not rendered when only texts were present.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.43 (24 October 2025)</h3>
+				<p>User configuration</p>
+				<ul>
+					<li>User settings are saved in the database and edited collectively.</li>
+					<li>A “Solving” message is added for problems that take more than 2 seconds to solve.</li>
+					<li>The name of the problem is changed to editable field.</li>
+					<li>The display of sections when printing or generating PDFs is removed.</li>
+					<li>An error with the creation date that produced a gray screen is corrected.</li>
+					<li>An error that occurred with the names of fluids defined in global sections is corrected.</li>
+					<li>An error that did not detect the duplication of symbols with global sections is corrected.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.421 (19 September 2025)</h3>
+				<p>Error in automatic table recalculation</p>
+				<ul>
+					<li>It corrects an error in the automatic recalculation of tables that caused them not to be
+						recalculated correctly.
+					</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.42 (8 September 2025)</h3>
+				<p>Fluid property diagrams</p>
+				<ul>
+					<li>It has been added the possibility to create fluid property diagrams in the graphical components.
+						In a new section called "Fluid Property Diagrams" you can create different types of diagrams:
+						for pure fluids (T-p, h-log p, T-s) and for humid air the psychrometric diagram.
+					</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.42 (8 September 2025)</h3>
+				<p>Fluid property diagrams</p>
+				<ul>
+					<li>It has been added the possibility to create fluid property diagrams in the graphical components.
+						In a new section called "Fluid Property Diagrams" you can create different types of diagrams:
+						for pure fluids (T-p, h-log p, T-s) and for humid air the psychrometric diagram.
+					</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.41 (10 July 2025)</h3>
+				<p>Creating new variables in tables</p>
+				<ul>
+					<li>It is now possible to create new variables in tables and indicate their value for
+						each of the rows of the table, using expressions separated by commas.
+						This option allows you to create tables and graphs with variables
+						that are within the same problem without having to solve the problem again.</li>
+					<li>In the definition of the data, reference can be made to previously created questions.
+						If the question has a numerical value, that value will be used,
+						if it is a list of options, a field has been added to this type of questions
+						to specify the numerical value for each option.</li>
+					<li>Questions inserted in text boxes are made to lose focus when clicked elsewhere.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.41 (10 July 2025)</h3>
+				<p>Creating new variables in tables</p>
+				<ul>
+					<li>It is now possible to create new variables in tables and indicate their value for
+						each of the rows of the table, using expressions separated by commas.
+						This option allows you to create tables and graphs with variables
+						that are within the same problem without having to solve the problem again.</li>
+					<li>In the definition of the data, reference can be made to previously created questions.
+						If the question has a numerical value, that value will be used,
+						if it is a list of options, a field has been added to this type of questions
+						to specify the numerical value for each option.</li>
+					<li>Questions inserted in text boxes are made to lose focus when clicked elsewhere.</li>
+				</ul>
+			</div>
+
+
+			<div class="ui segment">
+				<h3>V 4.40 (2 may 2025)</h3>
+				<p>New component Question</p>
+				<ul>
+					<li>A version is implemented to be able to undo the last actions,
+						although the operation is not perfect, it allows to undo many of the modifications to the
+						problems using CTRL/CMD + Z. </li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.35 (24 april 2025)</h3>
+				<p>CTRL/CMD + Z Implementation</p>
+				<ul>
+					<li>A version is implemented to be able to undo the last actions,
+						although the operation is not perfect, it allows to undo many of the modifications to the
+						problems using CTRL/CMD + Z. </li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.34 (7 april 2025)</h3>
+				<p>Shortcut to calculate all sections (R)</p>
+				<ul>
+					<li>Added a keyboard shortcut to calculate all sections of a problem by pressing the R key.</li>
+					<li>Changed the symbol to delimit variables in texts from ## to ??, due to incompatibility with
+						Markdown titles.</li>
+					<li>Simplified New... button</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.33 (3 april 2025)</h3>
+				<p>Valores del problema en los textos</p>
+				<ul>
+					<li>Added the ability to automatically include values (data, unknowns, fluids or wet air) in
+						Markdown texts by
+						placing the variable symbol between ##. For example: ## x_1 ## would put in the text the value
+						of that variable followed by its unit.</li>
+					<li>The value of the data entered in the tables will always be the value without changing the unit.
+						When solving the problem, the unit change will be made if it exists.</li>
+					<li>An error is corrected in which the lists of the activities of a task also included the
+						old activities that used the same statement as the task.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.32 (3 February 2025)</h3>
+				<p>Automatic recalculation of tables</p>
+				<ul>
+					<li>A check is added to the tables to allow automatic recalculation of the tables when solving the
+						problem.</li>
+					<li>Fixed a bug in writing the csv file for activities.</li>
+					<li>Other minor changes.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.31 (20 January 2025)</h3>
+				<p>Improvements in courses and tasks</p>
+				<ul>
+					<li>Sorting and filtering of the course list and task list.</li>
+					<li>Duplication of courses and tasks.</li>
+					<li>Saving table of corrected activities of a task.</li>
+					<li>When sending activities to all students the system checks that it does not exist, so as not to
+						duplicate it.</li>
+					<li>It is possible to import external courses to the user (from another teacher) through the course
+						id.</li>
+					<li>A button has been added to activate the self-correction of the activities from the task, by
+						pressing it we allow the student to self-correct his problem.</li>
+					<li>Added “Hide unit change” check for data and unknowns.</li>
+					<li>Print button in the problem button bar.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.30 (21 October 2024)</h3>
+				<p>Courses and tasks</p>
+				<ul>
+					<li>New management of activities through courses and tasks that teachers can create.</li>
+					<li>The new activity button is changed to the management of activities and courses where the user
+						can register in a course or create a new activity.</li>
+					<li>Change in the visualization of the tables, differentiating the tables that go on the “paper” and
+						the tables of the interface.</li>
+					<li>Change in the toolbar, configuration on the left and the user on the right with an icon and a
+						tooltip (to avoid variable width).</li>
+					<li>The type “Solution” is added as one more type of problems.</li>
+					<li>The selection of the type of problem is done by a drop-down list in the general properties of
+						the problem.</li>
+					<li>The paper height is adjusted for A4.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.26 (12 September 2024)</h3>
+				<p>Text type data correction</p>
+				<ul>
+					<li>The correction of text type data, which are those whose value is written between quotation
+						marks, is allowed.</li>
+					<li>Some minor errors in the list of activities associated with a statement have been corrected.
+					</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.25 (23 April 2024)</h3>
+				<p>Server changed to Github</p>
+				<ul>
+					<li>The application server is moved to a Github page for speed reasons.
+						https://jfcoronel.github.io/psolver_org/app
+					</li>
+					<li>Added the name of the author (user) in the list of activities associated with a statement.</li>
+					<li>The click area for editing the general properties of a problem is expanded to the whole upper
+						area, previously only the problem name was used.</li>
+					<li>Fixed some minor bugs.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.24 (11 April 2024)</h3>
+				<p>Component Lockout</p>
+				<ul>
+					<li>The possibility of locking individual components by means of a check box has been added, thus
+						preventing them from being modified or deleted unintentionally.
+					</li>
+					<li>Fixed some minor bugs./li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.23 (18 March 2024)</h3>
+				<p>A3 page format</p>
+				<ul>
+					<li>A3 page size (portrait/landscape) is added to the properties of each of the problems.
+					</li>
+					<li>The upper width limit on images and graphics is changed so that it can be greater than 100% on
+						A3 or landscape pages.
+					</li>
+					<li>Fixed some minor bugs./li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.22 (29 February 2024)</h3>
+				<p>Landscape page format</p>
+				<ul>
+					<li>Page orientation (portrait/landscape) is added to the properties of each of the problems.
+					</li>
+					<li>The page setup of the problem list is stored so that it does not change when returning to the
+						list from the problems.
+					</li>
+					<li>Fixed some minor bugs.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.21 (24 January 2024)</h3>
+				<p>Errors in copying statements</p>
+				<ul>
+					<li>Standard users (students) are not allowed to copy statements, only teachers are allowed to do
+						so.
+					</li>
+					<li>Problems that are statements are removed from the list of activities linked to a statement.
+						Preventing the statement itself and any copy of it from appearing.
+					</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.20 (17 January 2024)</h3>
+				<p>Types of users: Students and Teachers.</p>
+				<ul>
+					<li>Two different types of users are established for the application: Standard (student) and
+						Teacher. The difference is that only Teacher type users will be able to create "Statements".
+					</li>
+					<li>The value of the maximum number of problems is changed to 50 for standard users and 250 for
+						teachers.</li>
+					<li>El número máximo de problemas se muestra en la información general del usuario.</li>
+					<li>The maximum number of problems is shown in the user's general information.</li>
+					<li>The creation of a new activity is done via a separate button from the copy problem button.</li>
+					<li>Teachers can edit student activities, even if they are already submitted</li>
+					<li>Links to images in Google Drive are changed, due to a problem with direct links from google
+						drive that was detected as of 11 January 2014
+						(https://issuetracker.google.com/issues/319531488?pli=1).
+					</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.13 (5 December 2023)</h3>
+				<p>Redefining, simplifying and reordering</p>
+				<ul>
+					<li>Rearrangement of the button bar, left back arrow, separation between edit and resolution
+						buttons.</li>
+					<li>Clicking on IDs copies their value to the clipboard.</li>
+					<li>Problem types are redefined: "Regular", "Statement", "Activity". To create a statement
+						(previously called "Teacher activity") a regular problem will be created and in its properties
+						the "Statement" check is used. It is therefore possible to switch between regular problem and
+						statement.
+					</li>
+					<li>"Activities" formerly called "Student Activity" are created by copying a statement.
+					</li>
+					<li>In the statements the id of the correct problem or solution problem is stored.</li>
+					<li>In the list of activities linked to a statement, some errors are corrected and the export to CSV
+						and the
+						personalised configuration of the pagination are added. In addition, the number of correct,
+						incorrect and
+						not found are separated into columns.
+					</li>
+					<li>he quick messages disappear all by time, some of them stayed when an error occurred.
+					</li>
+					<li>In the unknowns the unit change is shown even if the unknown is not yet calculated.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.12 (30 October 2023)</h3>
+				<p>Correction of problems with tolerance</p>
+				<ul>
+					<li>In correction by comparison of problems, the values are considered correct when the error is
+						less than 0.1%.
+						In case the correct value is 0, the user value must be less than 1e-9.
+						It does not perform correction of the string used for the unit.
+					</li>
+					<li>When trying to solve a problem where one of its active components has an error,
+						the program will display an informational message and suspend the resolution.
+					</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.11 (19 September 2023)</h3>
+				<p>Improving quick editing</p>
+				<ul>
+					<li>The responsiveness of quick editing (double-click) of data, unknowns and equations is improved.
+					</li>
+					<li>A link to the "Documentation" is added to the top area of the registration screen and the
+						problem list.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.10 (11 September 2023)</h3>
+				<p>Improving section management</p>
+				<ul>
+					<li>Global sections: the components of these sections will be used in all other sections of the
+						problem.</li>
+					<li>Correction by comparison can already be used in problems with sections.</li>
+					<li>Possibility to make problems "private", private problems cannot be viewed or copied.</li>
+					<li>New filter by type of problem: "normal", "activity as teacher", "activity as student".</li>
+					<li>The language change can only be made on the initial registration screen.</li>
+					<li>Fixed error in solving problems with data equal to "?".</li>
+					<li>Error correction in the tables placed in sections.</li>
+					<li>Fixed error in some messages after translation into English.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.00 (12 July 2023)</h3>
+				<p>Name change, we are now <img src="img/logo_psolver.svg" width="32px" alt="Logo pSolver">
+					<strong>pSolver</strong>
+				</p>
+				<ul>
+					<li>Change of name and logo. New name pSolver, new website http://psolver.org
+					</li>
+					<li>First English version of the application.
+						The user can choose between the English or the Spanish version.</li>
+					<li>Multiple components are selected by pressing ctrl/cmd and dragging the mouse.
+						A box with a dashed border will be shown.
+					</li>
+					<li>In the text we can insert equations in the same format used by the application,
+						surrounding them with $$.
+					</li>
+					<li>It is now possible to use incompressible fluid names in string type data.
+						<a href="http://www.coolprop.org/fluid_properties/Incompressibles.html">
+							http://www.coolprop.org/fluid_properties/Incompressibles.html </a>
+					</li>
+					<li>The gamma function (Euler's Gamma, a generalisation of the factorial) is removed,
+						in order to be able to use gamma as a variable.</li>
+					<li>The tabular view can be sorted by sections.</li>
+					<li>You can click inside the quick edit boxes to change the cursor position.
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+		<br>
+
+		<div class="ui center aligned container">
+			<p><a href="index_es.html" class="ui inverted link">pSolver</a> ::
+				<a href="https://groups.google.com/d/forum/pSolver" target="_blank">User group</a> ::
+				<a href="http://www.twitter.com/psolver_org" target="_blank">twitter</a>
+			</p>
+		</div>
+		<br>
+	</div>
+</body>
+
+</html>

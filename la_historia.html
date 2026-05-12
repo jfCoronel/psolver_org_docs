@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>pSolver</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="img/favicon.png" />
+	<meta name="description" content="Problem Solver" />
+	<meta name="keywords" content="pSolver" />
+	<meta name="author" content="Juan F. Coronel Toro" />
+	<link rel="stylesheet" type="text/css" href="./css/semantic.min.css">
+	<script src="./css/semantic.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+	<div class="ui container">
+		<h2><img style="margin-top: 10px;" src="img/logo_psolver.svg" width="48px" alt="Logo pSolver"> pSolver
+		</h2>
+
+		<div class="ui secondary pointing menu container">
+			<a href="index_es.html" class="item">INICIO</a>
+			<a href="manual usuario.html" class="item">MANUAL USUARIO</a>
+			<a href="la_historia.html" class="item active">HISTORIAL</a>
+		</div>
+
+		<div class="ui main container">
+
+			<h1>La Historia</h1>
+			<h4>Evolución temporal inversa (de abajo arriba)</h4>
+
+			<div class="ui segment">
+				<h3>V 4.60 (10 de marzo de 2026)</h3>
+				<p>Menús contextuales y simplificación barra de botones</p>
+				<ul>
+					<li>Se añaden menús contextuales de los componentes del problema para facilitar la edición y el uso de la aplicación.</li>
+					<li>Se simplifica la barra de botones, eliminando los botones de edición, que ahora se pueden usarse desde el menú contextual.</li>
+					<li>Se añade a la barra de botonel el botón de gestión de las funciones globales.</li>
+					<li>Se añade un nuevo componente "función local" para permitir la definición de funciones personalizadas por el usuario.</li>
+					<li>En la edición de ecuaciones se añade el botón añadir función, como ayuda a la hora de insertar funciones globales o locales en la ecuación.</li>
+					<li>Los nuevos problemas tiene la opción de resetear automáticamente los valores iniciales después de realizar un cálculo activada por defecto.</li>
+					<li>Se cambia el valor de edición en barra lateral a doble click por defecto.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.53 (6 de marzo de 2026)</h3>
+				<p>Reset automático de valores iniciales tras cálculo</p>
+				<ul>
+					<li>Se añade una opción global al problema para resetear automáticamente los valores iniciales después de realizar un cálculo.</li>
+					<li>Se mueve el botón de funciones globales al editor de ecuaciones, pudiendo insertarse un ejemplo de uso de la función en la ecuación.</li>
+					<li>Se corrige un error al añadir nuevos usarios a cursos distinguia si el correo estaba en mayúsculas o minúsculas.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.52 (2 de marzo de 2026)</h3>
+				<p>Edición con Click o Doble click configurable</p>
+				<ul>
+					<li>Se añade a la configuración del usuario la posibilidad de elegir si se edita con click simple o doble click con la barra lateral, y activar la edición rápida con doble click o ctrl + doble click.</li>
+					<li>Se corrigen algunos errores en las etiquetas emergentes de los botones.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.51 (11 de febrero de 2026)</h3>
+				<p>Funciones locales</p>
+				<ul>
+					<li>Se añade la posibilidad de añadir funciones locales definidas por el usuario al problema. El usuario debe introducir el código en javascript de la función.</li>
+					<li>Las funciones locales se guardan con el propio problema.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.50 (11 de febrero de 2026)</h3>
+				<p>Funciones globales</p>
+				<ul>
+					<li>Se añade la posibilidad de activar funciones globales predefinidas para su uso en los problemas.
+						Estas funciones se pueden activar desde las propiedades generales del problema, y una vez
+						activadas estarán disponibles en todas las secciones del problema.</li>
+					<li>Funciones globlales añadidas: Gamma (Matemáticas), FF_recpar, FF_recper, FF_dispar (Factores de
+						forma 3D), Deltap_tub (Fluidos, pérdida de presión en tubería)</li>
+					<li>Se corrige un error por el que copiar y pegar no funcionaba correctamente en los campos
+						editables.</li>
+					<li>Se corrige un error por el que la modificación de las propiedades generales del problema no
+						ponian en rojo el botón de guardar.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.49 (13 de enero de 2026)</h3>
+				<p>Edición solución y enunciado desde la tarea</p>
+				<ul>
+					<li>Se añaden dos botones para poder editar el enunciado y la solución directamente desde la
+						gestión de tareas.
+					</li>
+					<li>Se corrige un error que generaba múltiples cuadros de diálogo cuando se envia la tarea a los
+						alumnos.
+					</li>
+					<li>Se corrige un error al cambiar entre las tablas de alumnos y variables de alumnos cuando alguna
+						columna estaba ordenada.
+					</li>
+					<li>Se corrige un con el ctrl+c y ctr+v en el explorador safari y otros basados en webkit.
+					</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.48 (9 de enero de 2026)</h3>
+				<p>Botón salvar</p>
+				<ul>
+					<li>En la barra de botones se añade un botón de salvar para guardar los cambios realizados en el
+						problema
+						sin necesidad de salir del mismo. El botón aparecerá en color rojo cuando existan cambios sin
+						guardar.
+					</li>
+					<li>El color de fondo de los componentes con error es ahora más fuerte para que se vea mejor.</li>
+					</li>
+					<li>Se comprueba que el usuario no deja el componente texto vacio, mostrando un mensaje de error si
+						lo hace.
+					</li>
+					<li>Se realiza un salvado en memoria del problema si se sale de la página, pulsando el botón atrás o
+						recargar o se cierra la pestaña, cuando se vuelve a entrar se restaura automáticamente.
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.47 (9 de enero de 2026)</h3>
+				<p>Corrección de tareas mejorada</p>
+				<ul>
+					<li>En la corrección de tareas se pueden visualizar dos tablas diferentes: una por alumno y otra por
+						variable.
+						Esta segunda tabla permite ver de forma rápida qué variables han sido contestadas correctamente
+						por todos los alumnos y cuáles no.
+					</li>
+					<li>Reordenación de los botonoes de la la tabla de corrección de tareas para mejorar su usabilidad.
+					</li>
+					<li>Las tablas de corrección del editor de tareas sólo se aplican a los alumnos del curso que tenga
+						seleccionado esa tarea,
+						permitiendo cambiar la misma tarea de curso y sin necesidad de crear otra tarea nueva.
+					</li>
+					<li>Se añade sistema de mantenimiento para poder borrar los problemas antiguos de usuarios inactivos
+						de la base de datos Firebase</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.46 (10 de diciembre de 2025)</h3>
+				<p>Nueva gestión de copia de problemas</p>
+				<ul>
+					<li>Nueva política de copias o duplicaciones de problemas: Las actividades no se pueden copiar,
+						los enunciados y las soluciones sólo los profesores y los problemas normales podrán copiarse en
+						función de que sean privados o no.</li>
+					<li>En la autocorrección de actividades el ID de la solucion no se ve, sólo aparece el botón
+						corregir activo o inactivo.</li>
+					<li>Sólo se puede importar desde archivo los problemas propios, no los de otro usuario.</li>
+					<li>Edición / Actualización del nombre de usuario directamente en la informacion de usuario que
+						aparece en la lista
+						de problemas.</li>
+					<li>Se elimina fecha de creación de la informacion del usario y el número de problemas se cambia al
+						formato n de n_max</li>
+					<li>Error cambio de unidad escrito así " x = x/10 " no funcionaba, ni daba error, ahora funciona.
+					</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.45 (1 de diciembre de 2025)</h3>
+				<p>Gestión de curso con tabla</p>
+				<ul>
+					<li>Se cambia la gestión de cursos a tabla, con botón actualizar y un mensaje de la fecha de última
+						actualización.</li>
+					<li>Se cambia el formato de los botones en la edición de las tareas a botones pequeños.</li>
+					<li>Mensaje de espera en los botones de los editores de curso y de tareas, mientras se realiza la
+						acción.</li>
+					<li>El nombre del problema pasa a campo editable cuando se hace click o se pasa el ratón sobre él.
+					</li>
+					<li>Se corrige un error por el que el doble click sobre un texto no ponía el foco en el Editor
+						Rápido.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.44 (1 de noviembre de 2025)</h3>
+				<p>Entregrar actividad con botón</p>
+				<ul>
+					<li>Se cambia el enlace de "Entregar actividad" por un botón.</li>
+					<li>Se colocan la etiqueta y el botón de entregar actividad a la derecha del nombre, dejando
+						la descripción en la línea inferior.</li>
+					</li>
+					<li>Se elimina la etiqueta que aparecia en el papel mostrando la fecha de entrega de la actividad
+					</li>
+					<li>Se corrige un error por el que cuando sólo tenemos textos las ecuaciones no se renderizaban.
+					</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.43 (24 de octubre de 2025)</h3>
+				<p>Configuración usuario</p>
+				<ul>
+					<li>La configuración de usuario se guarda en la base de datos y se edita de forma conjunta.</li>
+					<li>Se añade mensaje "Resolviendo" para los problemas que tardan más de 2 segundos en resolverse.
+					</li>
+					<li>El nombre del problema se cambia a campo editable.</li>
+					<li>Se elimnan la visualización de las secciones al imprimir o generar pdf</li>
+					<li>Se corrige un error con la fechaCreacion que producía un pantallazo gris.</li>
+					<li>Se corrige un error que ocurria con los nombre de fluidos definidos en secciones globales.</li>
+					<li>Se corrige un error por el que no detectaba la duplicación de símbolos con secciones globales.
+					</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.421 (19 de septiembre de 2025)</h3>
+				<p>Error en recalculo automático de tablas</p>
+				<ul>
+					<li>Se corrige un error en el recalculo automático de tablas que hacía que no se recalcularan
+						correctamente.
+					</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.42 (8 de septiembre de 2025)</h3>
+				<p>Diagramas de propiedades de fluidos</p>
+				<ul>
+					<li>Se ha añadido la posibilidad de crear diagramas de propiedades de fluidos en los componentes
+						tipo gráficas.
+						En una nueva sección denominada "Diagramas de propiedades de fluidos" se pueden crear diferentes
+						tipos de diagramas: para fluidos puros (T-p, h-log p, T-s) y para aire húmedo el diagrama
+						sicrométrico.
+					</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.41 (10 de julio de 2025)</h3>
+				<p>Crear nuevas variables en las tablas</p>
+				<ul>
+					<li>Ahora es posible crear nuevas variables en las tablas e indicar cual es su valor para
+						cada una de las filas de la tabla, usando expresiones separadas por comas. Esta opción
+						permite crear tablas y gráficas con variables que están dentro del mismo problema sin necesidad
+						de
+						resolver de nuevo el problema. </li>
+					<li>En la definición de los datos se puede hacer referencia a cuestiones creadas anteriormente.
+						Si la cuastión tiene un valor numérico se usará ese valor, si es una lista de opciones, se ha
+						añadido
+						un campo a este tipo de cuestiones para especificar el valor numérico parea cada opción.</li>
+					<li>Se consigue que las cuestiones insertadas en cajas de texto pierdan el foco al hacer click fuera
+						en cualquier otro sitio.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.40 (2 de mayo de 2025)</h3>
+				<p>Nuevo componente Cuestión</p>
+				<ul>
+					<li>Se ha añadido el nuevo componente "Cuestión". Este componente sirve para incluir en los textos
+						cuadros de texto o listas desplegables
+						que pueden ser rellenados por los alumnos.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.35 (24 de abril de 2025)</h3>
+				<p>Implementación del CTRL/CMD + Z</p>
+				<ul>
+					<li>Se implementa una versión para poder deshacer las últimas acciones,
+						aunque la operación no es perfecta permite deshacer mucha de las modificaciones a los problemas
+						utilizando CTRL/CMD + Z </li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.34 (7 de abril de 2025)</h3>
+				<p>Atajo para calcular todas la secciones (R)</p>
+				<ul>
+					<li>Se añade un atajo de teclado para calcular todas las secciones de un problema pulsando la tecla
+						R.
+					</li>
+					<li>Se cambia el símbolo para delimitar las variables en los textos de ## a ??, por incompatibilidad
+						con los títulos de Markdown.</li>
+					<li>Se simplifica el botón Nuevo... </li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.33 (3 de abril de 2025)</h3>
+				<p>Valores del problema en los textos</p>
+				<ul>
+					<li>Se añade la posibilidad de incluir valores automáticamente (datos, incógnitas, fluidos o aires
+						húmedos) en los textos en Markdown colocando el
+						símbolo de la variable entre ##. Por ejemplo: ## x_1 ## pondría en el texto el valor de esa
+						variable seguido de su unidad.
+					</li>
+					<li>El valor de los datos introducido en lasd tablas, será siempre el valor sin cambiar de unidad.
+						Al resolver el problema se realizará el cambio de unidad si existiera.</li>
+					<li>Se corrige un error por el que las listas de las actividades de una tarea incluían también las
+						actividades antiguas que usaran el mismo enunciado que la tarea.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.32 (3 de febrero de 2025)</h3>
+				<p>Recalculo automático de tablas</p>
+				<ul>
+					<li>Se añade un check a las tablas para permitir el recalculo automático de las tablas al resolver
+						el problema.</li>
+					<li>Se corrige un error en la escritura del archivo csv para las actividades.</li>
+					<li>Otros cambios menores.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.31 (20 de enero de 2025)</h3>
+				<p>Mejoras en cursos y tareas</p>
+				<ul>
+					<li>Ordenado y filtrado de la lista de cursos y la lista de tareas.</li>
+					<li>Duplicación de cursos y tareas.</li>
+					<li>Guardado de la tabla de actividades corregidas de una tarea.</li>
+					<li>Al enviar las actividades a todos los alumnos el sistema comprueba que no existe, para no
+						duplicarla.</li>
+					<li>Es posible importar cursos externos al usuario (de otro profesor) a través del id del curso.
+					</li>
+					<li>Se añade el botón para activar la autocorrección de las actividades desde la tarea, al pulsarlo
+						permitimos que el alumno autocorrija su problema.</li>
+					<li>Se añade el check "Ocultar cambio de unidad" para los datos y las incógnitas.</li>
+					<li>Botón imprimir en la barra de botones del problema.</li>
+				</ul>
+			</div>
+
+
+			<div class="ui segment">
+				<h3>V 4.30 (21 de octubre de 2024)</h3>
+				<p>Cursos y tareas</p>
+				<ul>
+					<li>Nueva gestión de las actividades a través de los cursos y tareas que los profesores pueden
+						crear.</li>
+					<li>El botón nueva actividad se cambia por la gestión de actividades y cursos donde el usuario
+						puede registrarse en un curso o crear una nueva actividad.</li>
+					<li>Cambio en la visualización de las tablas, diferenciando las tablas que van en el "papel" y las
+						tablas de la interfaz.</li>
+					<li>Cambio en la barra de herramientas, configuración a la izquierda y el usuario a la derecha con
+						un icono y un tooltip (para evitar el ancho variable).
+					</li>
+					<li>El tipo "Solución" se añade como un tipo más de problemas</li>
+					<li>La selección del tipo de problema se realiza mediante una lista despleglable en las propiedades
+						generales del problema.</li>
+					<li>Se ajusta el alto del papel para A4.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.26 (12 de septiembre de 2024)</h3>
+				<p>Corrección de datos tipo texto</p>
+				<ul>
+					<li>Se perimite la corrección de datos tipo texto, que son los que su valor se escribe entre
+						comillas.
+					</li>
+					<li>Se corrigen algunos errores menores en el la lista de actividades asociadas a un enunciado.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.25 (23 de abril de 2024)</h3>
+				<p>Cambio de servidor a Github</p>
+				<ul>
+					<li>Se cambia el servidor de la aplicación a una página de Github por motivos de velocidad.
+						https://jfcoronel.github.io/psolver_org/app
+					</li>
+					<li>Se añade el nombre del autor (usuario) en la lista de actividades asociadas a un enunciado.</li>
+					<li>Se amplia la zona de click para editar las propiedades generales de un problema
+						a todo el área superior, antes sólo se usaba el nombre del problema.</li>
+					<li>Se corrigen algunos errores menores.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.24 (11 de abril de 2024)</h3>
+				<p>Bloqueo de componentes</p>
+				<ul>
+					<li>Se añade la posibilidad mediante un check de bloquear los componentes de manera individual,
+						impidiendo así que puedan ser modificados o eliminados involuntariamente.
+					</li>
+					<li>Se corrigen algunos errores menores.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.23 (18 de marzo de 2024)</h3>
+				<p>Formato A3 de página</p>
+				<ul>
+					<li>Se añade el tamaño A3 de página (vertical/horizontal) a las propiedades de cada uno de los
+						problemas.
+					</li>
+					<li>Se cambia el límite superior del ancho en imágenes y gráficas para que pueda ser mayor de 100 %
+						en páginas A3 o apaisadas.
+					</li>
+					<li>Se corrigen algunos errores menores.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.22 (29 de febrero de 2024)</h3>
+				<p>Formato apaisado de página</p>
+				<ul>
+					<li>Se añade la orientación de página (vertical/horizontal) a las propiedades de cada uno de los
+						problemas.
+					</li>
+					<li>La configuración del paginado de la lista de problemas se memoriza para que no cambie al volver
+						a la lista desde los problemas.
+					</li>
+					<li>Se corrigen algunos errores menores.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.21 (24 de enero de 2024)</h3>
+				<p>Errores en la copia de enunciados</p>
+				<ul>
+					<li>No se permite copiar enunciados a los usuarios de tipo estándar (estudiantes), sólo pueden
+						hacerlo los profesores.
+					</li>
+					<li>Se elimina de la lista de actividades vinculadas a un enunciado los problemas que sean
+						enunciados. Evitando que aparezca el propio
+						enunciado y cualquier copia del mismo.
+					</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.20 (17 de enero de 2024)</h3>
+				<p>Tipos de usuarios: Estudiantes y Profesores</p>
+				<ul>
+					<li>Se establecen dos tipo de usuarios distintos para la aplicación: Estándar (estudiante) y
+						Profesor. La diferencia
+						está en que unicamente podrán crear "Enunciados" los usuarios tipo Profesor.
+					</li>
+					<li>El valor del nº máximo de problemas se cambia a 50 para los usuarios estándar y 250 para los
+						profesores.</li>
+					<li>El número máximo de problemas se muestra en la información general del usuario.</li>
+					<li>La creación de una nueva actividad se realiza mediante un botón independiente del botón de
+						copiar problema.</li>
+					<li>Los Profesores pueden editar las actividades de los alumnos, aunque esten entregadas</li>
+					<li>Se cambian los vínculos a las imágenes en Google Drive, debido a un problema con los vínculos
+						directos desde google
+						drive que se detectó a partir del 11 de enero de 2014
+						(https://issuetracker.google.com/issues/319531488?pli=1)
+					</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.13 (5 de diciembre de 2023)</h3>
+				<p>Redefiniendo, simplificando y reordenando</p>
+				<ul>
+					<li>Reordenación de la barra de botones, flecha vuelta atrás a la izquierda, separación entre
+						botones de edición y resolución.
+					</li>
+					<li>Al hacer click en los ID se copia su valor al portapapeles.</li>
+					<li>Se redefinen los tipos de problemas: "Normal", "Enunciado", "Actividad". Para crear un
+						enunciado (antes llamado "Actividad de profesor")
+						se creará un problema normal y en sus propiedades se usa el check de "Enunciado". Es por tanto
+						posible cambiar entre problema normal y enunciado.
+					</li>
+					<li>Las "Actividades" antes llamadas "Actividad de alumno" se crean al copiar un enunciado.</li>
+					<li>En los enunciados se guarda el id del problema correcto o problema solución.</li>
+					<li>En el listado de actividades vínculados a un enunciado, se corrigen algunos errores y se añade
+						la exportación a CSV y
+						la configuración personalizada de la paginación. Además se separan en columnas de nº de
+						correctas, incorrectas y no encontradas.
+					</li>
+					<li>Los mensajes rápidos desaparecen todos por tiempo, algunos se quedaban cuando ocurría un error.
+					</li>
+					<li>En las incógnitas se muestra en cambio de unidad aunque la incógnita no esté aún calculada</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.12 (30 de octubre de 2023)</h3>
+				<p>Corrección problemas con tolerancia</p>
+				<ul>
+					<li>En la corrección por comparación de los problemas, los valores se consideran correctos cuando el
+						error es
+						inferior al 0.1%. Para el caso de que el valor correcto sea 0 el valor del usuario debe ser
+						menor a 1e-9.
+						No realiza corrección de la cadena usada para la unidad.
+					</li>
+					<li>Al intentar resolver un problema donde alguno de sus componentes activos tenga un error,
+						el programa mostrará un mensaje informativo y suspenderá la resolución.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.11 (19 de septiembre de 2023)</h3>
+				<p>Mejorando la edición rápida</p>
+				<ul>
+					<li>Se mejora la respuesta de la edición rápida (doble click) de los datos, incógnitas y ecuaciones.
+					</li>
+					<li>Se añade un vínculo a la "Documentación" en la zona superior de la pantalla de registro y de la
+						lista de problemas.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.10 (11 de septiembre de 2023)</h3>
+				<p>Mejorando la gestión de secciones</p>
+				<ul>
+					<li>Secciones globales: los componentes de estas secciones se usarán en todas las otras secciones
+						del problema.</li>
+					<li>La corrección por comparación ya puede usarse en problemas con secciones.</li>
+					<li>Posibilidad de convertir los problemas en "privados", los problemas privados no podrán verse ni
+						copiarse.</li>
+					<li>Nuevo filtro por tipo de problema: "normal", "actividad como profesor", "actividad como alumno".
+					</li>
+					<li>El cambio de idioma únicamente puede hacerse en la pantalla inicial de registro.</li>
+					<li>Resuelto error en la resolución de problemas con datos iguales a "?".</li>
+					<li>Corrección de error en las tablas colacadas en secciones.</li>
+					<li>Corregido error en algunos mensajes tras la traducción al inglés.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 4.00 (12 de julio de 2023)</h3>
+				<p>Cambio de nombre, ahora somos <img src="img/logo_psolver.svg" width="32px" alt="Logo pSolver">
+					<strong>pSolver</strong>
+				</p>
+				<ul>
+					<li>Cambio de nombre y de logo. Nuevo nombre pSolver, nueva página web http://psolver.org
+					</li>
+					<li>Primera versión en inglés de la aplicación. El usuario puede elegir entre la versión en inglés o
+						la versión en español.</li>
+					<li>La selección de múltiples componentes se realiza pulsando ctrl/cmd y arrastrando el ratón.
+						aparecerá
+						una caja con el borde en línea discontinua.
+					</li>
+					<li>
+						En los texto podemos insertar ecuaciones en el mismo formato que usa la aplicación,
+						rodeándolas con $ $.
+					</li>
+					<li>Ya es posible usar en los nombres de fluidos incompresibles en los datos tipo cadena de texto.
+						<a href="http://www.coolprop.org/fluid_properties/Incompressibles.html">
+							http://www.coolprop.org/fluid_properties/Incompressibles.html </a>
+					</li>
+					<li>Se elimina la función gamma (Gamma de Euler, una generalización del factorial), para poder usar
+						gamma como variable.</li>
+					<li>La vista tabular se puede ordenar por secciones.</li>
+					<li>Se puede hacer click dentro de las cajas de edición rápida para cambiar la posición del cursor.
+					</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.55 (19 de mayo de 2023)</h3>
+				<p>Edición rápida (in situ) de componentes.</p>
+				<ul>
+					<li>Edición rápida: Haciendo doble click ó pulsando "Enter" sobre un componente seleccionado se
+						activa
+						la edición
+						in situ del mismo. Consiste en un cuadro de texto justo debajo del componente que el usuario
+						puede
+						editar, pulsando "Enter" ó "Escape" para finalizar la edición.
+					</li>
+					<li>La edición rápida está disponible para Textos, Datos, Ecuaciones e incógnitas. Lo que aparece en
+						el
+						cuadro de edición rápida depende del tipo de componente.
+					</li>
+					<li>Se eliminan el renderizado que realizaba Mathjax para formatear las ecuaciones con los
+						siguientes
+						textos: 'in', 'ne', 'gt', 'le', 'ge', 'll', 'gg', 'vv', 'nn', 'uu', 'cc', 'CC', 'NN', 'QQ',
+						'RR',
+						'ZZ', 'AA', 'EE'
+						.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.54 (11 de mayo de 2023)</h3>
+				<p>Guardando problemas en disco.</p>
+				<ul>
+					<li>Los problemas que se realicen sin estar registrados como usuarios podrán guardarse al disco en
+						un
+						archivo de formato json, usando un botón
+						en la parte superior derecha de la barra de botones.
+					</li>
+					<li>Estos archivos podrán ser importados a cualquier cuenta de usuario usando el botón "importar
+						problemas desde archivo".</li>
+					<li>Cambios en la pantalla inicial, ahora cuando se trabaja sin usuario se puede cargar un problema
+						almacenado en disco.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.53 (3 de mayo de 2023)</h3>
+				<p>Simplificando la creación de actividades.</p>
+				<ul>
+					<li>Los enunciados de las actividades se crean con un nuevo botón desde el listado de problemas.
+					</li>
+					<li>Se elimina la sección "Actividades/Exámenes" de los parámetros de configuración del problema.
+					</li>
+					<li>La entrega de actividades por parte del alumno se hace con un enlace colocado al lado del nombre
+						del
+						problema.
+					</li>
+					<li>Se corrige un error por el que no se corregian correctamente los problemas debido a la gestión
+						de
+						secciones.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.52 (21 de abril de 2023)</h3>
+				<p>Problemas con secciones.</p>
+				<ul>
+					<li>Se añade un nuevo componente la "sección", que permite dividir el problema en trozos
+						independientes.
+						De esta manera podremos redefinir datos usando el mismo símbolo o incluso hacer varios problemas
+						dentro del
+						mismo problema.
+					</li>
+					<li>La paginación cuando se realiza un filtrado de la lista se hace referida a los problemas
+						filtrados y
+						no a todos los problemas.</li>
+					<li>El botón buscar incógnitas, si encuentra alguna, pedirá al usuario que haga click para
+						colocarlas.
+					</li>
+					<li>Al resolver ya no crea automaticamente las incógnitas, el usuario debe buscarlas o crearlas
+						primero.
+					</li>
+					<li>Los mensajes de creación y pegado de componentes se esperan a que se haga click para destruirse.
+					</li>
+					<li>El color gris del fondo de puntos o cuadrículado se pone algo más claro.</li>
+					<li>Se corrige un error en reemplazar símbolo, fallaba cuando el símbolo estaba al final de la
+						cadena de
+						texto.</li>
+					<li>Se corrige una error en la creación de un componente, al hacer click sobre otro componente
+						lo colocaba al principio del problema.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.51 (21 de marzo de 2023)</h3>
+				<p>Corrección de problemas y gestión de actividades.</p>
+				<ul>
+					<li>Se simplifica la corrección por comparación usando siempre las variables del problema correcto.
+					</li>
+					<li>Se mejora la visualización de la lista de actividades realizadas por los alumnos, mostrándola en
+						una
+						tabla
+						a pantalla completa.
+					</li>
+					<li>Se añade la posibilidad de corregir una lista de actividades de alumnos usando el ID del
+						problema
+						correcto.</li>
+					<li>El ID del problema correcto ahora no se guarda con los datos del problema.</li>
+					<li>Se añade la paginación en la parte superior de la lista de problemas.</li>
+					<li>Se corrige un error en el reemplazo de símbolos por el que no mostraba el mensaje tras el
+						reemplazo.
+					</li>
+					<li>Se corrige un error en la conversión de datos en incógnitas e incógnitas en datos.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.50 (21 de febrero de 2023)</h3>
+				<p>Gestión de Actividades/Exámenes.</p>
+				<ul>
+					<li>Se añada la posibilidad de definir un problema como "Actividad/Examen", se hace en las
+						propiedades
+						generales del problema.</li>
+					<li>Si copiamos un problema tipo Actividad/Examen sólo se podrán copiar objetos pertenecientes a ese
+						problema.</li>
+					<li>Las copias de actividades mostrarán en el editor de propiedades del problema la posibilidad de
+						"Entregar el problema". </li>
+					<li>Desde el problema original definido como "Actividad/Exámen" se puede obtener un listado de los
+						problemas copiados desde su id.
+						Así el profesor que pone una actividad podrá revisar las actividades relaizadas por los alumnos
+						vinculadas a ella.</li>
+					<li>Se reordena y organiza el editor de las propiedades del problema.</li>
+					<li>Cambio en los valores por defecto de datos e incógnitas nuevas, la unidad por defecto se deja en
+						blanco.</li>
+					<li>Los fluidos y aire húmedos nuevos tienen por defecto desactivada "la descripción".</li>
+					<li>Cambio del color de las líneas y del fondo de la cabecera de las tablas.</li>
+					<li>Definición de tablas en el Markdown de las cajas de texto.</li>
+					<li>Se corrige un error en las tablas en el procesado de los valores de datos iguales e una
+						expresión,
+						por ejemplo "T_1 = 23" ó "T_1 = T_1 + 45"</li>
+					<li>Se corrige un error en las gráficas por el que las gráficas nuevas no recordaban la tabla de la
+						que
+						toman los datos.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.49 (9 de febrero de 2023)</h3>
+				<p>Expresiones matemáticas en el componente tabla.</p>
+				<ul>
+					<li>Tablas: A partir de esta versión pueden usarse expresiones matemáticas en la definición de como
+						cambian los datos.
+						Las expresiones se evaluaran usando las variables que han sido previamente calculadas en el
+						problema. En el caso
+						de la definición de los datos separados por comas, a partir del segundo valor se calculan usando
+						los
+						valores de la
+						fila anterior en la tabla. Para más detalle ver la <a
+							href="manual usuario.html#cdp_tablas">sección
+							de tablas</a> en el manual de usuario.</li>
+					<li>Actualización de datos al terminar la edición. Hasta ahora la actualización de datos y fluidos
+						se
+						realizaba
+						al mismo tiempo que el usuario modificaba los valores en la caja de texto. Esto producía un
+						retardo
+						en la escritura
+						en problemas grandes. La revisión y actualización del problema se realiza ahora al terminar la
+						edición y volver al "papel".
+					</li>
+					<li>Reordenación de la librería de resolución de ecuaciones.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.48 (19 de enero de 2023)</h3>
+				<p>Mejoras en el componente de gráficas.</p>
+				<ul>
+					<li>Actualización del objeto de gráficas: se reestructura el formulario para las gráficas, colocando
+						cada serie en un desplegable.
+						Ahora cada serie puede referirse a una tabla diferente. Se le añade nombre a cada una de las
+						series.
+						Se Añade la posibilidad de
+						un eje secundario para las y. Se cambia el formato de los números en la grafica.
+					</li>
+					<li>El valor cambiado de unidad de los datos e incógnitas se formatea correctamente.</li>
+					<li>Se Añaden las mayúsculas a los Shortcuts "X", "Y", "R", ...</li>
+					<li>Al buscar y crear las incógnitas, se busca también en los valores de las propiedades de los
+						fluidos
+						y/o aires húmedos.</li>
+					<li>Reemplazar símbolo busca el símbolo completo, hasta ahora realizaba el reemplazo si era una
+						subcadena de un símbolo ya existente.</li>
+					<li>Reorganizaión del código para resolver problemas y actualización de las librerías React,
+						Hookstate y
+						Vite.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.47 (20 de octubre de 2022)</h3>
+				<p>Resolución numérica de ecuaciones diferenciales/integrales con las tablas. </p>
+				<ul>
+					<li>Para poder resolver numericamente las ecuaciones diferenciales o integrales, se ha añadido a las
+						tablas la posibilidad de que los datos puedan calcularse en función de variables obtenidas en la
+						fila anterior de la tabla.
+					</li>
+					<li>Ver el apartado resolución numérica de ecauciones diferenciales/integrales en el manual de
+						usuario.
+					</li>
+					<li>Se añade a la barra de botones el botón cortar (ctrl+x ó cmd+x) para podder copiar y eliminar al
+						mismo tiempo.</li>
+					<li>Se elimina de las tablas el nº de hojas por página que aparecia en la zona inferior. Este valor
+						se
+						controla unicamente desde
+						la barra de edición.
+					</li>
+				</ul>
+			</div>
+
+
+			<div class="ui segment">
+				<h3>V 3.46 (6 de octubre de 2022)</h3>
+				<p>Modo Examen, usando CuadernoDeProblemas en los exámenes. </p>
+				<ul>
+					<li>Se ha añadido la posibilidad de realizar los problemas en "Modo examen". Esta opción bloquea la
+						posibilidad de copiar/pegar
+						componentes desde fuera del problema, y añade una cabecera a los problemas con la información
+						sobre
+						el autor del problema. Ver
+						la sección <a href="manual usuario.html#cdp_examenes">Usando CdP en exámenes</a> del manual de
+						usuario.
+					</li>
+					<li>Cursores para mover los componentes. Se pueden mover los componentes seleccionados usando los
+						cursores del teclado.</li>
+					<li>Se añaden a los fluidos propiedades que no dependen del estado: Masa molar M [kg/mol],
+						temperatura y
+						presión del punto triple y temperatura y presión del punto crítico.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.45 (12 de septiembre de 2022)</h3>
+				<p>Mejoras en la corrección de problemas por comparación.</p>
+				<ul>
+					<li>La opción de corrección por comparación muestra ahora unicamente dos opciones "Comprobar
+						variables
+						correctas" y "Corregir variables propias".
+					</li>
+					<li>Comprobar variables correctas: Muestra un listado de las variables del problema correcto,
+						buscando
+						sus equivalentes en el problema propio (del usuario). </li>
+
+					<li>Corregir variables propias: Muestra un listado de las variables de nuestro problema (propias)
+						buscando sus equivalentes en el problema correcto.</li>
+					<li>Se añade un filtro en ambas listas de corrección para mostrar unicamente las variables con borde
+						que
+						son consideradas la solución principal del problema</li>
+					<li>El botón "reemplazar símbolo" toma como símbolo a modificar el del elemento seleccionado, o el
+						primer elemento en el caso de que estén seleccionados varios elementos.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.44 (27 de junio de 2022)</h3>
+				<p>Corrección de problemas por comparación.</p>
+				<ul>
+					<li>Nueva opción de corrección por comparación. Permite comparar nuestro problema con otro del cual
+						conocemos su id. Mostrando
+						aquellas variables que coinciden, las que son diferentes y las que no se encuentran. Añadida una
+						sección al manual de usuario explicando
+						su funcionamiento.
+					</li>
+					<li>Reordenación de la barra de botones. Se agrupa la creación de nuevos componentes en un
+						desplegable,
+						se elimina el botón print (usar el menú del explorador).
+						Botón flecha a izquierda para volver a la lista de problemas.</li>
+					<li>Se cambia el nombre del filtro de "Categorias" a "Por categorías".</li>
+					<li>Se cambian los links iniciales de "Problema en blanco" y "Problema con ID conocido" por botones.
+					</li>
+					<li>Actualización de la conexión con la base de datos Firebase, versión 8 a versión 9.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.43 (6 de mayo de 2022)</h3>
+				<p>Nuevo botón "reemplazar símbolo" <svg viewBox="0 0 1024 1024" focusable="false" data-icon="retweet"
+						width="1em" height="1em" fill="currentColor" aria-hidden="true">
+						<path
+							d="M136 552h63.6c4.4 0 8-3.6 8-8V288.7h528.6v72.6c0 1.9.6 3.7 1.8 5.2a8.3 8.3 0 0011.7 1.4L893 255.4c4.3-5 3.6-10.3 0-13.2L749.7 129.8a8.22 8.22 0 00-5.2-1.8c-4.6 0-8.4 3.8-8.4 8.4V209H199.7c-39.5 0-71.7 32.2-71.7 71.8V544c0 4.4 3.6 8 8 8zm752-80h-63.6c-4.4 0-8 3.6-8 8v255.3H287.8v-72.6c0-1.9-.6-3.7-1.8-5.2a8.3 8.3 0 00-11.7-1.4L131 768.6c-4.3 5-3.6 10.3 0 13.2l143.3 112.4c1.5 1.2 3.3 1.8 5.2 1.8 4.6 0 8.4-3.8 8.4-8.4V815h536.6c39.5 0 71.7-32.2 71.7-71.8V480c-.2-4.4-3.8-8-8.2-8z">
+						</path>
+					</svg>.</p>
+				<ul>
+					<li>Botón "Reempazar símbolo". Reemplaza un símbolo por otro introducido por el usuario, buscando en
+						todos los
+						componentes del problema.</li>
+					<li>Se añade un check para ponerle unidades a las cabeceras de las tablas.</li>
+					<li>Usando datos tipo cadena podremos utilizar como nombre del fluido, además de los españoles
+						listados
+						en el desplegable, los nombres que usa Coolprop para los fluidos.</li>
+					<li>Color de elementos inactivos configurable. Por defecto gris claro.</li>
+					<li>Edición en las ecuaciones en un campo multilinea (como los textos).</li>
+					<li>Se añade al manual de usuario una sección final sobre "Expresiones matemáticas".</li>
+					<li>Se cambia la “#" que aparece en la primera fila de las tablas por “n”</li>
+					<li>En la Vista tabular se formatea el valor inicial a los decimales configurados en el problema.
+					</li>
+					<li>Cuando se cambia el nombre de una tabla se actualiza autamaticamente en las gráficas vinculadas
+						a
+						ella.</li>
+					<li>Los márgenes superior y laterales de la hoja se redimensionan a 2,5 cm (aprox.).</li>
+					<li>Se corrige un error en el tamaño de letra de los números cuando se produce un cambio de unidad
+						(datos e incógnitas)</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.42 (20 de abril de 2022)</h3>
+				<p>Unificando tamaños y tipos de letra.</p>
+				<ul>
+					<li>Se usa el tipo de letra Times New Roman para todo.</li>
+					<li>Se iguala el tamaño del texto al tamaño de las ecuaciones.</li>
+					<li>Los márgenes superior y laterales de la hoja son ahora algo mayores.</li>
+					<li>Se coloca la vista tabular al lado izquierdo, derecho o centrado al igual que la página.</li>
+					<li>Se mejora la función "if" y se añade la función "at", <a
+							href="https://personal.us.es/jfc/CdP3/?id=f0baa8b9-32b0-4e6d-8ffd-460426033958"
+							target="_blank">ejemplo del uso de ambas funciones</a></li>
+					<li>Se añade nuevo error para detectar cuando el nombre de fluido no existe.</li>
+					<li>Se abandona la codificación en Typescript, volviendo a javascript.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.40 (22 de marzo de 2022)</h3>
+				<p>Nueva vista tabular de los componentes y nueva librería para las gráficas (Chart.js).</p>
+				<ul>
+					<li>Nueva vista tabular con la lista de componentes (datos, incógnitas, ecuaciones, ...)</li>
+					<li>Cambio de la librería para mostrar las gráficas (Chart.js)</li>
+					<li>Se añade cabecera con el tipo de componente a los formularios de edición.</li>
+					<li>Nuevos coleres por defecto para los componentes: ecuaciones en gris oscuro, fluidos y aires
+						húmedos
+						en verde</li>
+					<li>Se corrige un error en la selección múltiple arrastrando cuando se tiene aplicado un zoom.</li>
+					<li>Se corrige un error en el desplazamiento cuando tenemos zoom, por el que el ratón y el
+						componente no
+						se desplazaban conjuntamente.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.37 (14 de marzo de 2022)</h3>
+				<p>Filtro para categorías, modificación de categorías existentes y otras mejoras.</p>
+				<ul>
+					<li>Se añade un filtro por categoría configurable a la lista de problemas.</li>
+					<li>Mejorada la selección de múltiples componentes, es posible realizar el arraztre en cualquier
+						dirección.</li>
+					<li>Se añade el botón "Editar categorías" que permite modificar el nombre y color de categorías
+						existentes.</li>
+					<li>Se añade a la propiedades de los problemas la posibilidad de decidir a partir de que valor
+						máximo y
+						mínimo se cambiará
+						la representación de los números a notación exponencial y por debajo de que valor se redondeará
+						un
+						número a cero.</li>
+					<li>Se corrige un error que generaba problemas de convergencia cuando la solución de una incógnita
+						era 0
+						o muy pequeña.</li>
+					<li>Se corrige un error por el que el botón "Enviar al fondo" no funcionaba correctamente cuando
+						existen
+						varias imágenes en un problema.</li>
+					<li>Se activa copiar/pegar usando ctrl + C / V (Mayúsculas).</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.36 (3 de febrero de 2022)</h3>
+				<p>Copiar/pegar componentes entre problemas, zoom para la hoja de papel y otra mejoras.</p>
+				<ul>
+					<li>Ya es posible copiar/pegar componentes entre distintos problemas, la aplicación utiliza el
+						portapapeles del sistema operativo.</li>
+					<li>Se añade a la configuración del problema la posibilidad de escalar el tamaño de la hoja de
+						papel.
+					</li>
+					<li>Pueden crearse datos tipo cadena de texto utilizando " al principio y final del valor del dato,
+						por
+						ejemplo f = "Agua". Los datos
+						tipo cadena de texto apareceran como una opción más al final de la lista de fluidos, permitiendo
+						cambiar el fluido modificando el valor
+						del dato por otra cadena de texto que coincida con alguno de los fluidos existentes.
+					</li>
+					<li>Se mejorada la resolución para ecuaciones tipo hipérbola (asintóticos). Cuando la resolución no
+						converge, se realiza un segundo intento
+						de resolución inviertiendo dicha ecuación, resolviendo 1/(primer_miembro) = 1/(segundo_miembro)
+						de
+						forma automática.</li>
+					<li> A partir de esta versión al descargar los problemas a un archivo, unicamente se guardan los
+						problemas seleccionados.</li>
+					<li> Se Revisan los atajos de teclado para que únicamente se ejecuten cuando ctrl ó cmd no esten
+						pulsados, evitando así que
+						se confundan con atajos del explorador. Por ejemplo f (crear nuevo fluido) y ctrl+f (buscar del
+						explorador).</li>
+					<li> Se eliminan las versiones de escritorio. La aplicación es capaz de funcionar off-line desde el
+						explorador</li>
+				</ul>
+			</div>
+
+
+			<div class="ui segment">
+				<h3>V 3.35 (18 de noviembre de 2021)</h3>
+				<p>Selección múltiple arrastrando el ratón y configuración de colores.</p>
+
+				<ul>
+					<li>Seleccionar múltiples elementos arrastrando el ratón, pinchar en una zona libre y arrastrar
+						hacia
+						abajo y la derecha.</li>
+					<li>Colores de los componentes configurables.</li>
+					<li>Cambio de los colores por defecto de los componentes.</li>
+					<li>Nuevo botón para activar/desactivar los componentes seleccionados</li>
+					<li>Añadida la energía interna y el volumen específico como propiedades de fluidos.</li>
+					<li>Ajustada la posición de los componentes durante su creación.</li>
+					<li>La descripción para los nuevos datos, incógnitas y ecuaciones aparece vacía.</li>
+					<li>Se corrige un error por el que no se guardaba el paso de ratón entre sesiones.</li>
+					<li>Se cambia el * por · en la notación exponencial cuando se hace un cambio de unidad.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.34 (6 de octubre de 2021)</h3>
+				<p>Nuevos fondos y posiciones para el papel.</p>
+
+				<ul>
+					<li>Nuevo botón de configuración de la pantalla. se guardará localmente para cada uno de los
+						diferentes
+						navegadores que usemos.</li>
+					<li>Revisados y ampliados los márgenes del papel.</li>
+					<li>Diferentes tipos de fondo para el papel (En blanco, con cuadrícula, con puntos).</li>
+					<li>La barra lateral desaparece cuando no está nada seleccionado, o sean más de uno los objetos
+						seleccionados.
+					</li>
+					<li>Colocación del papel (izq, der, centro).</li>
+					<li>Colocación de la barra lateral (izq, der).</li>
+					<li>Corregido un error en el cambio de tipo imagen.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.33 (27 de septiembre de 2021)</h3>
+				<p>Hemos revisado y mejorado muchos aspectos:</p>
+
+				<ul>
+					<li>Añadido cambio de unidad para los datos</li>
+					<li>Añadido cambio de unidad para los fluidos y los aires húmedos</li>
+					<li>Botón para convertir datos en incógnitas e incógnitas en datos. Aparece en el área de edición de
+						datos e
+						incógnitas.</li>
+					<li>Nueva gestión de las imágenes no encontradas</li>
+					<li>Lista de problemas reordenada, check de selección de problemas a la izquierda (permite selección
+						múltiple).
+						id del problema añadido y puede editarse el problema haciendo doble click sobre el nombre</li>
+					<li>Se añade el campo "Autor original", que muestra el e-mail del creador del problema (sólo para
+						problemas
+						nuevos a partir de esta edición).
+					</li>
+					<li>Valor por defecto del paso de ratón en los problemas nuevos: 12 px</li>
+					<li>Botón para colapsar la barra lateral de edición.</li>
+					<li>En los valores numéricos se usará notación exponencial para valores muy pequeños (< 1e-3) o muy
+							grandes (>
+							1e6).</li>
+					<li>Se cambia el tipo de letra de los textos a "Times New Roman" y se añaden nuevas opciones para su
+						formateo en
+						Markdown.
+						(<a href="https://personal.us.es/jfc/CdP3/?id=0e9a864b-87f5-4dde-b1bd-b08c06701785"
+							target="_blank">Ejemplo</a>)
+					</li>
+					<li>Añadido "shortcut" b para buscar las incógnitas</li>
+					<li>Corregido error para que el título del eje "y" se muestre centrado.</li>
+				</ul>
+			</div>
+
+
+			<div class="ui segment">
+				<h3>V 3.32 (20 de junio de 2021)</h3>
+				<p>Ancho de la barra lateral ajustable y algunos errores corregidos:</p>
+
+				<ul>
+					<li>En la barra lateral de la pantalla de trabajo, cuando no se tiene seleccionado ningún
+						componente, es posible modificar el ancho en pixeles de la barra lateral.
+					</li>
+					<li>Al modificar las ecuaciones se revisa si están bien escritas y se resetean las incógnitas a "?".
+					</li>
+					<li>Se corrige un error en los fluidos cuando una propiedad depende de una expresión que es
+						función de una incógnita del problema. Mostrará error si esa incógnita aún no se ha creado.</li>
+
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.31 (20 de mayo de 2021)</h3>
+				<p>Cambiamos duplicar por el más usual copiar/pegar en los problemas:</p>
+				<ul>
+					<li>En los problemas se cambia el botón duplicar por los botones copiar (ctrl/cmd + c) y pegar
+						(ctrl/cmd
+						+ v).
+						El
+						usuario
+						debe de hacer click donde quiera que se copien los componentes previamente copiados. Permite la
+						copia de
+						múltiples componentes.
+					</li>
+					<li>Corregido un error en las expresiones de las propiedades de los fluidos y del aire húmedo
+						por la que no reconocía como variable a otra propiedad de fluido/aire húmedo definida
+						anteriormente.
+					</li>
+					<li>Los errores que se generen en los componentes de un problema se guardan para que al volver a
+						cargarlos desde
+						la lista vuelvan a aparecer.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.30 (4 de mayo de 2021)</h3>
+				<p>Revisión y reescritura total y GRÁFICAS:</p>
+
+				<ul>
+					<li>Reescrito por completo utilizando Typescript y Hookstate, reducción del tamaño y mejora en la
+						velocidad de
+						ejecución</li>
+					<li>Versión simplificada de la lista de problemas, la edición de todas las propiedades del problema
+						se
+						pasan al
+						área
+						de trabajo.</li>
+					<li>Área lateral de edición fija, cambiando en función del componente seleccionado en el problema
+					</li>
+					<li>Formato A4 de fondo para simular totalmente el aspecto al imprimir.</li>
+					<li>Edición de las propiedades del problema a través de vínculo en el propio nombre del problema.
+					</li>
+					<li>Nº de cifras significativas personalizables en cada problema.</li>
+					<li>Movimiento de los componentes discontinuo para facilitar la alineación. En las propiedades de
+						cada
+						problema
+						aparece el campo "Paso de ratón [px]" configurable para cada problema.</li>
+					<li>Selección múltiple utilizando cmd/ctrl mejorada.</li>
+					<li>Se añade el botón "encontrar incógnitas" que revisa el problema en busca de nuevas incógnitas
+						añadidas a las
+						ecuaciones.</li>
+					<li>Botón "exportar a CSV" en las tabla.</li>
+					<li>Nuevo componente "Gráfica" para realizar gráfica de línea vinculadas a las tablas.</li>
+					<li>Y otras muchas mejoras ...</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.22 (20 de enero de 2021)</h3>
+				<p>Corrección de errores:</p>
+
+				<ul>
+					<li>Error en los valores del máximo y el mínimo de las incógnitas que estaban invertidos, donde
+						ponía
+						máximo
+						debería
+						de poner mínimo y viceversa.</li>
+					<li>Se colocan el mínimo, el valor inicial y el máximo ordenados para las incógnitas y los fluidos
+					</li>
+					<li>Se comprueba que el valor introducido en el nº de columnas de las tablas es un número, y así no
+						se
+						machacan
+						los nombres de las columnas
+						salvo que se reduzca el número de columnas.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.21 (19 de noviembre de 2020)</h3>
+				<p>Corregimos algunos errores descubiertos:</p>
+
+				<ul>
+					<li>Los díalogos laterales de edición ahora no atenuan la hoja del problema. Podemos realizar scroll
+						en
+						ella
+						para revisar el problema mientras editamos un componente.</li>
+					<li>Se elimina la actualización automática del valor inicial para fluidos y aires,
+						puesto que generaba muchos problemas. Cuando se resuelve el problema
+						se convierten en datos aquellos fluidos/aires que se puedan calcular (aquellos
+						que sólo dependen de datos del problema), acelerando así la resolución y eliminando
+						la necesidad de un valor inicial en esos casos.
+					</li>
+					<li>Se mejora el proceso de resolución para números muy grandes y/o muy pequeños.</li>
+					<li>Se cambia el formato por defecto a notación científica (exponecial) cuando el número es mayor de
+						1e+7</li>
+					<li>Se corrige un error por el que los datos mayores a 10000 no se mostraban correctamente.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.20 (3 de noviembre de 2020)</h3>
+				<p>Ya están aquí las tablas para poder resolver múltiples veces el mismo problema:</p>
+
+				<ul>
+					<li>Nuevo componente "Tabla" que permite resolver varias veces el mismo problema modificando
+						el valor de los datos para cada resolución. En el último apartado del <a
+							href="manual usuario.html">manual de
+							usuario</a> puedes ver como usar las tablas.</li>
+					<li>Los fluidos y aires húmedos, actualizan automaticamente su valor inicial en el caso de que
+						puedan
+						calcularlo,
+						acelerando la convergencia en dichos casos.
+					</li>
+					<li>Se añade un vínculo a toda la documentación desde el icono y el nombre de la zona superior
+						izquierda
+						de la
+						página con la lista de problemas.</li>
+					<li>Se mueve el alojamiento a la página personal.us.es/jfc redireccionando la pagina
+						http://cuadernodeproblemas.es
+					</li>
+				</ul>
+				<p>Y algunos errores corregidos.</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.10 (3 de septiembre de 2020)</h3>
+				<p>Hemos realizado un gran avance en esta versión esperamos que os gusten las nuevas características
+					añadidas:</p>
+
+				<ul>
+					<li>Modo off-line activado. Se permite trabajar durante un tiempo sin conexión a la red, cuando
+						volvemos
+						a tener
+						conexión
+						la aplicación sube de forma autmática los cambios realizados durante el periodo off-line.</li>
+					<li>Añadido el formateo <a href="https://commonmark.org/help/">Markdown</a> en los cuadros de texto.
+						Una
+						maravilla
+						...</li>
+					<li>Activada la opción de "Subir Problemas" de la versión 2. Usando el botón "Descargar problemas"
+						de la
+						versión
+						2
+						conseguimos
+						un archivo de texto que podemos subir a la versión 3 mediante el botón "Subir Problemas".</li>
+					<li>Botón "imprimir".</li>
+					<li>Se añade a las imágenes el campo "tipo" para facilitar la importación de imágenes desde "Google
+						Drive" y
+						"Dropbox".</li>
+					<li>Cambio de unidades para las incógnitas. Debe introducir la expresión para realizar el cambio (la
+						incógnita
+						siempre se llama "y" en está expresión) y la unidad final
+						tras el cambio. Ejemplo para cambiar de K a ºC: Expresión "y - 273.15", Unidad final "ºC"</li>
+					<li>Selección de múltiples componentes usando "Ctrl" ó "Cmd". Puede usarse para eliminar, duplicar,
+						enviar al
+						fondo o mover varios componentes.
+						Al mover los componentes debe mantenerse pulsado el "Ctrl" ó "Cmd", aunque da la impresión de
+						que
+						unicamente
+						se mueve el último componente seleccionado, cuando finaliza el desplazamiento se mueven todos,
+						intentaló.</li>
+					<li>Check para poner borde a los componentes.</li>
+					<li>Botón "Enviar fondo" para enviar al fondo el componente que está delante, cuando dos compnentes
+						se
+						solapan.
+					</li>
+					<li>En la descripción de datos, incógnitas, ecuaciones e imágenes se convierte -> en ➞ y <- en
+							←.</li>
+				</ul>
+				<p>Y muchos errores corregidos.</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.06 (5 de junio de 2020)</h3>
+				<p>Nuevas carácteristicas añadidas a esta versión:</p>
+				<ul>
+					<li>Nuevo botón para actualizar todos los valores iniciales utilizando los resultados. Facilita la
+						convergencia
+						hacia la solución por etapas.</li>
+					<li>Se Añade a las unidades un formateador que convierte ^2, ^3, ^4 y ^5 y el º en sus carácteres
+						UTF-8
+					</li>
+					<li>Se añade el check "Mostrar descripción" para los fluidos y los aires húmedos. Permite ocultar la
+						descripción automática con las variables de entrada que la aplicación genera.
+					</li>
+					<li>Se añaden las siguientes propiedades para los fluidos: Viscosidad cinemática: ν [m²/s],
+						Difusividad
+						térmica:
+						α
+						[m²/s] y Coeficiente de expansión térmica: β [1/K].</li>
+					<li>Se mejora el proceso de convergencia, el sistema intenta modifica los valores del las incógnitas
+						cuando estos resultan en una división por cero.</li>
+					<li>Al crear los componentes debe de hacerse click en el lugar donde se desea posicionar.</li>
+					<li>Se abre automáticamente la edición del componente después de crearlos.</li>
+					<li>Se eliminan los “:” a la descripción de datos e incógnitas. Si el usuario quiere debe incluir
+						él.
+					</li>
+				</ul>
+				<p>Y múltiples errores corregidos.</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.05 (30 de abril de 2020)</h3>
+				<p>Nuevas carácteristicas añadidas a esta versión:</p>
+				<ul>
+					<li>Se aplica color a las símbolos, unidades y valores. Para distinguir mejor cada tipo de elemento
+						diferente.
+					</li>
+					<li>Se añade el check "activo" a los elementos calculables para poder ponerlos inactivos y
+						que el proceso de resolución los ignore.</li>
+					<li>A la descripción de los elementos se le añade un nº de orden.</li>
+				</ul>
+				<p>Y como suele ser usual se corrigieron de múltiples errores.</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>V 3.04 (27 de abril de 2020)</h3>
+				<p>Corrección de múltiples errores de todo tipo. Se añade el botón de guardar problema en la base de
+					datos.
+					Anteriormente se guardaba el problema cada vez que se modificaba algo, aunque fuera la posición de
+					un
+					elemento.
+					Esto producía un número altisimo de escrituras en la base de datos.
+				</p>
+				<p>En esta versión sólo se guarda el problema cuando ocurre alguna de las siguientes cosas:</p>
+				<ul>
+					<li>El usuario pulsa el botón de guardar.</li>
+					<li>El usuario pulsa el botón de resolver.</li>
+					<li>El usuario vuelve a la lista de sus problemas.</li>
+					<li>El usuario cierra la pestaña o el explorador que está usando.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>Versión 3.0 (7 de abril de 2020)</h3>
+				<p>Se lanza la primera beta de la <strong>versión de 3 de CuadernoDeProblemas</strong>, con una interfaz
+					completamente
+					renovada y con nuevas carácteristicas para facilitar su uso.
+				</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>26 de octubre de 2016</h3>
+				<p>Se cambia el formato de los números a 4 cifras significativas cuando el número es menor que 10000 y
+					se
+					muestra
+					el
+					número sin decimales cuando es mayor de 10000.</p>
+				<h3>19 de octubre de 2016</h3>
+				<p>Se resuelve problema con las propiedades de fluidos y aires húmedos, por el cuando se seleccionaba un
+					una
+					propiedad de entrada distinta en un objeto se modificaban todos los que hubieran sido editados
+					antes.
+				</p>
+				<p>Se resuelve error en el cálculo de la humedad absoluta cuando se entraba con temperatura seca y
+					temperatura
+					húmeda.</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>17 de octubre de 2016</h3>
+				<p>Se arregla un problema por el que las pestañas de la derecha se movían hacia el final de la página en
+					algunos
+					navegadores de Windows.</p>
+				<p>Se cambia el color de fondo a celeste claro para mejorar contraste.</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>14 de octubre de 2016</h3>
+				<p>Se corrige un error en la visualización de la segunda propiedad de los fluidos y del aire húmedo.</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>6 de octubre de 2016</h3>
+				<p>Se resuelve un error en el filtrado de problemas que producía que tras filtrar, al pulsar algunos
+					problemas se
+					cargaran otros diferentes.</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>29 de septiembre de 2016</h3>
+				<p>Se resuelve un problema que alteraba el orden de los elementos tras calcular.</p>
+				<p>Se añade la visualización de las propiedades de entrada de las que dependen las propiedades de los
+					fluidos y
+					del
+					aire húmedo.</p>
+				<p>Cuando los datos sean expresiones se muestra la expresión y el valor calculado de la misma después de
+					resolver.
+				</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>16 de septiembre de 2016</h3>
+				<p>Se organizan los datos, propiedades de fluidos, incógnitas, enunciado, dibujos y ecuaciones en
+					pestañas,
+					todo
+					más
+					ordenado.</p>
+				<p>Se implementa la posibilidad de que los datos sean una expresión de un dato incluido previamente.</p>
+				<p>Se cambian ligeramente los colores del fondo de las barras para que encajen mejor con las nuevas
+					pestañas.</p>
+				<p>Se corrige un error por el que cuando la incógnita valía 0.0 el proceso de resolución no convergía.
+				</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>10 de septiembre de 2016</h3>
+				<p>Se ha reescrito por completo el código del lado del servidor. Las variables se han cambiado de
+					<i>float</i> a
+					<i>double</i> mejorando la precisión del cálculo.
+				</p>
+				<p>Se ha modificado el motor de resolución de sistemas para dividir las ecuaciones en bloques
+					independientes
+					antes
+					de resolver. Para determinar los bloques independientes de ecuaciones se utiliza el algoritmo de
+					Tarjan
+					para
+					grafos fuertemente conexos.</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>23 de junio de 2016</h3>
+				<p>Se añaden las propiedades <i>Viscosidad cinemática (m²/s), Número de Prandtl (-), Difusividad térmica
+						(m²/s)</i>.
+				</p>
+				<p>Se cambia y corrige las unidades de los calores específicos a <i>J/(kg·K)</i></p>
+			</div>
+
+			<div class="ui segment">
+				<h3>9 de junio de 2016</h3>
+				<p>Se ha reescrito por completo el código del lado del cliente de la aplicación (Versión 2). Le código
+					javascript
+					de
+					la aplicación alcanzó una longitud inmanejable, y por ello, ha sido necesario reestructurarlo y
+					prepararlo para
+					seguir creciendo.</p>
+
+				<p>La estructura de los objetos es ahora más simple, los datos, incógnitas, propiedades de fluidos o
+					aire
+					húmedo
+					aparecen en la lista de la izquierda. Los dibujos o imágenes y las ecuaciones en la lista de la
+					derecha
+					y la
+					lista
+					de problemas del usuario ocupan toda la pantalla cuando se seleccionan. El usuario es llevado
+					automáticamente a
+					su
+					lista de problemas cuando entra a la aplicación.</p>
+
+				<p>Por problemas en el renderizado de las ecuaciones usando MathJax, es posible dejar un texto entre
+					comillas (")
+					para que lo muestre tal cual. Por ejemplo si el texto contiene una letra griega al rendezizarlo la
+					muestra, al
+					poner nudo lo renderiza como &nu;do, para mantenerlo escribiríamos "nudo".</p>
+
+				<p>Se incluye la nueva versión de CoolProp (6.0.0) que incluye el Coeficiente expansión volumétrico.</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>15 de marzo de 2016</h3>
+				<p>Las imágenes se muestran en una barra deslizante a la derecha. Se añade la posibilidad de mostrar
+					imágenes
+					hechas
+					con "Google Draw". Para obtener el enlace a la imagen que debe incluirse en CuadernoDeProblemas,
+					debemos
+					utilizar
+					el menú "Archivo -> Publicar en la web ..." de Google Draw. Si la imagen es de Google Draw el
+					diálogo
+					que
+					muestra
+					la imagen añadirá un link para acceder a la edición de la imagen con Google Draw.</p>
+				<p>La representación de las ecuaciones se renderiza utilizando <a href="http://mathjax.org">MathJax</a>.
+				</p>
+				<p>Por compatibilidad con la notación <a href="http://asciimath.org">AsciiMath</a> las variables griegas
+					se
+					escriben
+					en inglés y sin ningún símbolo delimitador, por tanto, ya no es necesario escribir $ por delante.
+				</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>3 de febrero de 2016</h3>
+				<p>La lista de problemas se muestra en una barra deslizante a la izquierda.</p>
+				<p>Se cambia el aspecto de los diálogos usando el tema FLAT de jQuery UI.</p>
+				<p>Se añaden etiquetas desplegables (tooltips) a los botones de la barra.</p>
+				<p>Mejora en la gestión de los errores asociados a la evaluación de las expresiones, informando al
+					usuario
+					de que
+					la
+					expresión dio infinito o no se puede calcular debido al logaritmos de números negativos, etc.</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>13 de mayo de 2015</h3>
+				<p>La lista de problemas se ordena en función de la fecha de actualización, colocando los más recientes
+					arriba.
+				</p>
+				<p>Se añade la posibilidad de ordenar (arrastrando) las ecuaciones, los datos, las incógnitas, las
+					propiedades de
+					fluidos y las imágenes. Cuando el cursor cambia al icono <img src="img/mover.png"> puedes mover el
+					elemento
+					hacia
+					arriba o hacia abajo.</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>9 de abril de 2015</h3>
+				<p>Se añade la posibilidad de poner <b>Etiquetas</b> a los problemas, en la ventana de problemas se
+					podrá
+					filtrar
+					la
+					lista de problemas en función de sus etiquetas</p>
+				<p>Cambio de la referencia de entalpía/entropía de los fluidos: Sólo se usa referencia de entalpía 200 y
+					entropía
+					1
+					para los refrigerantes, para el resto de los fluidos se deja el valor que usa la librería CoolProp,
+					da
+					problemas
+					para aquellos fluidos para los que a 0ºC y 1 bar no existe líquido saturado</p>
+				<p>Se corrige error por el que no se actualizaba la lista de problemas después de duplicar uno de ellos.
+				</p>
+				<p>Se muestran nuevos mensajes de error cuando existen problemas para iniciar la sesión con un nombre de
+					usuario/contraseña.</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>13 de enero de 2015</h3>
+				<p>Se añaden las letra griegas, comenzando la variable con $.</p>
+				<ul>
+					<li>Minúsculas: $alfa (&alpha;), $beta (&beta;), $gamma (&gamma;), $delta (&delta;), $epsilon
+						(&epsilon;), $zeta
+						(&zeta;), $eta (&eta;), $theta (&theta;), $iota (&iota;), $kappa (&kappa;), $lambda (&lambda;),
+						$mu
+						(&mu;),
+						$nu
+						(&nu;), $xi (&xi;), $pi (&pi;), $ro (&rho;), $sigma (&sigma;), $tau (&tau;), $upsilon
+						(&upsilon;),
+						$fi
+						(&phi;),
+						$chi (&chi;), $psi (&psi;), $omega (&omega;).</li>
+
+					<li>Mayúsculas: $Delta (&Delta;), $Sigma (&Sigma;), $Omega (&Omega;).</li>
+				</ul>
+				<p>Al escribir el enlace a un problema en el campo de direcciones del navegador, si el usuario no a
+					iniciado
+					la
+					sesión, se carga el problema sin copiarlo en la cuenta del usario.</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>3 de octubre de 2014</h3>
+				<p>Botón configuración, con la posibilidad de cambiar el nombre de usuario y la contraseña.</p>
+				<p>Se precalculan las propiedades de los fluidos antes de comenzar el proceso iterativo de resolución,
+					para
+					no
+					crear
+					matrices singulares ...</p>
+				<p>Se Cambia la referencia de los fluidos puros para la entalpía y la entropía 200 kJ/kg y 1 kJ/kg·K
+					para
+					liquido
+					saturado a 0ºC.</p>
+				<p>Se desactivan los botones de lista de problemas, enlazar problemas y configuración cuando la sesión
+					no
+					está
+					iniciada.</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>5 de septiembre de 2014</h3>
+				<p>Se añaden las propiedades de los fluidos puros a través del uso de la librería <a
+						href="http://coolprop.org">CoolProp</a> y la propiedades sicrométricas del aire húmedo con
+					software
+					propio.
+				</p>
+				<p>Se añade el botón "duplicar" a todos los elementos: problemas, datos, incógnitas, ecuaciones,
+					imágenes,
+					propiedad
+					de fluido y propiedad sicrométrica.</p>
+				<p>Comprobaciones de posibles errores en los diferentes elementos del problema.</p>
+				<p>Mucha prueba y depuración ...</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>9 de julio de 2014</h3>
+				<p>El ancho de la columna de datos y el alto del enunciado son ahora redimensionables</p>
+
+			</div>
+
+			<div class="ui segment">
+				<h3>1 de julio de 2014</h3>
+				<p>El valor de los datos puede ser una operación pero sólo con números (de momento), por ejemplo "0.67 *
+					43.5 /
+					78.6".</p>
+				<p>Se resuelve un problema por el que los subíndices en mayúscula de las ecuaciones no se mostraban
+					bien.
+				</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>10 de junio de 2014</h3>
+				<p>Se añade una lista de imágenes a cada problema, para poder mostrar esquemas o dibujos asociados a los
+					problemas.
+					Las imágenes deben de estar almacenadas en algún lugar con URL pública (dropbox, twitter, facebook,
+					...)
+				</p>
+				<p>Se añade el inicio automático de sesión. El navegador entrará con el usuario y contraseña que se
+					entró la
+					última
+					vez. Si no se desea que lo recuerde se debe cerrar la sesión antes de salir.</p>
+				<p>Se añade un botón para obtener un enlace al problema. Si enviamos este enlace a otro usuario de
+					CuadernoDeProblemas al ejecutar este enlace se creará una copia de nuestro problema en la cuenta de
+					dicho
+					usuario.
+				</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>23 de mayo de 2014</h3>
+				<p>Se añaden los campos máximo, mínimo y valor inicial a las incógnitas para que el usuario pueda
+					ajustarlo
+					cuando
+					aparezcan problemas de convergencia.</p>
+				<p>El valor del datos introducido por el usuario se guarda exactamente igual que el usuario lo escribió.
+					Al
+					editar
+					datos, incógnitas y ecuaciones la aplicación se sitúa inmediatamente con el campo descripción,
+					facilitando así
+					el
+					moverse entre campos pulsando el tabulador.</p>
+				<p>Desde la lista de problemas se puede duplicar el problema seleccionado. Se activa la gestión de
+					errores
+					de
+					datos
+					e incógnitas.</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>2 de abril de 2014</h3>
+				<p>Se añade la fecha de primera creación y última actualización a cada uno de los problemas. Cuando se
+					listan los
+					problemas aparece debajo de cada nombre de problema <i>[fecha de creación, fecha actualización]</i>.
+				</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>14 de marzo de 2014</h3>
+				<p>REDISEÑO de la aplicación, se elimina el editor de texto genérico y se configura la aplicación a
+					través
+					de tres
+					objetos: <strong>datos</strong>, <strong>incógnitas</strong> y <strong>ecuaciones</strong>. La
+					aplicación
+					permite
+					crear, editar y eliminar un número indefinido de cada uno de los tres objetos. El objetivo es ayudar
+					al
+					alumno a
+					resolver los problemas de forma ordenada, pasando por las diversas fases que requiere una adecuada
+					<a href="como_resolver_problemas.html">metodología de resolución de problemas</a>.
+				</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>12 de julio de 2013</h3>
+				<p>La solución al problema se saca del editor de texto y se muestra en una barra lateral donde el
+					usuario
+					puede
+					editar la unidad de las variables. Se cambian los colores del editor de texto para distinguir
+					claramente
+					las
+					ecuaciones. Se corrigen más errores.</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>30 de abril de 2013</h3>
+				<p>Se añade un botón para la creación de las llaves automáticamente y se corrigen millones (o eso
+					parecían)
+					de
+					errores.</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>11 de febrero de 2013</h3>
+				<p>La primera versión de la aplicación. Se configura como un editor de texto plano en el cual las
+					ecuaciones
+					se
+					introducen entre llaves. El resto de lo escrito por el usuario no se procesa.</p>
+
+			</div>
+		</div>
+
+		<br>
+		<div class="ui center aligned container">
+			<p><a href="index_es.html" class="ui inverted link">pSolver</a> ::
+				<a href="https://groups.google.com/d/forum/pSolver" target="_blank">Grupo de usuarios</a> ::
+				<a href="http://www.twitter.com/psolver_org" target="_blank">twitter</a>
+			</p>
+		</div>
+		<br>
+	</div>
+</body>
+
+</html>

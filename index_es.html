@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>pSolver</title>
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="img/favicon.png" />
+	<meta name="description" content="Problem Solver" />
+	<meta name="keywords" content="pSolver" />
+	<meta name="author" content="Juan F. Coronel Toro" />
+	<link rel="stylesheet" type="text/css" href="./css/semantic.min.css">
+	<script src="./css/semantic.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script>
+		function setIdioma(valor) {
+			if (valor === 'es') {
+				location.href = "index_es.html"
+			} else if (valor === 'uk') {
+				location.href = "index.html"
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div class="ui container">
+		<h2><img style="margin-top: 10px;" src="img/logo_psolver.svg" width="48px" alt="Logo pSolver"> pSolver
+			<button style="float:right; margin-top: 10px;" class="ui icon button" onclick="setIdioma('es')">
+				<img src="img/Spain_flag_icon.png">
+			</button>
+			<button style="float:right; margin-top: 10px;" class="ui icon button" onclick="setIdioma('uk')">
+				<img src="img/UK_flag_icon.png">
+			</button>
+			<button style="float:right; margin-top: 10px;" class="ui button" onclick="location.href='https://jfcoronel.github.io/psolver_db/'" title="Base de datos de problemas de pSolver">
+				pSolver DB
+			</button>
+		</h2>
+
+
+		<div class="ui secondary pointing menu container">
+			<a href="index.html" class="item active">INICIO</a>
+			<a href="manual usuario.html" class="item">MANUAL USUARIO</a>
+			<a href="la_historia.html" class="item">HISTORIAL</a>
+		</div>
+
+		<div class="ui main container">
+
+			<div class="ui segment">
+
+				<h3>Bienvenidos a pSolver</h3>
+
+				<p>pSolver es una herramienta gratuita y on-line diseñada para analizar,
+					resolver, editar y gestionar problemas. El desarrollo de la aplicación trata de soslayar
+					los
+					principales inconvenientes que presenta el uso de "equation solvers" para el aprendizaje en materías
+					científicas y técnicas.
+					La aplicación permite plantear y resolver problemas del mismo modo que lo haríamos sobre un papel,
+					facilitando su revisión, evaluación, gestión y edición por profesores y alumnos.
+					Además de datos, ecuaciones e incógnitas la aplicación permite añadir textos enriquecidos
+					(Markdown),
+					imágenes, propiedades de fluidos (CoolProp), tablas y gráficas.</p>
+
+				<h4>Versión actual: 4.60</h4>
+				<button onclick="location.href='../app/'" class="ui primary button">
+					Ir a la aplicación
+				</button>
+			</div>
+
+
+			<div class="ui segment">
+				<h3>pSolver</h3>
+				<p>El desarrollo de la aplicación comenzó en 2013 con el nombre de "CuadernoDeProblemas", en 2023
+					cambió su nombre a "pSolver".Las principales modificaciones
+					que ha sufrido pueden consultarse el <a href="la_historia.html">historial.</a>
+				</p>
+				<p>pSolver es una aplicación on-line para facilitar la resolución de los problemas
+					que usualmente se plantean en las disciplinas técnicas vinculadas a la ingeniería.
+					En el siguiente video e muestra un tutorial de uso con un problema geométrico muy sencillo.
+				</p>
+				<p align="center">
+					<iframe width="640" height="360" src="https://www.youtube.com/embed/MdlZLjJZxPQ"
+						title="YouTube video player" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</p>
+				<p></p>
+
+				<p>En esta misma página puedes encontrar un <a href="manual usuario.html">manual de usuario</a>
+					donde se describen cada una de las carácteristicas de la herramienta y cómo hacer uso de ellas.
+				</p>
+
+				<p>En la sección de artículos y vídeos iremos incluyendo documentación y tutoriales para facilitar el
+					uso. También queremos
+					pediros vuestra colaboración para la mejora y depuración, hemos
+					creado un <a href="https://groups.google.com/d/forum/cuadernodeproblemas" target="_blank">grupo de
+						usuarios</a>
+					para que podáis informarnos de los errores, mejoras u opiniones.
+				</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>Explorador recomendado</h3>
+				<p>Se recomienda utilizar Chrome, Safari o Microsoft Edge. Con Firefox no está permitido el uso del
+					portapapeles del sistema para copiar y pegar
+					componentes, podemos activarlo siguiendo los siguientes pasos:</p>
+				<ol>
+					<li>Escribir "about:config" en la barra de navegación de Firefox.</li>
+					<li>Aceptar el mensaje de "Aceptar el riesgo y continuar".</li>
+					<li>Buscar "dom.events.testing.asyncClipboard" y ponerlo a "true".</li>
+				</ol>
+				<p>Los problemas son almacenados de forma automática en una base de datos on-line (Google Firebase).
+					Es posible utilizar la web de la aplicación en modo off-line (sin conexión a internet). Los cambios
+					en los problemas se guardan en forma local y se sincronizan cuando el mismo explorador vuelve a
+					conectarse a internet.</p>
+			</div>
+
+			<div class="ui segment">
+				<h3>Artículos y vídeos</h3>
+
+				<ul>
+					<li>13-feb-2023: <a href="ecuaciones_diferenciales.html">Tutorial de iniciación a
+							pSolver
+							#5.
+							Resolución de ecuaciones diferenciales mediante tablas (versión 3.49)</a></li>
+					<li>14-jul-2022: <a href="convergencia.html">Tutorial de iniciación a pSolver #4.
+							Problemas de convergencia (versión 3.44)</a></li>
+					<li>27-jun-2022: <a href="correccion_por_comparacion.html">Tutorial de iniciación a
+							pSolver
+							#3.
+							Corrección por comparación (versión 3.44)</a></li>
+					<li>02-jun-2021: <a href="iniciacion_cdp_1_v33.html">Tutorial de iniciación a pSolver
+							#1.
+							Actualizado
+							a la versión 3.3</a></li>
+					<li>01-jun-2021: <a href="iniciacion_cdp_propiedades_tablas_graficas.html">Tutorial de iniciación a
+							pSolver #2. Propiedades de fluidos, tablas y gráficas (V 3.3)</a></li>
+					<li>27-abr-2020: <a href="iniciacion_cdp_1.html">Tutorial de iniciación a pSolver #1 (V
+							3.0)</a>
+					</li>
+					<li>28-ene-2016: <a href="premioInnovacionETSI.html">Finalistas del II Premio de innovación docente
+							de
+							la
+							E.T.S.I.</a></li>
+					<li>5-sep-2014: <a href="video_iceilt2014.html">Video de ejemplo geométrico (versión 2.0)</a></li>
+					<li>14-mar-2014: <a href="como_resolver_problemas.html">¿Cómo resolver problemas?</a></li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
+				<h3>Agradecimientos</h3>
+				<p>Esta herramienta utiliza las siguientes magníficas librerías:</p>
+				<ul>
+					<li><a href="http://coolprop.org">CoolProp</a>: Para el cálculo de las propiedades de los fluidos
+						y el aire húmedo.</li>
+					<li><a href="http://mathjax.org">MathJax</a>: Para el formateo de las ecuaciones.</li>
+					<li><a href="https://github.com/silentmatt/expr-eval">expr-eval</a>: Evaluador de expresiones para
+						javascript.
+					</li>
+					<li><a href="http://reactjs.org">React</a>: Biblioteca de JavaScript para construir interfaces de
+						usuario.</li>
+					<li><a href="https://ant.design/docs/react/introduce">Ant design</a>: Biblioteca de componentes
+						gráficos de interfaz para React.</li>
+				</ul>
+			</div>
+
+
+			<div class="ui center aligned container">
+				<p><a href="index_es.html" class="ui inverted link">pSolver</a> ::
+					<a href="https://groups.google.com/d/forum/pSolver" target="_blank">Grupo de usuarios</a> ::
+					<a href="http://www.twitter.com/psolver_org" target="_blank">twitter</a>
+				</p>
+				<p>Culpable: <a href="http://jfc.us.es">Juan F. Coronel Toro</a></p>
+				<p>Cómplices: Luis Pérez-Lombard, Ismael Rodríguez Maestre</p>
+			</div>
+			<br>
+		</div>
+	</div>
+</body>
+
+</html>

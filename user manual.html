@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>pSolver</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="img/favicon.png" />
+	<meta name="description" content="Problem Solver" />
+	<meta name="keywords" content="pSolver" />
+	<meta name="author" content="Juan F. Coronel Toro" />
+	<link rel="stylesheet" type="text/css" href="./css/semantic.min.css">
+	<script src="./css/semantic.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+	<div class="ui container">
+		<h2><img style="margin-top: 10px;" src="img/logo_psolver.svg" width="48px" alt="Logo pSolver"> pSolver
+		</h2>
+
+		<div class="ui secondary pointing menu container">
+			<a href="index.html" class="item">HOME</a>
+			<a href="user manual.html" class="item active">USER MANUAL</a>
+			<a href="history.html" class="item">HISTORY</a>
+		</div>
+
+		<div class="ui main container">
+			<h1>User Manual</h1>
+			<h4>Updated to version 4.60</h4>
+
+			<h2>Index</h2>
+			<ol style="font-size: 1.2rem; line-height: 1.3">
+				<li><a href="#introduccion">Introduction</a></li>
+				<li><a href="#cuentas">User accounts</a></li>
+				<li><a href="#lista">Problem list</a></li>
+				<li><a href="#pantalla">Problem screen</a></li>
+				<li><a href="#componentes">Problem components</a></li>
+				<li><a href="#resolucion">Problem solving</a></li>
+				<li><a href="#secciones">Sections</a></li>
+				<li><a href="#multiple">Solving a problem multiple times</a></li>
+				<li><a href="#diferenciales">Numerical solution of differential/integral equations</a></li>
+				<li><a href="#expresiones">Mathematical expressions</a></li>
+				<li><a href="#correccion">Self-correction</a></li>
+				<li><a href="#actividades">Activities</a></li>
+			</ol>
+
+			<a name="introduccion"></a>
+			<div class="ui segment">
+				<h2>Introduction</h2>
+				<p>pSolver is an application designed to facilitate the resolution of numerical problems
+					that usually arise in technical disciplines related to engineering.</p>
+
+				<p>Each of the problems handled by the application must contain the basic
+					components needed to solve it. These components are:</p>
+
+				<ul>
+					<li>Data</li>
+					<li>Unknowns</li>
+					<li>Equations</li>
+				</ul>
+
+				<p>The application is able to solve a system of nonlinear equations,
+					finding the values of the unknowns that satisfy these equations.
+				</p>
+
+				<p>To add complementary information and anything else we want to include in the problem,
+					we have two more components:
+				</p>
+
+				<ul>
+					<li>Texts</li>
+					<li>Images</li>
+				</ul>
+
+				<p>The physical properties of the most common fluids and those of humid air (psychrometry)
+					can be obtained with two components added to the application for this purpose:
+				</p>
+
+				<ul>
+					<li>Fluids</li>
+					<li>Humid Airs</li>
+				</ul>
+
+				<p>In order to be able to analyze the results obtained by varying some of the input data,
+					the application has two components called:
+				</p>
+
+				<ul>
+					<li>Tables</li>
+					<li>Graphs</li>
+				</ul>
+
+				<p>To be able to perform several problems within the same document, sections can be used,
+					and to include repetitive calculations we have functions in which they can be programmed. These
+					actions are performed with the components:</p>
+
+				<ul>
+					<li>Sections</li>
+					<li>Functions</li>
+				</ul>
+
+				<p>All these components, which the user can create, move, edit, delete and copy/paste,
+					help to solve the problem in an orderly fashion.
+					In this way, the student can focus on the proper approach to the problem,
+					without having to spend time and effort on mathematical resolution
+					or searching for fluid properties in tables.
+				</p>
+
+				<p>The application can be run in any latest generation browser
+					by accessing the address <a target="_blank"
+						href="http://app.psolver.org/app">http://app.psolver.org/app</a>.
+				</p>
+				<p>It is recommended to use Chrome, Safari or Microsoft Edge.
+					With Firefox it is not allowed to use the system clipboard to copy and paste components,
+					we can enable it by following the steps below:</p>
+				<ol>
+					<li>Type "about:config" in the Firefox navigation bar.</li>
+					<li>Accept the "Accept risk and continue" message.</li>
+					<li>Search for "dom.events.testing.asyncClipboard" and set it to "true".</li>
+				</ol>
+				<p>Problems are automatically stored in an on-line database (Google Firebase).</p>
+			</div>
+
+			<a name="cuentas"></a>
+			<div class="ui segment">
+				<h2>User accounts</h2>
+
+				<p>When we access the application for the first time,
+					the following page appears, where we can choose the language
+					with the drop-down menu in the upper left zone.
+				</p>
+
+				<img class="ui bordered centered image" src="img/pantalla inicio_en.png" width="960"
+					alt="Starting page" />
+				<br>
+				<p>By clicking on the buttons that appear we can perform the following actions:</p>
+				<ul>
+					<li>Login: Log in with our already registered user.</li>
+					<li>Sign up: Allows to create a user account for the use of the application.</li>
+				</ul>
+
+				<p>If we click on the sign up button, the following registration dialog will appear:</p>
+				<img class="ui bordered centered image" src="img/registrar nuevo usuario_en.png" width="480"
+					alt="Sign up dialog" />
+				<br>
+				<p>After filling in the fields with our data, the following informative message will be displayed:</p>
+				<img class="ui bordered centered image" src="img/mensaje verificacion email_en.png" width="360"
+					alt="verification email" />
+				<br>
+				<p>To finish the registration process we must access our email,
+					where we will receive a message with a link to verify our account, please note that sometimes the
+					mail is classified as spam.
+					Once this is done we will be able to log in with our email and password.</p>
+				<p>The login dialog is shown in the following image, and allows us, if we have forgotten the password,
+					to sent an email to set a new password.
+				</p>
+				<img class="ui bordered centered image" src="img/iniciar sesion_en.png" width="480" alt="Login" />
+				<br>
+				<p>The next time we access the application with the same computer and browser
+					we will access directly without having to enter the user and password again.
+					If we do not want this to happen, which is highly recommended if the computer is not ours,
+					we must close the session before finishing.
+				</p>
+				<p>The application allows you to make a problem without having any user by pressing the "Blank problem"
+					button that appears in the startup window. We will be able to work normally with the problem but
+					nothing will be saved in the database. If we use the "Problem with known ID" button, it will ask us
+					for the ID (it is an identifying number of the problem that we will see later on how to obtain) of
+					an existing problem and will allow us to work with it, but as before, it will not save any of the
+					modifications that we make. It is also possible to work without a registered user by loading a
+					problem from a local file (stored on the user's computer).
+				</p>
+				<p>In the case of working on a problem without being logged as a user we will find in the upper
+					right part of the button bar the button
+					<svg viewBox="64 64 896 896" focusable="false" data-icon="save" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M893.3 293.3L730.7 130.7c-7.5-7.5-16.7-13-26.7-16V112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V338.5c0-17-6.7-33.2-18.7-45.2zM384 184h256v104H384V184zm456 656H184V184h136v136c0 17.7 14.3 32 32 32h320c17.7 0 32-14.3 32-32V205.8l136 136V840zM512 442c-79.5 0-144 64.5-144 144s64.5 144 144 144 144-64.5 144-144-64.5-144-144-144zm0 224c-44.2 0-80-35.8-80-80s35.8-80 80-80 80 35.8 80 80-35.8 80-80 80z">
+						</path>
+					</svg>
+					which allows us to save the current problem to the local disk (json format is used).
+				</p>
+				<p>When we create a new account the user type will be "Standard (student)" with a maximum number of 50
+					problems. If you want to change your user type to "Teacher" or to increase the
+					maximum number of problems, you have to write an email to psolver@psolver.org requesting it.</p>
+			</div>
+
+			<a name="lista"></a>
+			<div class="ui segment">
+				<h2>Problem list</h2>
+
+				<p>After logging into our account we are shown the following screen where we can see our problem list.
+				</p>
+				<img class="ui bordered centered image" src="img/lista problemas_en.png" width="960"
+					alt="Problem list" />
+				<br>
+
+				<p>This screen is where the user's problems are managed. We can create a new problem using
+					<svg viewBox="64 64 896 896" focusable="false" data-icon="file-add" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M854.6 288.6L639.4 73.4c-6-6-14.1-9.4-22.6-9.4H192c-17.7 0-32 14.3-32 32v832c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V311.3c0-8.5-3.4-16.7-9.4-22.7zM790.2 326H602V137.8L790.2 326zm1.8 562H232V136h302v216a42 42 0 0042 42h216v494zM544 472c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v108H372c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h108v108c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V644h108c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H544V472z">
+						</path>
+					</svg>
+					button.
+				</p>
+
+				<p>For each of the problems, a check box is shown on the left to select it and on the right
+					<svg viewBox="64 64 896 896" focusable="false" class="" data-icon="edit" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 000-48.4z">
+						</path>
+					</svg>
+					icon allows you to load the problem to work with.
+					If we select a problem using the check we can delete or duplicate it using the icons
+					<svg viewBox="64 64 896 896" focusable="false" class="" data-icon="edit" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M360 184h-8c4.4 0 8-3.6 8-8v8h304v-8c0 4.4 3.6 8 8 8h-8v72h72v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80h72v-72zm504 72H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zM731.3 840H292.7l-24.2-512h487l-24.2 512z">
+						</path>
+					</svg>
+					<svg viewBox="64 64 896 896" focusable="false" class="" data-icon="edit" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M832 64H296c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h496v688c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8V96c0-17.7-14.3-32-32-32zM704 192H192c-17.7 0-32 14.3-32 32v530.7c0 8.5 3.4 16.6 9.4 22.6l173.3 173.3c2.2 2.2 4.7 4 7.4 5.5v1.9h4.2c3.5 1.3 7.2 2 11 2H704c17.7 0 32-14.3 32-32V224c0-17.7-14.3-32-32-32zM350 856.2L263.9 770H350v86.2zM664 888H414V746c0-22.1-17.9-40-40-40H232V264h432v624z">
+						</path>
+					</svg>
+					above the list.
+				</p>
+
+				<p>The list of problems can be sorted according to different criteria (Date modified, category or name)
+					using the drop-down list. The category of each problem is displayed as a different coloured label.
+				</p>
+
+				<p>The "Filter" drop-down menu allows you to filter by category, so that only the problems of the
+					categories selected by the user will be shown in the list, or to make a filter according to the
+					type of problems: regular, statement, solutions or activity (see section "Activities").</p>
+
+				<p>The other buttons have the following functions:</p>
+
+				<ul>
+					<li>
+						<svg viewBox="64 64 896 896" focusable="false" data-icon="logout" width="1em" height="1em"
+							fill="currentColor" aria-hidden="true">
+							<path
+								d="M868 732h-70.3c-4.8 0-9.3 2.1-12.3 5.8-7 8.5-14.5 16.7-22.4 24.5a353.84 353.84 0 01-112.7 75.9A352.8 352.8 0 01512.4 866c-47.9 0-94.3-9.4-137.9-27.8a353.84 353.84 0 01-112.7-75.9 353.28 353.28 0 01-76-112.5C167.3 606.2 158 559.9 158 512s9.4-94.2 27.8-137.8c17.8-42.1 43.4-80 76-112.5s70.5-58.1 112.7-75.9c43.6-18.4 90-27.8 137.9-27.8 47.9 0 94.3 9.3 137.9 27.8 42.2 17.8 80.1 43.4 112.7 75.9 7.9 7.9 15.3 16.1 22.4 24.5 3 3.7 7.6 5.8 12.3 5.8H868c6.3 0 10.2-7 6.7-12.3C798 160.5 663.8 81.6 511.3 82 271.7 82.6 79.6 277.1 82 516.4 84.4 751.9 276.2 942 512.4 942c152.1 0 285.7-78.8 362.3-197.7 3.4-5.3-.4-12.3-6.7-12.3zm88.9-226.3L815 393.7c-5.3-4.2-13-.4-13 6.3v76H488c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h314v76c0 6.7 7.8 10.5 13 6.3l141.9-112a8 8 0 000-12.6z">
+							</path>
+						</svg>: Log out user.
+					</li>
+					<li>
+						<svg viewBox="64 64 896 896" focusable="false" data-icon="team" width="1em" height="1em"
+							fill="currentColor" aria-hidden="true">
+							<path
+								d="M824.2 699.9a301.55 301.55 0 00-86.4-60.4C783.1 602.8 812 546.8 812 484c0-110.8-92.4-201.7-203.2-200-109.1 1.7-197 90.6-197 200 0 62.8 29 118.8 74.2 155.5a300.95 300.95 0 00-86.4 60.4C345 754.6 314 826.8 312 903.8a8 8 0 008 8.2h56c4.3 0 7.9-3.4 8-7.7 1.9-58 25.4-112.3 66.7-153.5A226.62 226.62 0 01612 684c60.9 0 118.2 23.7 161.3 66.8C814.5 792 838 846.3 840 904.3c.1 4.3 3.7 7.7 8 7.7h56a8 8 0 008-8.2c-2-77-33-149.2-87.8-203.9zM612 612c-34.2 0-66.4-13.3-90.5-37.5a126.86 126.86 0 01-37.5-91.8c.3-32.8 13.4-64.5 36.3-88 24-24.6 56.1-38.3 90.4-38.7 33.9-.3 66.8 12.9 91 36.6 24.8 24.3 38.4 56.8 38.4 91.4 0 34.2-13.3 66.3-37.5 90.5A127.3 127.3 0 01612 612zM361.5 510.4c-.9-8.7-1.4-17.5-1.4-26.4 0-15.9 1.5-31.4 4.3-46.5.7-3.6-1.2-7.3-4.5-8.8-13.6-6.1-26.1-14.5-36.9-25.1a127.54 127.54 0 01-38.7-95.4c.9-32.1 13.8-62.6 36.3-85.6 24.7-25.3 57.9-39.1 93.2-38.7 31.9.3 62.7 12.6 86 34.4 7.9 7.4 14.7 15.6 20.4 24.4 2 3.1 5.9 4.4 9.3 3.2 17.6-6.1 36.2-10.4 55.3-12.4 5.6-.6 8.8-6.6 6.3-11.6-32.5-64.3-98.9-108.7-175.7-109.9-110.9-1.7-203.3 89.2-203.3 199.9 0 62.8 28.9 118.8 74.2 155.5-31.8 14.7-61.1 35-86.5 60.4-54.8 54.7-85.8 126.9-87.8 204a8 8 0 008 8.2h56.1c4.3 0 7.9-3.4 8-7.7 1.9-58 25.4-112.3 66.7-153.5 29.4-29.4 65.4-49.8 104.7-59.7 3.9-1 6.5-4.7 6-8.7z">
+							</path>
+						</svg>: Courses and activities: Requests the ID of a course to be able to register in it or the
+						ID of a task to create an activity (see section “Activities”).
+					</li>
+					<li>
+						<svg viewBox="64 64 896 896" focusable="false" data-icon="import" width="1em" height="1em"
+							fill="currentColor" aria-hidden="true">
+							<path
+								d="M888.3 757.4h-53.8c-4.2 0-7.7 3.5-7.7 7.7v61.8H197.1V197.1h629.8v61.8c0 4.2 3.5 7.7 7.7 7.7h53.8c4.2 0 7.7-3.4 7.7-7.7V158.7c0-17-13.7-30.7-30.7-30.7H158.7c-17 0-30.7 13.7-30.7 30.7v706.6c0 17 13.7 30.7 30.7 30.7h706.6c17 0 30.7-13.7 30.7-30.7V765.1c0-4.3-3.5-7.7-7.7-7.7zM902 476H588v-76c0-6.7-7.8-10.5-13-6.3l-141.9 112a8 8 0 000 12.6l141.9 112c5.3 4.2 13 .4 13-6.3v-76h314c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8z">
+							</path>
+						</svg>: Copy problem: Requests the ID of a problem and makes a copy of it in our
+						account. Allowing to copy problems between different users.
+					</li>
+					<li>
+						<svg viewBox="64 64 896 896" focusable="false" data-icon="cloud-download" width="1em"
+							height="1em" fill="currentColor" aria-hidden="true">
+							<path
+								d="M624 706.3h-74.1V464c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v242.3H400c-6.7 0-10.4 7.7-6.3 12.9l112 141.7a8 8 0 0012.6 0l112-141.7c4.1-5.2.4-12.9-6.3-12.9z">
+							</path>
+							<path
+								d="M811.4 366.7C765.6 245.9 648.9 160 512.2 160S258.8 245.8 213 366.6C127.3 389.1 64 467.2 64 560c0 110.5 89.5 200 199.9 200H304c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8h-40.1c-33.7 0-65.4-13.4-89-37.7-23.5-24.2-36-56.8-34.9-90.6.9-26.4 9.9-51.2 26.2-72.1 16.7-21.3 40.1-36.8 66.1-43.7l37.9-9.9 13.9-36.6c8.6-22.8 20.6-44.1 35.7-63.4a245.6 245.6 0 0152.4-49.9c41.1-28.9 89.5-44.2 140-44.2s98.9 15.3 140 44.2c19.9 14 37.5 30.8 52.4 49.9 15.1 19.3 27.1 40.7 35.7 63.4l13.8 36.5 37.8 10C846.1 454.5 884 503.8 884 560c0 33.1-12.9 64.3-36.3 87.7a123.07 123.07 0 01-87.6 36.3H720c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h40.1C870.5 760 960 670.5 960 560c0-92.7-63.1-170.7-148.6-193.3z">
+							</path>
+						</svg>: Download selected problems to a file: Backs up selected problems to a file (json format
+						is used).
+					</li>
+					<li>
+						<svg viewBox="64 64 896 896" focusable="false" data-icon="cloud-upload" width="1em" height="1em"
+							fill="currentColor" aria-hidden="true">
+							<path
+								d="M518.3 459a8 8 0 00-12.6 0l-112 141.7a7.98 7.98 0 006.3 12.9h73.9V856c0 4.4 3.6 8 8 8h60c4.4 0 8-3.6 8-8V613.7H624c6.7 0 10.4-7.7 6.3-12.9L518.3 459z">
+							</path>
+							<path
+								d="M811.4 366.7C765.6 245.9 648.9 160 512.2 160S258.8 245.8 213 366.6C127.3 389.1 64 467.2 64 560c0 110.5 89.5 200 199.9 200H304c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8h-40.1c-33.7 0-65.4-13.4-89-37.7-23.5-24.2-36-56.8-34.9-90.6.9-26.4 9.9-51.2 26.2-72.1 16.7-21.3 40.1-36.8 66.1-43.7l37.9-9.9 13.9-36.6c8.6-22.8 20.6-44.1 35.7-63.4a245.6 245.6 0 0152.4-49.9c41.1-28.9 89.5-44.2 140-44.2s98.9 15.3 140 44.2c19.9 14 37.5 30.8 52.4 49.9 15.1 19.3 27.1 40.7 35.7 63.4l13.8 36.5 37.8 10C846.1 454.5 884 503.8 884 560c0 33.1-12.9 64.3-36.3 87.7a123.07 123.07 0 01-87.6 36.3H720c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h40.1C870.5 760 960 670.5 960 560c0-92.7-63.1-170.7-148.6-193.3z">
+							</path>
+						</svg>: Import problems from file: Upload the problem(s) from a local file to your account.
+					</li>
+					<li>
+						<svg viewBox="64 64 896 896" focusable="false" data-icon="book" width="1em" height="1em"
+							fill="currentColor" aria-hidden="true">
+							<path
+								d="M832 64H192c-17.7 0-32 14.3-32 32v832c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V96c0-17.7-14.3-32-32-32zm-260 72h96v209.9L621.5 312 572 347.4V136zm220 752H232V136h280v296.9c0 3.3 1 6.6 3 9.3a15.9 15.9 0 0022.3 3.7l83.8-59.9 81.4 59.4c2.7 2 6 3.1 9.4 3.1 8.8 0 16-7.2 16-16V136h64v752z">
+							</path>
+						</svg>
+						: Edit categories: Allows you to modify the name and/or colour of existing categories.
+					</li>
+				</ul>
+			</div>
+
+			<a name="pantalla"></a>
+			<div class="ui segment">
+				<h2>Problem screen</h2>
+
+				<p>When we click on the arrow button on a specific problem we enter the problem screen.</p>
+
+				<p>The problem screen consists of 3 main zones:</p>
+				<ul>
+					<li>The button bar in the upper area.</li>
+					<li>The central area, which represents our problem on paper, is where the different components
+						created by the user will be placed.</li>
+					<li>A right side bar for editing components. Its content will change depending on the selected
+						component.
+					</li>
+				</ul>
+
+				<img class="ui bordered centered image" src="img/pantalla de problema_en.png" width="960"
+					alt="Problem screen" />
+				<br>
+
+				<p>To change user configuration we can use the button
+					<svg viewBox="64 64 896 896" focusable="false" data-icon="user" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M858.5 763.6a374 374 0 00-80.6-119.5 375.63 375.63 0 00-119.5-80.6c-.4-.2-.8-.3-1.2-.5C719.5 518 760 444.7 760 362c0-137-111-248-248-248S264 225 264 362c0 82.7 40.5 156 102.8 201.1-.4.2-.8.3-1.2.5-44.8 18.9-85 46-119.5 80.6a375.63 375.63 0 00-80.6 119.5A371.7 371.7 0 00136 901.8a8 8 0 008 8.2h60c4.4 0 7.9-3.5 8-7.8 2-77.2 33-149.5 87.8-204.3 56.7-56.7 132-87.9 212.2-87.9s155.5 31.2 212.2 87.9C779 752.7 810 825 812 902.2c.1 4.4 3.6 7.8 8 7.8h60a8 8 0 008-8.2c-1-47.8-10.9-94.3-29.5-138.2zM512 534c-45.9 0-89.1-17.9-121.6-50.4S340 407.9 340 362c0-45.9 17.9-89.1 50.4-121.6S466.1 190 512 190s89.1 17.9 121.6 50.4S684 316.1 684 362c0 45.9-17.9 89.1-50.4 121.6S557.9 534 512 534z">
+						</path>
+					</svg>. The parameters we can modify are shown in the configuration sidebar and will be saved for
+					each user.
+					This parameter includes: user name, the width of the sidebar, its position, the
+					zoom of the page and its position, we can modify the "Mouse step" in pixels that allows us to move
+					the components in jumps of that size, facilitating their positioning and alignment. We can also
+					change the white background of the page to a grid or dotted background.
+					To edit the components in the sidebar or with the quick editor,
+					we can choose the event (click, double click or ctrl+double click) that we want to use.
+					Finally, we can change the colour of the text used for the different components: data, unknowns,
+					etc. components: data,
+					unknowns, equations, properties of fluids or humid air, the labels of the images, tables and graphs,
+					and the "non-active" components.
+				</p>
+
+				<img class="ui bordered centered image" src="img/configuracion_en.png" width="360"
+					alt="Configuration" />
+				<br />
+				<p>In the upper area, outside the paper, we can see the name of the problem, its category and its
+					description. If we click on the name it will appear in the editing sidebar the general problem
+					properties, as shown in the following figure:
+				</p>
+
+				<img class="ui bordered centered image" src="img/propiedades problema_en.png" width="360"
+					alt="Problem properties" />
+				<br>
+
+				<p>Using this bar we can change the name, description, category and page size/orientation of the pages.
+					With the "private" check we block the problem, so that the problem cannot be seen or copied by
+					others.
+				</p>
+				<p>If we want to create a new type of category we must do it using the drop-down menu "Create
+					new category", where we can choose a name and colour of the category and then click on the "Add"
+					button.
+				</p>
+				<img class="ui bordered centered image" src="img/crear nueva categoria_en.png" width="360"
+					alt="Create new category" />
+				<br>
+				<p>In the drop-down menu "Numerical format" we can modify the number of significant figures to be used
+					in this problem, by default value is 4. Also configurable are the value below which it will be
+					rounded to zero, and the minimum and maximum values to change the notation from
+					decimal (the point is used as decimal separator) to exponential or scientific notation.</p>
+				<img class="ui bordered centered image" src="img/formato numerico_en.png" width="360"
+					alt="Numerical format" />
+				<br>
+				<p>The check "Automatically set results to initial values after solving" allows the results
+					to be reset to the initial values after performing a calculation automatically.</p>
+				<p>
+					We can also see the dates of creation and last modification of the problem and the problem ID. The
+					ID is a combination of letters and numbers that uniquely identifies the problem and which can be
+					copied to send the problem to another user. The e-mail of the original author of the problem
+					corresponds to the user who created the problem. This e-mail will be kept when we make copies of the
+					problem.</p>
+
+				<p>In addition to the user configuration button we can see the "New" drop-down menu that allows us to
+					create
+					each of the different components of a problem (details in the next section).</p>
+
+				<p>The classic buttons for saving, printing, editing, deleting, copying, cutting and pasting can be
+					found in the button bar or in the contextual menu using the right mouse button.
+					In addition we find the following buttons:</p>
+				<ul>
+					<li><svg viewBox="64 64 896 896" focusable="false" data-icon="eye" width="1em" height="1em"
+							fill="currentColor" aria-hidden="true">
+							<path
+								d="M942.2 486.2C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 000 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM512 766c-161.3 0-279.4-81.8-362.7-254C232.6 339.8 350.7 258 512 258c161.3 0 279.4 81.8 362.7 254C791.5 684.2 673.4 766 512 766zm-4-430c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm0 288c-61.9 0-112-50.1-112-112s50.1-112 112-112 112 50.1 112 112-50.1 112-112 112z">
+							</path>
+						</svg>
+						Activate/deactivate: Activates or deactivates the selected components (contextual menu).
+					</li>
+
+					<li><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="edit" width="1em"
+							height="1em" fill="currentColor" aria-hidden="true">
+							<path
+								d="M752 240H144c-17.7 0-32 14.3-32 32v608c0 17.7 14.3 32 32 32h608c17.7 0 32-14.3 32-32V272c0-17.7-14.3-32-32-32zm-40 600H184V312h528v528zm168-728H264c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h576v576c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8V144c0-17.7-14.3-32-32-32zM300 550h296v64H300z">
+							</path>
+						</svg>
+						Send to the back: When two components occupy the same space on the sheet, we can send the
+						selected component to the background (contextual menu).
+					</li>
+					<li><svg viewBox="0 0 1024 1024" focusable="false" data-icon="retweet" width="1em" height="1em"
+							fill="currentColor" aria-hidden="true">
+							<path
+								d="M136 552h63.6c4.4 0 8-3.6 8-8V288.7h528.6v72.6c0 1.9.6 3.7 1.8 5.2a8.3 8.3 0 0011.7 1.4L893 255.4c4.3-5 3.6-10.3 0-13.2L749.7 129.8a8.22 8.22 0 00-5.2-1.8c-4.6 0-8.4 3.8-8.4 8.4V209H199.7c-39.5 0-71.7 32.2-71.7 71.8V544c0 4.4 3.6 8 8 8zm752-80h-63.6c-4.4 0-8 3.6-8 8v255.3H287.8v-72.6c0-1.9-.6-3.7-1.8-5.2a8.3 8.3 0 00-11.7-1.4L131 768.6c-4.3 5-3.6 10.3 0 13.2l143.3 112.4c1.5 1.2 3.3 1.8 5.2 1.8 4.6 0 8.4-3.8 8.4-8.4V815h536.6c39.5 0 71.7-32.2 71.7-71.8V480c-.2-4.4-3.8-8-8.2-8z">
+							</path>
+						</svg>
+						Replace symbol: Replace a symbol with other entered by the user, searching all
+						components of the problem.
+					</li>
+
+					<li>
+						<svg viewBox="64 64 896 896" focusable="false" data-icon="database" width="1em" height="1em"
+							fill="currentColor" aria-hidden="true">
+							<path
+								d="M832 64H192c-17.7 0-32 14.3-32 32v832c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V96c0-17.7-14.3-32-32-32zm-600 72h560v208H232V136zm560 480H232V408h560v208zm0 272H232V680h560v208zM304 240a40 40 0 1080 0 40 40 0 10-80 0zm0 272a40 40 0 1080 0 40 40 0 10-80 0zm0 272a40 40 0 1080 0 40 40 0 10-80 0z">
+							</path>
+						</svg>
+						Tabular view: Displays several lists of the main components (data, unknowns, equations, fluids
+						and humid airs) in tabular format.
+					</li>
+					<li>
+						<svg viewBox="64 64 896 896" focusable="false" data-icon="schedule" width="1em" height="1em"
+							fill="currentColor" aria-hidden="true">
+							<path
+								d="M928 224H768v-56c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v56H548v-56c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v56H328v-56c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v56H96c-17.7 0-32 14.3-32 32v576c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V256c0-17.7-14.3-32-32-32zm-40 568H136V296h120v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56h148v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56h148v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56h120v496zM416 496H232c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h184c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8zm0 136H232c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h184c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8zm308.2-177.4L620.6 598.3l-52.8-73.1c-3-4.2-7.8-6.6-12.9-6.6H500c-6.5 0-10.3 7.4-6.5 12.7l114.1 158.2a15.9 15.9 0 0025.8 0l165-228.7c3.8-5.3 0-12.7-6.5-12.7H737c-5-.1-9.8 2.4-12.8 6.5z">
+							</path>
+						</svg>
+						Self-correction: This option allows us to correct our problem by comparing it with
+						another problem that should be correct. You can find a section on the subject below.
+					</li>
+
+				</ul>
+
+				<p>Finally, we can find the buttons related to the resolution and management of the problem:</p>
+
+				<ul>
+					<li>
+						<svg viewBox="64 64 896 896" focusable="false" data-icon="file-search" width="1em" height="1em"
+							fill="currentColor" aria-hidden="true">
+							<path
+								d="M688 312v-48c0-4.4-3.6-8-8-8H296c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h384c4.4 0 8-3.6 8-8zm-392 88c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h184c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H296zm144 452H208V148h560v344c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8V108c0-17.7-14.3-32-32-32H168c-17.7 0-32 14.3-32 32v784c0 17.7 14.3 32 32 32h272c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm445.7 51.5l-93.3-93.3C814.7 780.7 828 743.9 828 704c0-97.2-78.8-176-176-176s-176 78.8-176 176 78.8 176 176 176c35.8 0 69-10.7 96.8-29l94.7 94.7c1.6 1.6 3.6 2.3 5.6 2.3s4.1-.8 5.6-2.3l31-31a7.9 7.9 0 000-11.2zM652 816c-61.9 0-112-50.1-112-112s50.1-112 112-112 112 50.1 112 112-50.1 112-112 112z">
+							</path>
+						</svg>
+						Search for unknowns: Review the equations and create the new unknowns found in them.
+					</li>
+
+					<li>
+						<svg viewBox="64 64 896 896" focusable="false" data-icon="calculator" width="1em" height="1em"
+							fill="currentColor" aria-hidden="true">
+							<path
+								d="M251.2 387H320v68.8c0 1.8 1.8 3.2 4 3.2h48c2.2 0 4-1.4 4-3.3V387h68.8c1.8 0 3.2-1.8 3.2-4v-48c0-2.2-1.4-4-3.3-4H376v-68.8c0-1.8-1.8-3.2-4-3.2h-48c-2.2 0-4 1.4-4 3.2V331h-68.8c-1.8 0-3.2 1.8-3.2 4v48c0 2.2 1.4 4 3.2 4zm328 0h193.6c1.8 0 3.2-1.8 3.2-4v-48c0-2.2-1.4-4-3.3-4H579.2c-1.8 0-3.2 1.8-3.2 4v48c0 2.2 1.4 4 3.2 4zm0 265h193.6c1.8 0 3.2-1.8 3.2-4v-48c0-2.2-1.4-4-3.3-4H579.2c-1.8 0-3.2 1.8-3.2 4v48c0 2.2 1.4 4 3.2 4zm0 104h193.6c1.8 0 3.2-1.8 3.2-4v-48c0-2.2-1.4-4-3.3-4H579.2c-1.8 0-3.2 1.8-3.2 4v48c0 2.2 1.4 4 3.2 4zm-195.7-81l61.2-74.9c4.3-5.2.7-13.1-5.9-13.1H388c-2.3 0-4.5 1-5.9 2.9l-34 41.6-34-41.6a7.85 7.85 0 00-5.9-2.9h-50.9c-6.6 0-10.2 7.9-5.9 13.1l61.2 74.9-62.7 76.8c-4.4 5.2-.8 13.1 5.8 13.1h50.8c2.3 0 4.5-1 5.9-2.9l35.5-43.5 35.5 43.5c1.5 1.8 3.7 2.9 5.9 2.9h50.8c6.6 0 10.2-7.9 5.9-13.1L383.5 675zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-36 732H180V180h664v664z">
+							</path>
+						</svg>
+						Solve: Solve the problem by calculating the unknowns.
+					</li>
+					<li>
+						<svg viewBox="64 64 896 896" focusable="false" data-icon="function" width="1em" height="1em"
+							fill="currentColor" aria-hidden="true">
+							<defs>
+								<style></style>
+							</defs>
+							<path
+								d="M841 370c3-3.3 2.7-8.3-.6-11.3a8.24 8.24 0 00-5.3-2.1h-72.6c-2.4 0-4.6 1-6.1 2.8L633.5 504.6a7.96 7.96 0 01-13.4-1.9l-63.5-141.3a7.9 7.9 0 00-7.3-4.7H380.7l.9-4.7 8-42.3c10.5-55.4 38-81.4 85.8-81.4 18.6 0 35.5 1.7 48.8 4.7l14.1-66.8c-22.6-4.7-35.2-6.1-54.9-6.1-103.3 0-156.4 44.3-175.9 147.3l-9.4 49.4h-97.6c-3.8 0-7.1 2.7-7.8 6.4L181.9 415a8.07 8.07 0 007.8 9.7H284l-89 429.9a8.07 8.07 0 007.8 9.7H269c3.8 0 7.1-2.7 7.8-6.4l89.7-433.1h135.8l68.2 139.1c1.4 2.9 1 6.4-1.2 8.8l-180.6 203c-2.9 3.3-2.6 8.4.7 11.3 1.5 1.3 3.4 2 5.3 2h72.7c2.4 0 4.6-1 6.1-2.8l123.7-146.7c2.8-3.4 7.9-3.8 11.3-1 .9.8 1.6 1.7 2.1 2.8L676.4 784c1.3 2.8 4.1 4.7 7.3 4.7h64.6a8.02 8.02 0 007.2-11.5l-95.2-198.9c-1.4-2.9-.9-6.4 1.3-8.8L841 370z">
+							</path>
+						</svg>
+						Global functions: Allows to include in the problem any of the global functions available in
+						pSolver.
+						To be able to use global functions in a problem we must first include them in the problem using
+						this button.
+					</li>
+					<li><svg viewBox="64 64 896 896" focusable="false" data-icon="sync" width="1em" height="1em"
+							fill="currentColor" aria-hidden="true">
+							<path
+								d="M168 504.2c1-43.7 10-86.1 26.9-126 17.3-41 42.1-77.7 73.7-109.4S337 212.3 378 195c42.4-17.9 87.4-27 133.9-27s91.5 9.1 133.8 27A341.5 341.5 0 01755 268.8c9.9 9.9 19.2 20.4 27.8 31.4l-60.2 47a8 8 0 003 14.1l175.7 43c5 1.2 9.9-2.6 9.9-7.7l.8-180.9c0-6.7-7.7-10.5-12.9-6.3l-56.4 44.1C765.8 155.1 646.2 92 511.8 92 282.7 92 96.3 275.6 92 503.8a8 8 0 008 8.2h60c4.4 0 7.9-3.5 8-7.8zm756 7.8h-60c-4.4 0-7.9 3.5-8 7.8-1 43.7-10 86.1-26.9 126-17.3 41-42.1 77.8-73.7 109.4A342.45 342.45 0 01512.1 856a342.24 342.24 0 01-243.2-100.8c-9.9-9.9-19.2-20.4-27.8-31.4l60.2-47a8 8 0 00-3-14.1l-175.7-43c-5-1.2-9.9 2.6-9.9 7.7l-.7 181c0 6.7 7.7 10.5 12.9 6.3l56.4-44.1C258.2 868.9 377.8 932 512.2 932c229.2 0 415.5-183.7 419.8-411.8a8 8 0 00-8-8.2z">
+							</path>
+						</svg>
+						Results to initial values: It takes as initial values for the resolution the results currently
+						calculated. This option, as we will see later on, is very interesting when problems of
+						convergence arise in the resolution of the problem.
+					</li>
+
+				</ul>
+
+				<p>The final area on the right hand side of the button bar contains the icon
+					<svg viewBox="64 64 896 896" focusable="false" data-icon="user" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M858.5 763.6a374 374 0 00-80.6-119.5 375.63 375.63 0 00-119.5-80.6c-.4-.2-.8-.3-1.2-.5C719.5 518 760 444.7 760 362c0-137-111-248-248-248S264 225 264 362c0 82.7 40.5 156 102.8 201.1-.4.2-.8.3-1.2.5-44.8 18.9-85 46-119.5 80.6a375.63 375.63 0 00-80.6 119.5A371.7 371.7 0 00136 901.8a8 8 0 008 8.2h60c4.4 0 7.9-3.5 8-7.8 2-77.2 33-149.5 87.8-204.3 56.7-56.7 132-87.9 212.2-87.9s155.5 31.2 212.2 87.9C779 752.7 810 825 812 902.2c.1 4.4 3.6 7.8 8 7.8h60a8 8 0 008-8.2c-1-47.8-10.9-94.3-29.5-138.2zM512 534c-45.9 0-89.1-17.9-121.6-50.4S340 407.9 340 362c0-45.9 17.9-89.1 50.4-121.6S466.1 190 512 190s89.1 17.9 121.6 50.4S684 316.1 684 362c0 45.9-17.9 89.1-50.4 121.6S557.9 534 512 534z">
+						</path>
+					</svg>
+					, when we leave the mouse over it we can see the name of the registered user, and on the left side
+					the button
+					<svg viewBox="64 64 896 896" focusable="false" data-icon="arrow-left" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M872 474H286.9l350.2-304c5.6-4.9 2.2-14-5.2-14h-88.5c-3.9 0-7.6 1.4-10.5 3.9L155 487.8a31.96 31.96 0 000 48.3L535.1 866c1.5 1.3 3.3 2 5.2 2h91.5c7.4 0 10.8-9.2 5.2-14L286.9 550H872c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8z">
+						</path>
+					</svg>
+					to return to the problem list or the initial registration screen.
+				</p>
+
+				<p>You can select multiple components by holding down ctrl (cmd on MacOS) and apply the action to all
+					components. You can also select multiple components by clicking and dragging the mouse while holding
+					down the ctrl key (cmd on MacOS), a box with a dashed border will appear.</p>
+			</div>
+
+			<a name="componentes"></a>
+			<div class="ui segment">
+				<h2>Problem components</h2>
+
+				<p><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="edit" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M920 416H616c-4.4 0-8 3.6-8 8v112c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-56h60v320h-46c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h164c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8h-46V480h60v56c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V424c0-4.4-3.6-8-8-8zM656 296V168c0-4.4-3.6-8-8-8H104c-4.4 0-8 3.6-8 8v128c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-64h168v560h-92c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h264c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8h-92V232h168v64c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8z">
+						</path>
+					</svg>
+					Text: This component allows us to insert a text box. Texts can be formatted using "Markdown". This
+					<a href="https://commonmark.org/help/">link</a> briefly describes what Markdown is and how to use
+					it. In the following link you can see an example with all the formatting possibilities that Markdown
+					offers within pSolver: <a href="http://psolver.org/?id=4694a32c-d3f9-4be3-af4b-3c34ece9bb3a"
+						target="_blank">Problem with
+						Markdown text examples.</a>
+				</p>
+
+				<img class="ui bordered centered image" src="img/Editar texto_en.png" width="960" alt="Text edit" />
+				<br>
+				<p>If we add a variable name between ??, for example ?? x_1 ?? will be replaced by its value
+					if this variable corresponds to a Data, an Unknown, a Fluid or a Humid air.
+					So, for example, if x_1 is a data worth 2.34 m/s, the text will print “2.34 m/s”. For the data it
+					will always include the value and the unit without changing the unit,
+					and for the unknowns it will include the value and the unit already changed, if this change exists.
+				</p>
+
+				<p>In the case that we want to force a data or an unknown the unit to be used,
+					we must add the desired unit between square brackets. For example: ?? T_1 [K] ??
+					will look for the value of T_1 in K whenever this unit is the original or the modified unit.</p>
+
+				<p>We can add text boxes or drop-down lists using references to a previously created “Question”
+					component.
+					To do this we must write the symbol of the question component between @@, for example @@ q_1 @@ will
+					be
+					replaced by a text box or a drop-down list (depending on the type of question),
+					which can be filled in by the student.
+					The purpose of this use of questions is to create activities with questions for the students to fill
+					in.
+				</p>
+
+				<p><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="edit" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 00-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z">
+						</path>
+					</svg>
+					Data: This component is used to enter the known data at the beginning of the problem. The data
+					symbol is
+					the mathematical name of the data and is formatted using AsciiMath as are the equations, fluid
+					properties and unknowns. A brief description of how to use this mathematical format is given in the
+					section <a href="#expresiones">Mathematical expressions</a>. The data value can be a number, an
+					expression with numbers, an expression containing other previous data or questions, or a text string
+					if enclosed
+					in
+					inverted commas, e.g. "Water". This type of string data can be used for fluids as we will see later.
+				</p>
+				<p>The "Active" option that appears in many components may not be selected, and in that case the program
+					would not take that component into account when solving the problem. As we will see, deactivating a
+					component so that the application does not use it in its resolution process can help to perform an
+					orderly resolution of the problem and thus improve the convergence of the resolution.
+
+				</p>
+				<p>The "Border" option places a border line around the component. <svg viewBox="64 64 896 896"
+						focusable="false" data-icon="lock" width="1em" height="1em" fill="currentColor"
+						aria-hidden="true">
+						<path
+							d="M832 464h-68V240c0-70.7-57.3-128-128-128H388c-70.7 0-128 57.3-128 128v224h-68c-17.7 0-32 14.3-32 32v384c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V496c0-17.7-14.3-32-32-32zM332 240c0-30.9 25.1-56 56-56h248c30.9 0 56 25.1 56 56v224H332V240zm460 600H232V536h560v304zM484 701v53c0 4.4 3.6 8 8 8h40c4.4 0 8-3.6 8-8v-53a48.01 48.01 0 10-56 0z">
+						</path>
+					</svg> check box locks the component, preventing it from being modified or deleted. Locked
+					components can only be repositioned.
+
+				</p>
+				<p>We can change the unit of the data by using the "Change unit" drop-down where we enter the final unit
+					and the mathematical expression to perform the unit change (the data in this expression
+					will always be called "x"). Finally, the bottom button allows us to convert the data into an
+					unknown.
+				</p>
+
+				<img class="ui bordered centered image" src="img/Editar dato_en.png" width="860" alt="Data edit" />
+				<br>
+
+				<p><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="edit" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M764 280.9c-14-30.6-33.9-58.1-59.3-81.6C653.1 151.4 584.6 125 512 125s-141.1 26.4-192.7 74.2c-25.4 23.6-45.3 51-59.3 81.7-14.6 32-22 65.9-22 100.9v27c0 6.2 5 11.2 11.2 11.2h54c6.2 0 11.2-5 11.2-11.2v-27c0-99.5 88.6-180.4 197.6-180.4s197.6 80.9 197.6 180.4c0 40.8-14.5 79.2-42 111.2-27.2 31.7-65.6 54.4-108.1 64-24.3 5.5-46.2 19.2-61.7 38.8a110.85 110.85 0 00-23.9 68.6v31.4c0 6.2 5 11.2 11.2 11.2h54c6.2 0 11.2-5 11.2-11.2v-31.4c0-15.7 10.9-29.5 26-32.9 58.4-13.2 111.4-44.7 149.3-88.7 19.1-22.3 34-47.1 44.3-74 10.7-27.9 16.1-57.2 16.1-87 0-35-7.4-69-22-100.9zM512 787c-30.9 0-56 25.1-56 56s25.1 56 56 56 56-25.1 56-56-25.1-56-56-56z">
+						</path>
+					</svg>
+					Unknown: This component is used to create the unknowns of our problem whose value will be obtained
+					by the application when solving a set of equations. The unknowns may be automatically created by
+					the application if we use the "find unknowns" button in the toolbar.
+				</p>
+				<p>If, once the result has been obtained, we want to change the unit of the unknown, we can do this
+					using the drop-down menu "Change of unit" where we introduce the final unit and the mathematical
+					expression to make the unit change (the unknown in this expression will always be called "y").
+				</p>
+				<p>The "Convergence parameters" drop-down will be discussed later in the section on convergence of
+					results. We can also find a button to convert the unknown to a data.</p>
+
+				<img class="ui bordered centered image" src="img/Editar incognita_en.png" width="860"
+					alt="Unknown edit" />
+				<br>
+
+				<p><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="edit" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M632 888H392c-4.4 0-8 3.6-8 8v32c0 17.7 14.3 32 32 32h192c17.7 0 32-14.3 32-32v-32c0-4.4-3.6-8-8-8zM512 64c-181.1 0-328 146.9-328 328 0 121.4 66 227.4 164 284.1V792c0 17.7 14.3 32 32 32h264c17.7 0 32-14.3 32-32V676.1c98-56.7 164-162.7 164-284.1 0-181.1-146.9-328-328-328zm127.9 549.8L604 634.6V752H420V634.6l-35.9-20.8C305.4 568.3 256 484.5 256 392c0-141.4 114.6-256 256-256s256 114.6 256 256c0 92.5-49.4 176.3-128.1 221.8z">
+						</path>
+					</svg>
+					Equation: This is the component with which the user can define the equations of his problems. The
+					equations must be written in AsciiMath format and must contain a single equal sign "=". In
+					the section "Mathematical expressions" you can find a summary of how the expressions present
+					in the application are evaluated.
+				</p>
+
+				<img class="ui bordered centered image" src="img/Editar ecuaciones_en.png" width="860"
+					alt="Equation edit" />
+				<br>
+
+				<p><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="edit" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zm-40 632H136v-39.9l138.5-164.3 150.1 178L658.1 489 888 761.6V792zm0-129.8L664.2 396.8c-3.2-3.8-9-3.8-12.2 0L424.6 666.4l-144-170.7c-3.2-3.8-9-3.8-12.2 0L136 652.7V232h752v430.2zM304 456a88 88 0 100-176 88 88 0 000 176zm0-116c15.5 0 28 12.5 28 28s-12.5 28-28 28-28-12.5-28-28 12.5-28 28-28z">
+						</path>
+					</svg>
+					Images: Component that allows the insertion of images that are accessible on the internet. The size
+					of the images is controlled by the "Width" property which defines the % of the page width that the
+					image should occupy.
+				</p>
+				<p>The three options for inserting images are chosen in the "Type" property:</p>
+				<ul>
+					<li>URL address: For this option in the "link" we must include the URL address where the image we
+						want to show is located. We recommend using the application <a href="https:\\postimages.org"
+							target="_blank"">postimages.org</a> 
+						to store images for free and without registration.
+					</li>
+					<li>Google Drive: If the image is in our Google Drive we must share it and put the option " Anyone with the link
+							can see the image". Copy the link provided by Google Drive and paste it into the "link"
+							field. </li>
+					<li>Dropbox: In the case of having the image stored in Dropbox, from Dropbox we create a link so
+						that "Anyone who has the link can see the file". We copy the link provided by Dropbox and paste
+						it into the "link" property.
+					</li>
+				</ul>
+
+				<img class="ui bordered centered image" src="img/Editar imagenes_en.png" class="con-borde" width="860"
+					alt="Image edit" />
+				<br>
+
+				<p><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="edit" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M512 472a40 40 0 1080 0 40 40 0 10-80 0zm367 352.9L696.3 352V178H768v-68H256v68h71.7v174L145 824.9c-2.8 7.4-4.3 15.2-4.3 23.1 0 35.3 28.7 64 64 64h614.6c7.9 0 15.7-1.5 23.1-4.3 33-12.7 49.4-49.8 36.6-82.8zM395.7 364.7V180h232.6v184.7L719.2 600c-20.7-5.3-42.1-8-63.9-8-61.2 0-119.2 21.5-165.3 60a188.78 188.78 0 01-121.3 43.9c-32.7 0-64.1-8.3-91.8-23.7l118.8-307.5zM210.5 844l41.7-107.8c35.7 18.1 75.4 27.8 116.6 27.8 61.2 0 119.2-21.5 165.3-60 33.9-28.2 76.3-43.9 121.3-43.9 35 0 68.4 9.5 97.6 27.1L813.5 844h-603z">
+						</path>
+					</svg>
+					Fluids: Este componente permite obtener las propiedades físicas de muchos fluidos a través del uso
+					de la librería <a href="http://www.coolprop.org/">Coolprop</a>. Para obtener una propiedad es
+					necesario
+					definir un símbolo, seleccionar el fluido y facilitar el valor de dos propiedades físicas del mismo.
+					Estos valores pueden ser números, datos, incógnitas o expresiones matemáticas que combinen los
+					componentes anteriores.
+
+
+					FLuid: This component allows the physical properties of many fluids to be obtained through the use
+					of the <a href="http://www.coolprop.org/">Coolprop</a> library. To obtain a property, it is
+					necessary to define a symbol, select the fluid and provide the value of two of its physical
+					properties. These values can be numbers, data, unknowns or mathematical expressions that combine the
+					above components.
+				</p>
+				<p>
+					In the list of available fluids will appear all the fluids provided by the Coolprop library plus all
+					the string data that exist in the problem, for example if we have a data f = "Water", f will appear
+					at the end of the list. Thus changing the value of the data we will change the fluid used
+					automatically, if we use string data we can use as fluid name, in addition to the ones
+					listed in the dropdown, the names used by Coolprop for fluids and incompressible fluids.
+				</p>
+
+				<img class="ui bordered centered image" src="img/Editar fluidos_en.png" class="con-borde" width="860"
+					alt="Fluid edit" />
+				<br>
+
+				<p><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="edit" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M811.4 418.7C765.6 297.9 648.9 212 512.2 212S258.8 297.8 213 418.6C127.3 441.1 64 519.1 64 612c0 110.5 89.5 200 199.9 200h496.2C870.5 812 960 722.5 960 612c0-92.7-63.1-170.7-148.6-193.3zm36.3 281a123.07 123.07 0 01-87.6 36.3H263.9c-33.1 0-64.2-12.9-87.6-36.3A123.3 123.3 0 01140 612c0-28 9.1-54.3 26.2-76.3a125.7 125.7 0 0166.1-43.7l37.9-9.9 13.9-36.6c8.6-22.8 20.6-44.1 35.7-63.4a245.6 245.6 0 0152.4-49.9c41.1-28.9 89.5-44.2 140-44.2s98.9 15.3 140 44.2c19.9 14 37.5 30.8 52.4 49.9 15.1 19.3 27.1 40.7 35.7 63.4l13.8 36.5 37.8 10c54.3 14.5 92.1 63.8 92.1 120 0 33.1-12.9 64.3-36.3 87.7z">
+						</path>
+					</svg>
+					Humid air: This component makes it possible to obtain the psychrometric properties of humid air, for
+					which it also uses the <a href="http://www.coolprop.org/">Coolprop</a> library. In this case the
+					properties to be supplied are three instead of two. We can apply a unit change to both fluids and
+					humid air, providing the final unit and the expression as a function of "x".
+				</p>
+
+				<img class="ui bordered centered image" src="img/Editar aires_en.png" class="con-borde" width="860"
+					alt="Humid air edit" />
+				<br>
+
+				<p><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="edit" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zm-40 208H676V232h212v136zm0 224H676V432h212v160zM412 432h200v160H412V432zm200-64H412V232h200v136zm-476 64h212v160H136V432zm0-200h212v136H136V232zm0 424h212v136H136V656zm276 0h200v136H412V656zm476 136H676V656h212v136z">
+						</path>
+					</svg>
+					Tables: Tables are components that allow the problem to be solved several times by changing the data
+					value for each row of the table. Tables are discussed in more detail in the section "Solving the
+					problem multiple times".
+				</p>
+
+				<p>
+					<svg viewBox="64 64 896 896" focusable="false" data-icon="line-chart" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M888 792H200V168c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v688c0 4.4 3.6 8 8 8h752c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM305.8 637.7c3.1 3.1 8.1 3.1 11.3 0l138.3-137.6L583 628.5c3.1 3.1 8.2 3.1 11.3 0l275.4-275.3c3.1-3.1 3.1-8.2 0-11.3l-39.6-39.6a8.03 8.03 0 00-11.3 0l-230 229.9L461.4 404a8.03 8.03 0 00-11.3 0L266.3 586.7a8.03 8.03 0 000 11.3l39.5 39.7z">
+						</path>
+					</svg>
+					Graphs: Graphs allow you to represent using line graphs the values obtained with the tables. We will
+					see them in more detail in the section "Solving the problem multiple times".
+				</p>
+
+				<p>
+					<svg viewBox="64 64 896 896" focusable="false" data-icon="border-verticle" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M872 476H152c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h720c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0-166h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 498h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0-664h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 498h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM650 216h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm56 592h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm-332 0h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm-56-592h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-166 0h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm332 0h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zM208 808h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm332 0h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM152 382h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm332 0h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zM208 642h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm332 0h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8z">
+						</path>
+					</svg>
+					Sections: This component allows the problem to be divided into independent parts (sections) as if it
+					were different subproblems. In this way, we can change the value of the data and the unknowns
+					using the same symbols in different sections of the same problem. It will be explained in more
+					detail in the section "Sections".
+				</p>
+
+				<p>
+					<svg viewBox="64 64 896 896" focusable="false" data-icon="function" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M841 370c3-3.3 2.7-8.3-.6-11.3a8.24 8.24 0 00-5.3-2.1h-72.6c-2.4 0-4.6 1-6.1 2.8L633.5 504.6a7.96 7.96 0 01-13.4-1.9l-63.5-141.3a7.9 7.9 0 00-7.3-4.7H380.7l.9-4.7 8-42.3c10.5-55.4 38-81.4 85.8-81.4 18.6 0 35.5 1.7 48.8 4.7l14.1-66.8c-22.6-4.7-35.2-6.1-54.9-6.1-103.3 0-156.4 44.3-175.9 147.3l-9.4 49.4h-97.6c-3.8 0-7.1 2.7-7.8 6.4L181.9 415a8.07 8.07 0 007.8 9.7H284l-89 429.9a8.07 8.07 0 007.8 9.7H269c3.8 0 7.1-2.7 7.8-6.4l89.7-433.1h135.8l68.2 139.1c1.4 2.9 1 6.4-1.2 8.8l-180.6 203c-2.9 3.3-2.6 8.4.7 11.3 1.5 1.3 3.4 2 5.3 2h72.7c2.4 0 4.6-1 6.1-2.8l123.7-146.7c2.8-3.4 7.9-3.8 11.3-1 .9.8 1.6 1.7 2.1 2.8L676.4 784c1.3 2.8 4.1 4.7 7.3 4.7h64.6a8.02 8.02 0 007.2-11.5l-95.2-198.9c-1.4-2.9-.9-6.4 1.3-8.8L841 370z">
+						</path>
+					</svg>
+					Functions: With this component we can define local functions of the problem.
+					Global functions are shown using the button on the toolbar.
+				</p>
+				<p>Local functions allow us to create a function in "javascript" code that can be used
+					later in the data, unknowns, equations, etc. To create a local function it is necessary to define a
+					name for the function, the arguments of the function and the javascript code that defines the function. 
+					In the following image we can see an example of the Sum function and how it is used in the problem.
+				</p>
+				<img class="ui bordered centered image" src="img/Editar funcion_en.png" class="con-borde" width="860"
+					alt="Edit function" />
+				<br>
+				<p> At the equation editor we can find a button "Add function" that helps us remember
+					the format of the activated global functions and the local functions, inserting an example of
+					use of the function in the equation.</p>
+
+				<p><svg viewBox="64 64 896 896" focusable="false" data-icon="form" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M904 512h-56c-4.4 0-8 3.6-8 8v320H184V184h320c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V520c0-4.4-3.6-8-8-8z">
+						</path>
+						<path
+							d="M355.9 534.9L354 653.8c-.1 8.9 7.1 16.2 16 16.2h.4l118-2.9c2-.1 4-.9 5.4-2.3l415.9-415c3.1-3.1 3.1-8.2 0-11.3L785.4 114.3c-1.6-1.6-3.6-2.3-5.7-2.3s-4.1.8-5.7 2.3l-415.8 415a8.3 8.3 0 00-2.3 5.6zm63.5 23.6L779.7 199l45.2 45.1-360.5 359.7-45.7 1.1.7-46.4z">
+						</path>
+					</svg>
+					Questions: This component allows questions to be added to the problem.
+					Questions can only be created by “Teacher” type users.
+					Questions define text boxes or drop-down lists that can later be included in the “Text” components
+					as
+					fillable questions by the student.
+				</p>
+
+				<h3>Quick edit</h3>
+
+				<p>For texts, data, unknowns and equations you can use the quick (in situ) editing of the component.
+					Double-clicking or pressing "Enter" on a selected component activates the in-place editing of the
+					component. It consists of a text box just below the component that the user can edit by pressing
+					"Enter" or "Escape" to finish the editing.
+				</p>
+				<p> In the case of data, as we can see in the following image, the symbol, an equal, the value or
+					expression of the data and the units between brackets are shown. The user can modify any of the
+					three fields and press Enter to finish. In the case of Text, to exit the edition process, press
+					Escape, since Enter is used to enter a new line in the text. </p>
+
+				<img class="ui bordered centered image" src="img/edicion rapida_en.png" class="con-borde" width="540"
+					alt="Edicion rapida" />
+				<br>
+
+
+				<h3>Tabular view</h3>
+				<p>Using button
+					<svg viewBox="64 64 896 896" focusable="false" data-icon="database" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M832 64H192c-17.7 0-32 14.3-32 32v832c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V96c0-17.7-14.3-32-32-32zm-600 72h560v208H232V136zm560 480H232V408h560v208zm0 272H232V680h560v208zM304 240a40 40 0 1080 0 40 40 0 10-80 0zm0 272a40 40 0 1080 0 40 40 0 10-80 0zm0 272a40 40 0 1080 0 40 40 0 10-80 0z">
+						</path>
+					</svg>
+					we access the tabular view of the problem.
+				</p>
+				<img class="ui bordered centered image" src="img/vista tabular_en.png" width="960"
+					alt="Problem tabular view" />
+				<br>
+				<p>This screen will display a list of the data, unknowns, equations, fluids or humid airs present in our
+					problem, depending on what is selected in the drop-down list on the top left.
+				</p>
+				<p>This option is designed to be able to check carefully all the components of our problem. If any
+					component has an error, the first field will appear in red. Within this screen we can only delete
+					the component by clicking on the word "Delete" in the Action column or edit the component by
+					clicking on its row (the editing sidebar is the same as the one in the main screen).
+				</p>
+			</div>
+
+			<a name="resolucion"></a>
+			<div class="ui segment">
+				<h2>Problem solving</h2>
+
+				<p>To solve the problem, click on the "solve" button
+					<svg viewBox="64 64 896 896" focusable="false" class="" data-icon="edit" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M251.2 387H320v68.8c0 1.8 1.8 3.2 4 3.2h48c2.2 0 4-1.4 4-3.3V387h68.8c1.8 0 3.2-1.8 3.2-4v-48c0-2.2-1.4-4-3.3-4H376v-68.8c0-1.8-1.8-3.2-4-3.2h-48c-2.2 0-4 1.4-4 3.2V331h-68.8c-1.8 0-3.2 1.8-3.2 4v48c0 2.2 1.4 4 3.2 4zm328 0h193.6c1.8 0 3.2-1.8 3.2-4v-48c0-2.2-1.4-4-3.3-4H579.2c-1.8 0-3.2 1.8-3.2 4v48c0 2.2 1.4 4 3.2 4zm0 265h193.6c1.8 0 3.2-1.8 3.2-4v-48c0-2.2-1.4-4-3.3-4H579.2c-1.8 0-3.2 1.8-3.2 4v48c0 2.2 1.4 4 3.2 4zm0 104h193.6c1.8 0 3.2-1.8 3.2-4v-48c0-2.2-1.4-4-3.3-4H579.2c-1.8 0-3.2 1.8-3.2 4v48c0 2.2 1.4 4 3.2 4zm-195.7-81l61.2-74.9c4.3-5.2.7-13.1-5.9-13.1H388c-2.3 0-4.5 1-5.9 2.9l-34 41.6-34-41.6a7.85 7.85 0 00-5.9-2.9h-50.9c-6.6 0-10.2 7.9-5.9 13.1l61.2 74.9-62.7 76.8c-4.4 5.2-.8 13.1 5.8 13.1h50.8c2.3 0 4.5-1 5.9-2.9l35.5-43.5 35.5 43.5c1.5 1.8 3.7 2.9 5.9 2.9h50.8c6.6 0 10.2-7.9 5.9-13.1L383.5 675zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-36 732H180V180h664v664z">
+						</path>
+					</svg>
+					, the application checks if the number of equations is equal to the number of unknowns. Sometimes it
+					is not able to obtain a solution and displays a message similar to the following:
+				</p>
+
+				<img class="ui bordered centered image" src="img/Dialogo error convergencia_en.png" width="360"
+					alt="Convergence error dialog" />
+				<br>
+
+				<p>For example, if we try to solve the equation ln(0.5 - x ) = 1, we do not obtain a solution because
+					the iterative process of solving begins by evaluating the two members of the equation with some
+					initial values, which in this case is x = 1. When we try to calculate the neperian logarithm of 0.5
+					- 1 = -0.5 we obtain an error (as we know the neperian logarithm of a negative number does not
+					exist).</p>
+
+				<p>In order to solve this we must change the initial value of x. In the drop-down "Convergence
+					parameters" that appears in the edition of the unknowns and fluids. In this drop-down we can change
+					the initial value, the minimum value and the maximum value, thus helping the convergence process to
+					find a solution. In our previous case, if we set the initial value to "-1" we can see how it finds a
+					solution.
+				</p>
+				<p>When convergence problems appear, the initial values of the unknowns must be revised. A good option
+					is to solve the equations in blocks and take the results obtained as initial values, using the
+					button "results to initial values".
+				</p>
+
+				<img class="ui bordered centered image" src="img/Editar convergencia_en.png" width="640"
+					alt="Editar parámetros de convergencia" />
+			</div>
+
+			<a name="secciones"></a>
+			<div class="ui segment">
+				<h2>Sections</h2>
+
+				<p>When we add a component section we can see the text "End Section: n" and a horizontal line that we
+					can place at the height we want marking the division between the different sections of the problem.
+					When we click on any component or free area of the paper we can see a label in the upper area that
+					shows us the current section, which will be the one we can solve.
+				</p>
+
+				<p>This component allows having data, unknowns and fluids with the same symbol in the different sections
+					of the problem, and thus being able to solve different subproblems within the same problem.
+				</p>
+				<br />
+				<img class="ui bordered centered image" src="img/problema con secciones_en.png" width="960"
+					alt="Problem with sections" />
+				<br />
+				<p>By clicking on the section label at the top right, we can make the section global. Global sections
+					are labelled in red and (G) is added to distinguish them.</p>
+
+				<p>All the data, unknowns, equations, fluids and humid airs from global sections will be included in
+					all the other sections when we proceed to solve them. If we have components common to all the
+					sections, the most appropriate way to do it is to create a global section and put them all in it.
+				</p>
+				<br />
+				<img class="ui bordered centered image" src="img/ejemplo seccion global_en.png" width="960"
+					alt="Global section example" />
+				<br />
+
+			</div>
+
+			<a name="multiple"></a>
+			<div class="ui segment">
+				<h2>Solving a problem multiple times</h2><a name="cdp_tablas"></a>
+
+				<p>In what has been described so far in the manual we have explained how to solve a given problem only
+					once. To solve the given problem several times, the "Table" component must be used.
+				</p>
+				<p>The first step before creating a table is to create a problem and solve it with some initial values
+					of the data that we can then vary using the table. After creating the table, in addition to defining
+					the number of rows (number of times the problem will be solved) and the number of columns, we must
+					define what each of the columns will contain.
+				</p>
+
+				<img class="ui bordered centered image" src="img/Editar tabla_en.png" width="860" alt="Table edit" />
+				<br>
+
+				<p>In each of the columns we must write the symbol of one of the data, unknowns, fluid or humid air of
+					our problem. Only for the data we can add a symbol = and an expression to define how much these data
+					are worth for each of the rows of the table. If the symbol of our data were T_1, the possibilities
+					would be the following:</p>
+				<ul>
+					<li>T_1 : For all rows the data T_1 is worth the value specified in its definition, in this case 10.
+					</li>
+					<li>T_1 = 25 : For all the rows the data T_1 is 25. We could also put an expression depending on the
+						variables of the problem, for example, T_1 = T_2 / 10, it would take as value of T_1 the
+						calculation of T_2/10, that is to say 2, and it would use it for all the rows.
+					</li>
+					<li>T_1 = 10, 12, 14, 15, 18 : Comma separated values are used in order for each of the rows in the
+						table. If the number of rows is greater than the number of values specified, the last one will
+						be repeated until the end of the rows. As shown in the next section, in this case we can put as
+						the first value an expression calculated using the variables of the problem and from the second
+						value the expression is evaluated with the values of the problem in the previous row.
+					</li>
+					<li>T_1 = 10 -> 50 : The value of the first row is 10 and the value of the last row is 50 and the
+						intermediate values are calculated by linear interpolation. Both 10 and 50 could be an
+						expression of variables in the problem.
+					</li>
+
+					<li>T_1 = 10 @ 5 : The value of the first row is 10 and the following rows are incremented by 5. For
+						this example, the values would be 10, 15, 20, 25, and 30. Both 10 and 5 could be an expression
+						of problem variables.
+					</li>
+				</ul>
+
+				<p>The data specified by the user is assumed to be unchanged,
+					the unit change will be applied for each data before solving the problem.
+					The unknowns, Fluids and Humid Airs will be displayed in the table in their final unit
+					once modified, if there is a unit change.</p>
+
+				<p>We can specify a new variable that is not defined in the problem and add to it an equals
+					and the values or expressions separated by commas that we want it to take in each of the rows of the
+					table.
+					This variable will be added to the problem and solved along with the rest of the problem components.
+					For example, if we add a column with the variable “T_3 = T_1, T_2, 24 [ºC]” the variable T_3 will
+					be added to the problem and will take the value of T_1 for the first row,
+					the value of T_2 for the second row and 24 for the rest of the rows.
+					The unit can be specified in square brackets at the end of the expression.
+					This option allows us to create variables and associate them to graphs with
+					values that are defined in the problem.</p>
+
+				<p>Once all the columns have been defined, click on the "Calculate" button to obtain the values of all
+					the rows, solving the problem as many times as we have rows. If we activate the check
+					“Recalculate table when solving” the table will be recalculated each time we solve the problem (or
+					the section where the table is located).
+					The button "Export to CSV" allows us to
+					export the values of the table to a file that we can later use in our computer.
+				</p>
+
+				<p>After creating a table, it is possible to create a "Graph" component to represent some of the columns
+					of the table. The width of the chart is specified as a percentage of the page width. And for each of
+					the data series that we want to represent, in the "Data table" drop-down menu we must choose which
+					table contains the data of that series.
+				</p>
+				<p>In the "AXES" area we have properties to name the axes and specify their minimum and maximum values.
+					And in the "SERIES" area we define how many data series we want to plot, introducing the name of
+					each series, the symbol that will be used as "x" in the graph and the one that will be used as "y".
+					The "Colour", "Symbol" and "Line" properties allow us to customise the appearance of the
+					representation of each of the series, being able to use a secondary axis for the "y".
+				</p>
+
+				<img class="ui bordered centered image" src="img/Editar grafica_en.png" width="960" alt="Graph edit" />
+				<br>
+				<h3>Fluids Diagrams</h3>
+				<p>When editing the graphs, there is a section that allows you to add saturation curves for different
+					fluids as the background for your graph, enabling you to superimpose your variables calculated in
+					tables onto these
+					saturation curves. The different options available for the “diagram type” are:
+				</p>
+
+				<ul>
+					<li><b>None</b>: No diagram will be displayed. .</li>
+					<li><b>Psychrometric w[g/kg] - T [°C] </b>: Displays the psychrometric saturation curve of humid air
+						at the pressure selected in the “Psychrometric pressure” field [kPa]. It also adds
+						in a thinner line the relative humidity curves of 75, 50, and 25%.</li>
+					<li><b>p[kPa] - T[°C] </b>: Shows the p-T saturation curve of the fluid selected in the “Fluid”
+						drop-down menu.</li>
+					<li><b>log p[kPa] - h[kJ/kg]</b>:Shows the p-h saturation curve of the fluid selected in the “Fluid”
+						drop-down menu.
+						The y-axis of the pressures is displayed on a logarithmic scale.</li>
+					<li><b>T[°C] - s[kJ/(kg·K)]</b>:Shows the T-s saturation curve of the fluid selected in the “Fluid”
+						drop-down menu.</li>
+				</ul>
+				<br />
+				<img class="ui bordered centered image" src="img/Diagrama de fluidos_en.png" width="960"
+					alt="Fluids diagram" />
+			</div>
+
+			<a name="diferenciales"></a>
+			<div class="ui segment">
+				<h2>Numerical solution of differential/integral equations</h2>
+
+				<p>Using the table component we can numerically solve differential/integral equations. For this purpose,
+					the possibility has been implemented that the data can be defined according to variables calculated
+					in the previous row of the table.
+				</p>
+				<p>To explain this utility we will use a simple example of the calculation of the position in a movement
+					with constant acceleration. When assembling the table we define the data using expressions from the
+					previous row:</p>
+				<br>
+				<img class="ui bordered centered image" src="img/enunciado ecuacion diferencial_en.png" width="960"
+					alt="Differential equation problem" />
+				<br>
+
+				<p>As we can see, we calculate the final position and velocity of an instant from the initial velocity
+					and position:
+				</p>
+				<ul>
+					<li>t = t, Deltat : The first value will be t (0 s) and the step Deltat (1 s)</li>
+					<li>v_i = v_i, v_f : The data v_i (initial velocity) will be worth v_i (0 m/s according to the
+						problem) for the first row and "v_f" (final velocity) for the following rows, v_f will be taken
+						from the previous row.</li>
+					<li>x_i = x_i, x_f : The data x_i (start position) shall be worth x_i (0 m according to the
+						problem) for the first row and "x_f" (end position) for the following rows, x_f shall be taken
+						from the previous row.</li>
+				</ul>
+				<br>
+
+				<img class="ui bordered centered image" src="img/tabla ecuacion diferencial_en.png" width="960"
+					alt="Differential equation table" />
+				<br>
+				<p>With this utility, differential and/or integral problems can be solved. This type of problem often
+					appears in the dynamic behaviour of time-varying problems or in spatial problems solved by finite
+					elements or finite differences.
+				</p>
+
+			</div>
+
+			<a name="expresiones"></a>
+			<div class="ui segment">
+				<h2>Mathematical expressions</h2>
+
+				<p>The mathematical expressions that we write in data, equations, fluids and humid airs, are evaluated
+					using the library <a href="https://github.com/silentmatt/expr-eval">expr-eval</a>.
+				</p>
+				<p>In the web page of this library we can find a section called "Expression Syntax" where it is
+					described how expressions must be written to be processed correctly.
+				</p>
+				<p>Variable names must be character strings (case sensitive) without any spaces. To use subscripts use
+					"_". "pi" and "e" are two preloaded numeric constants and must not be used as variable names.
+				</p>
+
+				<h3>Operator precedence</h3>
+
+				<table>
+					<thead>
+						<tr>
+							<th align="left">Operator</th>
+							<th align="left">Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td align="left">(...)</td>
+							<td align="left">Group</td>
+						</tr>
+						<tr>
+							<td align="left">!</td>
+							<td align="left">Factorial</td>
+						</tr>
+						<tr>
+							<td align="left">^</td>
+							<td align="left">Exponentiation</td>
+						</tr>
+						<tr>
+							<td align="left">*, /, %</td>
+							<td align="left">Multiplication, division, remainder</td>
+						</tr>
+						<tr>
+							<td align="left">+, -</td>
+							<td align="left">Addition, subtraction</td>
+						</tr>
+						<tr>
+							<td align="left">==, !=, &gt;=, &lt;=, &gt;, &lt; </td>
+							<td align="left">Equal, not equal, greater than or equal to, less than or equal to, greater
+								than, less than</td>
+						</tr>
+						<tr>
+							<td align="left">and</td>
+							<td align="left">logical AND</td>
+						</tr>
+						<tr>
+							<td align="left">or</td>
+							<td align="left">logical OR</td>
+						</tr>
+					</tbody>
+				</table>
+				<h4>Functions</h4>
+				<p>The functions shown in the table below are the most common predefined functions.</p>
+				<table>
+					<thead>
+						<tr>
+							<th align="left">Function</th>
+							<th align="left">Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td align="left">abs(x)</td>
+							<td align="left">Absolute value of x</td>
+						</tr>
+						<tr>
+							<td align="left">acos(x)</td>
+							<td align="left">Arc cosine of x (in radians)</td>
+						</tr>
+						<tr>
+							<td align="left">acosh(x)</td>
+							<td align="left">Arc hyperbolic cosine of x (in radians)</td>
+						</tr>
+						<tr>
+							<td align="left">asin(x)</td>
+							<td align="left">Arc sine of x (in radians)</td>
+						</tr>
+						<tr>
+							<td align="left">asinh(x)</td>
+							<td align="left">Arc hyperbolic sine of x (in radians)</td>
+						</tr>
+						<tr>
+							<td align="left">atan(x)</td>
+							<td align="left">Arc tangent of x (in radians)</td>
+						</tr>
+						<tr>
+							<td align="left">atanh(x)</td>
+							<td align="left">Arc hyperbolic tangent of x (in radians))</td>
+						</tr>
+						<tr>
+							<td align="left">cbrt(x)</td>
+							<td align="left">Cubic root of x</td>
+						</tr>
+						<tr>
+							<td align="left">ceil(x)</td>
+							<td align="left">The smallest integer that is &gt;= x</td>
+						</tr>
+						<tr>
+							<td align="left">cos(x)</td>
+							<td align="left">cosine of x (x in radians)</td>
+						</tr>
+						<tr>
+							<td align="left">cosh(x)</td>
+							<td align="left">hyperbolic cosine of x (x in radians)</td>
+						</tr>
+						<tr>
+							<td align="left">exp(x)</td>
+							<td align="left">eexponential of x, is equal to e^x</td>
+						</tr>
+						<tr>
+							<td align="left">floor(x)</td>
+							<td align="left">The largest integer that is &lt;= x</td>
+						</tr>
+						<tr>
+							<td align="left">ln(x)</td>
+							<td align="left">Neperian logarithm of x</td>
+						</tr>
+						<tr>
+							<td align="left">log(x)</td>
+							<td align="left">Neperian logarithm of x, equals ln(x)</td>
+						</tr>
+						<tr>
+							<td align="left">log10(x)</td>
+							<td align="left">Decimal logarithm of x</td>
+						</tr>
+						<tr>
+							<td align="left">log2(x)</td>
+							<td align="left">Logarithm in base 2 of x</td>
+						</tr>
+						<tr>
+							<td align="left">round(x)</td>
+							<td align="left">Round x to the nearest integer</td>
+						</tr>
+						<tr>
+							<td align="left">sign(x)</td>
+							<td align="left">Sign of x (-1, 0, or 1 for negative, zero or positive x respectively)
+							</td>
+						</tr>
+						<tr>
+							<td align="left">sin(x)</td>
+							<td align="left">Sine of x (x in radians)</td>
+						</tr>
+						<tr>
+							<td align="left">sinh(x)</td>
+							<td align="left">Hyperbolic sine of x (x in radians)</td>
+						</tr>
+						<tr>
+							<td align="left">sqrt(x)</td>
+							<td align="left">Square root of x</td>
+						</tr>
+						<tr>
+							<td align="left">tan(x)</td>
+							<td align="left">Tangent of x (x in radians)</td>
+						</tr>
+						<tr>
+							<td align="left">tanh(x)</td>
+							<td align="left">Hyperbolic tangent of x (x in radians)</td>
+						</tr>
+						<tr>
+							<td align="left">random(n)</td>
+							<td align="left">Random number between [0, n)
+							</td>
+						</tr>
+						<tr>
+							<td align="left">min(a,b,…)</td>
+							<td align="left">Minimum of a series of values (a,b,...)</td>
+						</tr>
+						<tr>
+							<td align="left">max(a,b,…)</td>
+							<td align="left">Maximum of a series of values (a,b,...)</td>
+						</tr>
+						<tr>
+							<td align="left">if( x>0, v<sub>1</sub>, v<sub>2</sub>)</td>
+							<td align="left">First parameter is evaluated, if it is true returns
+								v<sub>1</sub> and if it is false returns v<sub>2</sub>. Example: if( x>8 , 1 , 0) = 1 ;
+								(x = 10)
+							</td>
+						</tr>
+						<tr>
+							<td align="left">
+								at(x,[l<sub>1</sub>,l<sub>2</sub>],[v<sub>1</sub>,v<sub>2</sub>,v<sub>3</sub>])</td>
+							<td align="left">x is evaluated, if x <= l<sub>1</sub> returns
+									v<sub>1</sub>, if x > l<sub>1</sub> and x <= l<sub>2</sub> returns v<sub>2</sub>
+										,and if x > l<sub>2</sub> returns v<sub>3</sub>.
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<p></p>
+			</div>
+
+			<a name="correccion"></a>
+			<div class="ui segment">
+				<h2>Self-correction</h2>
+
+				<p>We will explain the use of this option on an example problem in which water is heated by adding heat
+					at constant pressure, in the following figure we can see the problem done by a student:
+				</p>
+
+				<img class="ui bordered centered image" src="img/problema a corregir_en.png" width="960"
+					alt="Example problem to be corrected" />
+				<br />
+
+				<p>Usin button
+					<svg viewBox="64 64 896 896" focusable="false" data-icon="schedule" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M928 224H768v-56c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v56H548v-56c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v56H328v-56c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v56H96c-17.7 0-32 14.3-32 32v576c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V256c0-17.7-14.3-32-32-32zm-40 568H136V296h120v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56h148v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56h148v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56h120v496zM416 496H232c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h184c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8zm0 136H232c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h184c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8zm308.2-177.4L620.6 598.3l-52.8-73.1c-3-4.2-7.8-6.6-12.9-6.6H500c-6.5 0-10.3 7.4-6.5 12.7l114.1 158.2a15.9 15.9 0 0025.8 0l165-228.7c3.8-5.3 0-12.7-6.5-12.7H737c-5-.1-9.8 2.4-12.8 6.5z">
+						</path>
+					</svg>
+					we can correct our problem by comparing it with another problem that may be the correct one. In the
+					upper field we enter the ID of the correct problem and click on the correct button.
+				</p>
+				<p>The table will list the variables (data, unknowns, fluids and humid airs) of the correct problem and
+					compare them with the variables of the proper problem. The variables of the correct problem have two
+					levels: Principal and Secondary. The primary variables are the fundamental unknowns of the problem
+					and are marked in the correct problem by putting a border around them. It is also possible to
+					correct text type data, remember that they are those whose value is in quotation marks, if for
+					example, we create a data a =“rises”, it will be compared with the data of the same name in the
+					correct problem. In the correct problem we can put more than one correct solution if we separate
+					them by commas, for example a =“rises”, “grows”.
+				</p>
+
+				<p>The "Show" filter allows us to keep only the primary variables.</p>
+
+				<img class="ui bordered centered image" src="img/pantalla corregir_en.png" width="960"
+					alt="Correction screen" />
+
+				<br />
+
+				<p>The last column shows the result of the comparison:
+				</p>
+				<ul>
+					<li> <svg viewBox="64 64 896 896" focusable="false" data-icon="check-circle" width="1em"
+							height="1em" fill="currentColor" aria-hidden="true">
+							<path
+								d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+								fill="#52c41a"></path>
+							<path
+								d="M512 140c-205.4 0-372 166.6-372 372s166.6 372 372 372 372-166.6 372-372-166.6-372-372-372zm193.4 225.7l-210.6 292a31.8 31.8 0 01-51.7 0L318.5 484.9c-3.8-5.3 0-12.7 6.5-12.7h46.9c10.3 0 19.9 5 25.9 13.3l71.2 98.8 157.2-218c6-8.4 15.7-13.3 25.9-13.3H699c6.5 0 10.3 7.4 6.4 12.7z"
+								fill="#f6ffed"></path>
+							<path
+								d="M699 353h-46.9c-10.2 0-19.9 4.9-25.9 13.3L469 584.3l-71.2-98.8c-6-8.3-15.6-13.3-25.9-13.3H325c-6.5 0-10.3 7.4-6.5 12.7l124.6 172.8a31.8 31.8 0 0051.7 0l210.6-292c3.9-5.3.1-12.7-6.4-12.7z"
+								fill="#52c41a"></path>
+						</svg>
+
+						The variable was found and its result is correct (same as the correct problem).
+					</li>
+
+					<li> <svg viewBox="64 64 896 896" focusable="false" data-icon="close-circle" width="1em"
+							height="1em" fill="currentColor" aria-hidden="true">
+							<path
+								d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+								fill="#eb2f96"></path>
+							<path
+								d="M512 140c-205.4 0-372 166.6-372 372s166.6 372 372 372 372-166.6 372-372-166.6-372-372-372zm171.8 527.1c1.2 1.5 1.9 3.3 1.9 5.2 0 4.5-3.6 8-8 8l-66-.3-99.3-118.4-99.3 118.5-66.1.3c-4.4 0-8-3.6-8-8 0-1.9.7-3.7 1.9-5.2L471 512.3l-130.1-155a8.32 8.32 0 01-1.9-5.2c0-4.5 3.6-8 8-8l66.1.3 99.3 118.4 99.4-118.5 66-.3c4.4 0 8 3.6 8 8 0 1.9-.6 3.8-1.8 5.2l-130.1 155 129.9 154.9z"
+								fill="#fff0f6"></path>
+							<path
+								d="M685.8 352c0-4.4-3.6-8-8-8l-66 .3-99.4 118.5-99.3-118.4-66.1-.3c-4.4 0-8 3.5-8 8 0 1.9.7 3.7 1.9 5.2l130.1 155-130.1 154.9a8.32 8.32 0 00-1.9 5.2c0 4.4 3.6 8 8 8l66.1-.3 99.3-118.5L611.7 680l66 .3c4.4 0 8-3.5 8-8 0-1.9-.7-3.7-1.9-5.2L553.9 512.2l130.1-155c1.2-1.4 1.8-3.3 1.8-5.2z"
+								fill="#eb2f96"></path>
+						</svg>
+						The variable was found but its result does not match the correct one.
+
+					</li>
+
+					<li> <svg viewBox="64 64 896 896" focusable="false" data-icon="question-circle" width="1em"
+							height="1em" fill="currentColor" aria-hidden="true">
+							<path
+								d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+								fill="orange"></path>
+							<path
+								d="M512 140c-205.4 0-372 166.6-372 372s166.6 372 372 372 372-166.6 372-372-166.6-372-372-372zm0 632c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm62.9-219.5a48.3 48.3 0 00-30.9 44.8V620c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8v-21.5c0-23.1 6.7-45.9 19.9-64.9 12.9-18.6 30.9-32.8 52.1-40.9 34-13.1 56-41.6 56-72.7 0-44.1-43.1-80-96-80s-96 35.9-96 80v7.6c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V420c0-39.3 17.2-76 48.4-103.3C430.4 290.4 470 276 512 276s81.6 14.5 111.6 40.7C654.8 344 672 380.7 672 420c0 57.8-38.1 109.8-97.1 132.5z"
+								fill="#fffae6"></path>
+							<path
+								d="M472 732a40 40 0 1080 0 40 40 0 10-80 0zm151.6-415.3C593.6 290.5 554 276 512 276s-81.6 14.4-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.2 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0130.9-44.8c59-22.7 97.1-74.7 97.1-132.5 0-39.3-17.2-76-48.4-103.3z"
+								fill="orange"></path>
+						</svg>
+						No variable with that name is found in the problem.
+					</li>
+				</ul>
+
+				<p> In our example in the figure we can see that we have two errors, firstly that the variable with the
+					volumetric flow rate in the correct problem is called "dotV_e" and ours probably has another name
+					(in this case "V_e"). The second error is that the data "Q" is 20 kW in our problem and the correct
+					one is 21 kW, this makes that both "h_s" and "T_s" that are results of the resolution are also
+					wrong. We would have to go back to our problem and change the value of "Q". </p>
+
+				<p>Once these two changes have been made and we go back to solving the problem, we can see that all the
+					variables of our problem are correct.</p>
+
+				<img class="ui bordered centered image" src="img/variables propias ok_en.png" width="960"
+					alt="Correct variables" />
+				<br />
+			</div>
+
+			<a name="actividades"></a>
+			<div class="ui segment">
+				<h2>Activities</h2><a name="cdp_examenes"></a>
+
+				<p>Activities are a type of problem designed to be sent to students for them to complete individually.
+					They can therefore be used to set homework or take exams.
+				</p>
+				<p>In order to set up activities your user type must be “Teacher”, if you want to convert your Student
+					account into a teacher account you must send an email requesting it to psolver@psolver.org.</p>
+
+				<p>From the teacher account in addition to the list of problems you can view the list of courses and the
+					list of tasks, using the “Show” drop-down menu.</p>
+
+				<img class="ui bordered centered image" src="img/lista cursos_en.png" width="960" alt="Courses list" />
+				<br />
+
+				<p>In the course list you can create, duplicate and delete courses. Courses are lists of students
+					registered in
+					pSolver to whom we can send activities to perform. Using button <svg viewBox="64 64 896 896"
+						focusable="false" data-icon="import" width="1em" height="1em" fill="currentColor"
+						aria-hidden="true">
+						<path
+							d="M888.3 757.4h-53.8c-4.2 0-7.7 3.5-7.7 7.7v61.8H197.1V197.1h629.8v61.8c0 4.2 3.5 7.7 7.7 7.7h53.8c4.2 0 7.7-3.4 7.7-7.7V158.7c0-17-13.7-30.7-30.7-30.7H158.7c-17 0-30.7 13.7-30.7 30.7v706.6c0 17 13.7 30.7 30.7 30.7h706.6c17 0 30.7-13.7 30.7-30.7V765.1c0-4.3-3.5-7.7-7.7-7.7zM902 476H588v-76c0-6.7-7.8-10.5-13-6.3l-141.9 112a8 8 0 000 12.6l141.9 112c5.3 4.2 13 .4 13-6.3v-76h314c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8z">
+						</path>
+					</svg>
+					we can load an external course that has been created by another teacher,
+					this will allow us to set tasks on courses created by other teachers.
+				</p>
+				<p>If we click the edit course button
+					<svg viewBox="64 64 896 896" focusable="false" data-icon="edit" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 000-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 009.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z">
+						</path>
+					</svg>
+					we will see the following screen in which we can change the name and description of the course and
+					add or delete members of a course using the e-mail with which the students registered. There is also
+					the possibility for the student to register by himself if we send him the course ID, using the
+					button <svg viewBox="64 64 896 896" focusable="false" data-icon="team" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M824.2 699.9a301.55 301.55 0 00-86.4-60.4C783.1 602.8 812 546.8 812 484c0-110.8-92.4-201.7-203.2-200-109.1 1.7-197 90.6-197 200 0 62.8 29 118.8 74.2 155.5a300.95 300.95 0 00-86.4 60.4C345 754.6 314 826.8 312 903.8a8 8 0 008 8.2h56c4.3 0 7.9-3.4 8-7.7 1.9-58 25.4-112.3 66.7-153.5A226.62 226.62 0 01612 684c60.9 0 118.2 23.7 161.3 66.8C814.5 792 838 846.3 840 904.3c.1 4.3 3.7 7.7 8 7.7h56a8 8 0 008-8.2c-2-77-33-149.2-87.8-203.9zM612 612c-34.2 0-66.4-13.3-90.5-37.5a126.86 126.86 0 01-37.5-91.8c.3-32.8 13.4-64.5 36.3-88 24-24.6 56.1-38.3 90.4-38.7 33.9-.3 66.8 12.9 91 36.6 24.8 24.3 38.4 56.8 38.4 91.4 0 34.2-13.3 66.3-37.5 90.5A127.3 127.3 0 01612 612zM361.5 510.4c-.9-8.7-1.4-17.5-1.4-26.4 0-15.9 1.5-31.4 4.3-46.5.7-3.6-1.2-7.3-4.5-8.8-13.6-6.1-26.1-14.5-36.9-25.1a127.54 127.54 0 01-38.7-95.4c.9-32.1 13.8-62.6 36.3-85.6 24.7-25.3 57.9-39.1 93.2-38.7 31.9.3 62.7 12.6 86 34.4 7.9 7.4 14.7 15.6 20.4 24.4 2 3.1 5.9 4.4 9.3 3.2 17.6-6.1 36.2-10.4 55.3-12.4 5.6-.6 8.8-6.6 6.3-11.6-32.5-64.3-98.9-108.7-175.7-109.9-110.9-1.7-203.3 89.2-203.3 199.9 0 62.8 28.9 118.8 74.2 155.5-31.8 14.7-61.1 35-86.5 60.4-54.8 54.7-85.8 126.9-87.8 204a8 8 0 008 8.2h56.1c4.3 0 7.9-3.4 8-7.7 1.9-58 25.4-112.3 66.7-153.5 29.4-29.4 65.4-49.8 104.7-59.7 3.9-1 6.5-4.7 6-8.7z">
+						</path>
+					</svg> that appears in the button bar of the problem list.
+				</p>
+
+				<img class="ui bordered centered image" src="img/editor cursos_en.png" width="960"
+					alt="courses editor" />
+				<br />
+
+				<p>The teacher must then create the task that will be sent as an activity to the student. For this
+					purpose, he/she also has a list of tasks that can be created, duplicated, deleted or edited.</p>
+
+				<img class="ui bordered centered image" src="img/lista tareas_en.png" width="960" alt="Tasks list" />
+				<br />
+
+
+				<p>By editing the assignment we can name it, give it a description, select the course to which it
+					belongs and set the ID of the problem to be used as a statement and the ID of the solution. With the
+					<svg viewBox="64 64 896 896" focusable="false" data-icon="send" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<defs>
+							<style></style>
+						</defs>
+						<path
+							d="M931.4 498.9L94.9 79.5c-3.4-1.7-7.3-2.1-11-1.2a15.99 15.99 0 00-11.7 19.3l86.2 352.2c1.3 5.3 5.2 9.6 10.4 11.3l147.7 50.7-147.6 50.7c-5.2 1.8-9.1 6-10.3 11.3L72.2 926.5c-.9 3.7-.5 7.6 1.2 10.9 3.9 7.9 13.5 11.1 21.5 7.2l836.5-417c3.1-1.5 5.6-4.1 7.2-7.1 3.9-8 .7-17.6-7.2-21.6zM170.8 826.3l50.3-205.6 295.2-101.3c2.3-.8 4.2-2.6 5-5 1.4-4.2-.8-8.7-5-10.2L221.1 403 171 198.2l628 314.9-628.2 313.2z">
+						</path>
+					</svg>
+					button, an activity is created in the accounts of each of the course
+					members, copying the content of the problem “statement”, the system checks if the student already
+					has that activity so as not to duplicate it. It is also possible for the student to
+					create the activity on his/her own, if we send him/her the task ID, using the button <svg
+						viewBox="64 64 896 896" focusable="false" data-icon="team" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M824.2 699.9a301.55 301.55 0 00-86.4-60.4C783.1 602.8 812 546.8 812 484c0-110.8-92.4-201.7-203.2-200-109.1 1.7-197 90.6-197 200 0 62.8 29 118.8 74.2 155.5a300.95 300.95 0 00-86.4 60.4C345 754.6 314 826.8 312 903.8a8 8 0 008 8.2h56c4.3 0 7.9-3.4 8-7.7 1.9-58 25.4-112.3 66.7-153.5A226.62 226.62 0 01612 684c60.9 0 118.2 23.7 161.3 66.8C814.5 792 838 846.3 840 904.3c.1 4.3 3.7 7.7 8 7.7h56a8 8 0 008-8.2c-2-77-33-149.2-87.8-203.9zM612 612c-34.2 0-66.4-13.3-90.5-37.5a126.86 126.86 0 01-37.5-91.8c.3-32.8 13.4-64.5 36.3-88 24-24.6 56.1-38.3 90.4-38.7 33.9-.3 66.8 12.9 91 36.6 24.8 24.3 38.4 56.8 38.4 91.4 0 34.2-13.3 66.3-37.5 90.5A127.3 127.3 0 01612 612zM361.5 510.4c-.9-8.7-1.4-17.5-1.4-26.4 0-15.9 1.5-31.4 4.3-46.5.7-3.6-1.2-7.3-4.5-8.8-13.6-6.1-26.1-14.5-36.9-25.1a127.54 127.54 0 01-38.7-95.4c.9-32.1 13.8-62.6 36.3-85.6 24.7-25.3 57.9-39.1 93.2-38.7 31.9.3 62.7 12.6 86 34.4 7.9 7.4 14.7 15.6 20.4 24.4 2 3.1 5.9 4.4 9.3 3.2 17.6-6.1 36.2-10.4 55.3-12.4 5.6-.6 8.8-6.6 6.3-11.6-32.5-64.3-98.9-108.7-175.7-109.9-110.9-1.7-203.3 89.2-203.3 199.9 0 62.8 28.9 118.8 74.2 155.5-31.8 14.7-61.1 35-86.5 60.4-54.8 54.7-85.8 126.9-87.8 204a8 8 0 008 8.2h56.1c4.3 0 7.9-3.4 8-7.7 1.9-58 25.4-112.3 66.7-153.5 29.4-29.4 65.4-49.8 104.7-59.7 3.9-1 6.5-4.7 6-8.7z">
+						</path>
+					</svg> that appears in the button bar of the problem list.
+				</p>
+
+				<img class="ui bordered centered image" src="img/editor tareas_en.png" width="960" alt="Tasks editor" />
+				<br />
+				<p>Initially the activities do not include the possibility for the student to self-correct,
+					but using the button "Activate self-correction" we can enable this possibility for all students in
+					the activity table.</p>
+
+				<p> The task editor can display two correction tables: one per student and one per variable. These
+					tables are updated
+					using the button <svg viewBox="64 64 896 896" focusable="false" data-icon="reload" width="1em"
+						height="1em" fill="currentColor" aria-hidden="true">
+						<path
+							d="M909.1 209.3l-56.4 44.1C775.8 155.1 656.2 92 521.9 92 290 92 102.3 279.5 102 511.5 101.7 743.7 289.8 932 521.9 932c181.3 0 335.8-115 394.6-276.1 1.5-4.2-.7-8.9-4.9-10.3l-56.7-19.5a8 8 0 00-10.1 4.8c-1.8 5-3.8 10-5.9 14.9-17.3 41-42.1 77.8-73.7 109.4A344.77 344.77 0 01655.9 829c-42.3 17.9-87.4 27-133.8 27-46.5 0-91.5-9.1-133.8-27A341.5 341.5 0 01279 755.2a342.16 342.16 0 01-73.7-109.4c-17.9-42.4-27-87.4-27-133.9s9.1-91.5 27-133.9c17.3-41 42.1-77.8 73.7-109.4 31.6-31.6 68.4-56.4 109.3-73.8 42.3-17.9 87.4-27 133.8-27 46.5 0 91.5 9.1 133.8 27a341.5 341.5 0 01109.3 73.8c9.9 9.9 19.2 20.4 27.8 31.4l-60.2 47a8 8 0 003 14.1l175.6 43c5 1.2 9.9-2.6 9.9-7.7l.8-180.9c-.1-6.6-7.8-10.3-13-6.2z">
+						</path>
+					</svg>.
+					The table per student shows each of the students in the course and the table per variable shows each
+					of the
+					main variables of the problem in the solution, allowing analysis of which variables are most
+					accurate and which are not.
+				</p>
+
+				<p>The activities to be performed by the students are actually problems that have the following
+					particularities:</p>
+				<ul>
+					<li>It only allows copy/paste components from the same activity.</li>
+					<li>Third parties are not allowed to make copies or view the activity (they are private).</li>
+					<li>To the right of the problem name is a button to submit the activity. After submission, none of
+						the
+						changes made by the student will be saved. That is, the problem will appear in the state in
+						which it was submitted each time it is reopened.
+					</li>
+				</ul>
+
+				<img class="ui bordered centered image" src="img/actividad sin entregar_en.png" width="960"
+					alt="Activity not delivered" />
+				<br />
+
+				<p> The figure above shows the activity when the student initiates it. The student must do the problem
+					paying special attention to create the unknowns that the statement establishes with the same name
+					and unit, since the correction will be made by comparing the main unknowns of the activity and the
+					solution that the teacher placed in the task. The following figure shows the activity performed by
+					the student, with the error of having called &phi; to the variable &gamma;.
+				</p>
+				<br />
+				<img class="ui bordered centered image" src="img/actividad entregada_en.png" width="960"
+					alt="Activity delivered" />
+
+				<br />
+				<p>If we go back to the task and click on the
+					<svg viewBox="64 64 896 896" focusable="false" data-icon="reload" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M909.1 209.3l-56.4 44.1C775.8 155.1 656.2 92 521.9 92 290 92 102.3 279.5 102 511.5 101.7 743.7 289.8 932 521.9 932c181.3 0 335.8-115 394.6-276.1 1.5-4.2-.7-8.9-4.9-10.3l-56.7-19.5a8 8 0 00-10.1 4.8c-1.8 5-3.8 10-5.9 14.9-17.3 41-42.1 77.8-73.7 109.4A344.77 344.77 0 01655.9 829c-42.3 17.9-87.4 27-133.8 27-46.5 0-91.5-9.1-133.8-27A341.5 341.5 0 01279 755.2a342.16 342.16 0 01-73.7-109.4c-17.9-42.4-27-87.4-27-133.9s9.1-91.5 27-133.9c17.3-41 42.1-77.8 73.7-109.4 31.6-31.6 68.4-56.4 109.3-73.8 42.3-17.9 87.4-27 133.8-27 46.5 0 91.5 9.1 133.8 27a341.5 341.5 0 01109.3 73.8c9.9 9.9 19.2 20.4 27.8 31.4l-60.2 47a8 8 0 003 14.1l175.6 43c5 1.2 9.9-2.6 9.9-7.7l.8-180.9c-.1-6.6-7.8-10.3-13-6.2z">
+						</path>
+					</svg>
+					button, the list of the activities
+					performed by the students and the correction of the main variables will update, showing whether they
+					are correct, incorrect or have not been found. By selecting a specific activity with the check in
+					the first column and using the button
+					<svg viewBox="64 64 896 896" focusable="false" data-icon="eye" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M942.2 486.2C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 000 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM512 766c-161.3 0-279.4-81.8-362.7-254C232.6 339.8 350.7 258 512 258c161.3 0 279.4 81.8 362.7 254C791.5 684.2 673.4 766 512 766zm-4-430c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm0 288c-61.9 0-112-50.1-112-112s50.1-112 112-112 112 50.1 112 112-50.1 112-112 112z">
+						</path>
+					</svg>
+					we can see the student's activity. Using the
+					<svg viewBox="64 64 896 896" focusable="false" data-icon="file-excel" width="1em" height="1em"
+						fill="currentColor" aria-hidden="true">
+						<path
+							d="M854.6 288.6L639.4 73.4c-6-6-14.1-9.4-22.6-9.4H192c-17.7 0-32 14.3-32 32v832c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V311.3c0-8.5-3.4-16.7-9.4-22.7zM790.2 326H602V137.8L790.2 326zm1.8 562H232V136h302v216a42 42 0 0042 42h216v494zM514.1 580.1l-61.8-102.4c-2.2-3.6-6.1-5.8-10.3-5.8h-38.4c-2.3 0-4.5.6-6.4 1.9-5.6 3.5-7.3 10.9-3.7 16.6l82.3 130.4-83.4 132.8a12.04 12.04 0 0010.2 18.4h34.5c4.2 0 8-2.2 10.2-5.7L510 664.8l62.3 101.4c2.2 3.6 6.1 5.7 10.2 5.7H620c2.3 0 4.5-.7 6.5-1.9 5.6-3.6 7.2-11 3.6-16.6l-84-130.4 85.3-132.5a12.04 12.04 0 00-10.1-18.5h-35.7c-4.2 0-8.1 2.2-10.3 5.8l-61.2 102.3z">
+						</path>
+					</svg>
+					button below we download a file containing the table in a format compatible with any spreadsheet.
+				</p>
+
+				<h3>Activities with questions</h3>
+				<p>Questions are components that can be added to the activities and that allow the teacher
+					to ask the student questions about the problem.
+					These questions can be of the text type or of the options list type.
+				</p>
+				<img class="ui bordered centered image" src="img/Editar cuestion_en.png" width="960"
+					alt="Edit question" />
+				<br />
+				<p>The question component will not be visible to the student when the question is sent to him/her,
+					therefore, questions must be included in texts by referring to their symbol and surrounding them
+					with @@. For example to insert the question q_1 in the text we must write @@ q_1 @@.
+				</p>
+				<img class="ui bordered centered image" src="img/Cuestion en texto_en.png" width="960"
+					alt="Question at text" />
+				<br />
+				<p>As with all activities, the teacher must create the statement,
+					which will be sent to the student when the activity is created,
+					and the solution, which will be used to correct the activity.
+					In the statement the value of the question should be left empty and
+					in the solution the correct value of the question should be included.</p>
+				<p>For text type questions with several possible solutions, the teacher can include
+					in the values of the differents correct solutions separated by commas.
+					When correcting, the differences between upper and lower case letters are not taken into account.
+					The “List of numerical values” field will be used if any data refers to the question.
+				</p>
+				</p>
+				<img class="ui bordered centered image" src="img/Solucion cuestion_en.png" width="960"
+					alt="Questions solutions" />
+				<br />
+			</div>
+		</div>
+		<br>
+
+		<div class="ui center aligned container">
+			<p><a href="index_es.html" class="ui inverted link">pSolver</a> ::
+				<a href="https://groups.google.com/d/forum/pSolver" target="_blank">User group</a> ::
+				<a href="http://www.twitter.com/psolver_org" target="_blank">twitter</a>
+			</p>
+		</div>
+		<br>
+	</div>
+</body>
+
+</html>

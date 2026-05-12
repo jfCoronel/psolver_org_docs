@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>pSolver</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="img/favicon.png" />
+	<meta name="description" content="Problem Solver" />
+	<meta name="keywords" content="pSolver" />
+	<meta name="author" content="Juan F. Coronel Toro" />
+	<link rel="stylesheet" type="text/css" href="./css/semantic.min.css">
+	<script src="./css/semantic.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script>
+		function setIdioma(valor) {
+			if (valor === 'es') {
+				location.href = "index_es.html"
+			} else if (valor === 'uk') {
+				location.href = "index.html"
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div class="ui container">
+		<h2><img style="margin-top: 10px;" src="img/logo_psolver.svg" width="48px" alt="Logo pSolver"> pSolver
+			<button style="float:right; margin-top: 10px;" class="ui icon button" onclick="setIdioma('es')">
+				<img src="img/Spain_flag_icon.png">
+			</button>
+			<button style="float:right; margin-top: 10px;" class="ui icon button" onclick="setIdioma('uk')">
+				<img src="img/UK_flag_icon.png">
+			</button>
+			<button style="float:right; margin-top: 10px;" class="ui button" onclick="location.href='https://jfcoronel.github.io/psolver_db/'" title="Database of pSolver problems">
+				pSolver DB
+			</button>
+		</h2>
+	</div>
+
+	<div class="ui secondary pointing menu container">
+		<a href="index.html" class="item active">HOME</a>
+		<a href="user manual.html" class="item">USER MANUAL</a>
+		<a href="history.html" class="item">HISTORY</a>
+	</div>
+
+	<div class="ui main container">
+
+		<div class="ui segment">
+			<h3>Welcome to pSolver</h3>
+
+			<p>pSolver is a free, on-line tool designed to analyse, <strong>solve</strong>, edit and manage
+				problems.
+				The development of the application attempts to circumvent the main disadvantages of using "equation
+				solvers"
+				for learning scientific and technical subjects. The application allows us to pose and solve problems
+				in the same way as we would do it on paper,
+				facilitating their review, evaluation, management and editing by teachers and students.
+				In addition to data, equations and unknowns, the application allows the addition of enriched texts
+				(Markdown),
+				images, fluid properties (CoolProp), tables and graphs.</p>
+
+			<h4>Current version: 4.60</h4>
+			<button onclick="location.href='../app/'" class="ui primary button">
+				Go to application
+			</button>
+		</div>
+
+		<div class="ui segment">
+			<h3>pSolver</h3>
+			<p>The development of the application started in 2013 under the name "CuadernoDeProblemas",
+				in 2023 it changed its name to "pSolver".
+				The main modifications it has undergone can be found in the <a href="history.html">history.</a>
+			</p>
+
+			<p>pSolver is an on-line application to facilitate the resolution of problems
+				that usually arise in the technical disciplines related to engineering.
+				The following video shows a tutorial with a very simple geometric problem (Spanish introduction).
+			</p>
+			<p align="center">
+				<iframe width="640" height="360" src="https://www.youtube.com/embed/MdlZLjJZxPQ"
+					title="YouTube video player" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+			</p>
+			<p></p>
+
+			<p>In this page you can find a <a href="user manual.html">user manual</a> where each of the features of the
+				tool and how to use them are described.
+			</p>
+			<p>In the articles and videos section we will include documentation and tutorials to facilitate the use.
+				We also want to ask for your collaboration for improvement and debugging, we have created a
+				<a href="https://groups.google.com/d/forum/cuadernodeproblemas" target="_blank">user group</a>
+				so that you can inform us of bugs, improvements or opinions.
+			</p>
+		</div>
+
+		<div class="ui segment">
+			<h3>Recommended browser</h3>
+			<p>It is recommended to use Chrome, Safari or Microsoft Edge.
+				With Firefox it is not allowed to use the system clipboard to copy and paste components,
+				we can enable it by following the steps below:</p>
+			<ol>
+				<li>Type "about:config" in the Firefox navigation bar.</li>
+				<li>Accept the "Accept risk and continue" message.</li>
+				<li>Search for "dom.events.testing.asyncClipboard" and set it to "true".</li>
+			</ol>
+			<p>Problems are automatically stored in an on-line database (Google Firebase).
+				It is possible to use the web application in off-line mode (without internet connection).
+				Changes to problems are saved locally and synchronized when the same browser
+				is reconnected to internet.
+			</p>
+		</div>
+
+		<div class="ui segment">
+			<h3>Articles and videos</h3>
+
+			<p>In progress...</p>
+
+		</div>
+
+		<div class="ui segment">
+			<h3>Acknowledgments</h3>
+			<p>This tool uses the following great libraries:</p>
+			<ul>
+				<li><a href="http://coolprop.org">CoolProp</a>: Calculation of the properties
+					of fluids and humid air.</li>
+				<li><a href="http://mathjax.org">MathJax</a>: Mathematical expressions rendering.</li>
+				<li><a href="https://github.com/silentmatt/expr-eval">expr-eval</a>: Parses and evaluates
+					mathematical expressions.</li>
+				<li><a href="http://reactjs.org">React</a>: JavaScript library for building user interfaces.</li>
+				<li><a href="https://ant.design/docs/react/introduce">Ant design</a>: Library of graphical
+					interface components for React.</li>
+			</ul>
+		</div>
+
+		<div class="ui center aligned container">
+			<p><a href="index_es.html" class="ui inverted link">pSolver</a> ::
+				<a href="https://groups.google.com/d/forum/pSolver" target="_blank">User group</a> ::
+				<a href="http://www.twitter.com/psolver_org" target="_blank">twitter</a>
+			</p>
+		</div>
+		<p>Guilty: <a href="http://jfc.us.es">Juan F. Coronel Toro</a></p>
+		<p>Accomplices: Luis Pérez-Lombard, Ismael Rodríguez Maestre</p>
+	</div>
+	<br>
+	</div>
+</body>
+
+</html>
