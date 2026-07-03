@@ -34,12 +34,25 @@
 			<h4>Evolución temporal inversa (de abajo arriba)</h4>
 
 			<div class="ui segment">
+				<h3>V 4.72 (3 de julio de 2026)</h3>
+				<p>Corrección de errores</p>
+				<ul>
+					<li>Se corrige un error en la obtención de las propiedades constantes de los fluidos (T_crit,
+						p_crit, ...)
+						reseteando los valores de entrada a T = 25ºC y p = 101.3 kPa.</li>
+					<li>Se elimina el renderizado que realizaba Mathjax para formatear el texto "mp".</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
 				<h3>V 4.70 (9 de junio de 2026)</h3>
 				<p>Instalable como PWA</p>
 				<ul>
 					<li>Esta versión permite instalar pSolver como una aplicación web progresiva (PWA).
-						Esto permite a los usuarios instalar pSolver en sus ordenadores como una aplicación de escritorio 
-						y usarlo sin necesidad de estar conectados a internet, los problemas se guardarán en el almacenamiento local del navegador 
+						Esto permite a los usuarios instalar pSolver en sus ordenadores como una aplicación de
+						escritorio
+						y usarlo sin necesidad de estar conectados a internet, los problemas se guardarán en el
+						almacenamiento local del navegador
 						y se sincronizarán con la base de datos cuando se vuelva a conectar a internet.</li>
 					</li>
 				</ul>
@@ -57,12 +70,17 @@
 				<h3>V 4.60 (10 de marzo de 2026)</h3>
 				<p>Menús contextuales y simplificación barra de botones</p>
 				<ul>
-					<li>Se añaden menús contextuales de los componentes del problema para facilitar la edición y el uso de la aplicación.</li>
-					<li>Se simplifica la barra de botones, eliminando los botones de edición, que ahora se pueden usarse desde el menú contextual.</li>
+					<li>Se añaden menús contextuales de los componentes del problema para facilitar la edición y el uso
+						de la aplicación.</li>
+					<li>Se simplifica la barra de botones, eliminando los botones de edición, que ahora se pueden usarse
+						desde el menú contextual.</li>
 					<li>Se añade a la barra de botonel el botón de gestión de las funciones globales.</li>
-					<li>Se añade un nuevo componente "función local" para permitir la definición de funciones personalizadas por el usuario.</li>
-					<li>En la edición de ecuaciones se añade el botón añadir función, como ayuda a la hora de insertar funciones globales o locales en la ecuación.</li>
-					<li>Los nuevos problemas tiene la opción de resetear automáticamente los valores iniciales después de realizar un cálculo activada por defecto.</li>
+					<li>Se añade un nuevo componente "función local" para permitir la definición de funciones
+						personalizadas por el usuario.</li>
+					<li>En la edición de ecuaciones se añade el botón añadir función, como ayuda a la hora de insertar
+						funciones globales o locales en la ecuación.</li>
+					<li>Los nuevos problemas tiene la opción de resetear automáticamente los valores iniciales después
+						de realizar un cálculo activada por defecto.</li>
 					<li>Se cambia el valor de edición en barra lateral a doble click por defecto.</li>
 				</ul>
 			</div>
@@ -71,9 +89,12 @@
 				<h3>V 4.53 (6 de marzo de 2026)</h3>
 				<p>Reset automático de valores iniciales tras cálculo</p>
 				<ul>
-					<li>Se añade una opción global al problema para resetear automáticamente los valores iniciales después de realizar un cálculo.</li>
-					<li>Se mueve el botón de funciones globales al editor de ecuaciones, pudiendo insertarse un ejemplo de uso de la función en la ecuación.</li>
-					<li>Se corrige un error al añadir nuevos usarios a cursos distinguia si el correo estaba en mayúsculas o minúsculas.</li>
+					<li>Se añade una opción global al problema para resetear automáticamente los valores iniciales
+						después de realizar un cálculo.</li>
+					<li>Se mueve el botón de funciones globales al editor de ecuaciones, pudiendo insertarse un ejemplo
+						de uso de la función en la ecuación.</li>
+					<li>Se corrige un error al añadir nuevos usarios a cursos distinguia si el correo estaba en
+						mayúsculas o minúsculas.</li>
 				</ul>
 			</div>
 
@@ -81,7 +102,9 @@
 				<h3>V 4.52 (2 de marzo de 2026)</h3>
 				<p>Edición con Click o Doble click configurable</p>
 				<ul>
-					<li>Se añade a la configuración del usuario la posibilidad de elegir si se edita con click simple o doble click con la barra lateral, y activar la edición rápida con doble click o ctrl + doble click.</li>
+					<li>Se añade a la configuración del usuario la posibilidad de elegir si se edita con click simple o
+						doble click con la barra lateral, y activar la edición rápida con doble click o ctrl + doble
+						click.</li>
 					<li>Se corrigen algunos errores en las etiquetas emergentes de los botones.</li>
 				</ul>
 			</div>
@@ -90,7 +113,8 @@
 				<h3>V 4.51 (11 de febrero de 2026)</h3>
 				<p>Funciones locales</p>
 				<ul>
-					<li>Se añade la posibilidad de añadir funciones locales definidas por el usuario al problema. El usuario debe introducir el código en javascript de la función.</li>
+					<li>Se añade la posibilidad de añadir funciones locales definidas por el usuario al problema. El
+						usuario debe introducir el código en javascript de la función.</li>
 					<li>Las funciones locales se guardan con el propio problema.</li>
 				</ul>
 			</div>
