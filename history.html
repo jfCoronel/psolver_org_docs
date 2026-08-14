@@ -36,6 +36,24 @@
 			<p>Only changes since the first English version (version 4.0) are shown.</p>
 
 			<div class="ui segment">
+				<h3>V 4.84 (14 August 2026)</h3>
+				<p>Non-blocking Calculation and Diagnosis of Unsolved Problems</p>
+				<ul>
+					<li>Calculation no longer freezes the interface: you can keep working on the sheet while it is
+						being solved, with a notice of which table row is being processed and a cancel button.</li>
+					<li>When a problem cannot be solved, you are told what to look at: which unknown has been left
+						without an equation, which equations are repeated or redundant, and which group of equations
+						contains the failure. The components involved are marked in red on the sheet.</li>
+					<li>Faster and more robust solving: the problem is split into blocks that are solved in order. An
+						80-equation problem goes from 191 to 12 ms.</li>
+					<li>A warning is shown when an unknown does not take part in any equation, instead of silently
+						ignoring it.</li>
+					<li>Fixed: changes to charts, images and tables were not marked as pending to save and could be
+						lost.</li>
+				</ul>
+			</div>
+
+			<div class="ui segment">
 				<h3>V 4.80 (4 August 2026)</h3>
 				<p>Bar Charts</p>
 				<ul>
