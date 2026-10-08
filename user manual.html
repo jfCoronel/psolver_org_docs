@@ -29,7 +29,7 @@
 
 		<div class="ui main container">
 			<h1>User Manual</h1>
-			<h4>Updated to version 4.60</h4>
+			<h4>Updated to version 4.86</h4>
 
 			<h2>Index</h2>
 			<ol style="font-size: 1.2rem; line-height: 1.3">
@@ -45,6 +45,7 @@
 				<li><a href="#expresiones">Mathematical expressions</a></li>
 				<li><a href="#correccion">Self-correction</a></li>
 				<li><a href="#actividades">Activities</a></li>
+				<li><a href="#calificaciones">Deadlines and grades</a></li>
 			</ol>
 
 			<a name="introduccion"></a>
@@ -185,6 +186,13 @@
 				<p>When we create a new account the user type will be "Standard (student)" with a maximum number of 50
 					problems. If you want to change your user type to "Teacher" or to increase the
 					maximum number of problems, you have to write an email to psolver@psolver.org requesting it.</p>
+
+				<h3>Installing pSolver as an application</h3>
+				<p>pSolver can be installed on a computer, tablet or phone as an application (progressive web app, PWA):
+					in Chrome and Edge, with the install icon shown in the address bar; in Safari, with "Share" and "Add to
+					Home Screen" (or "Add to Dock" on a Mac). Once installed it opens in its own window and also works
+					without an internet connection: changes are saved on the device and synchronised with the database when
+					the connection returns. The application updates itself when a new version is published.</p>
 			</div>
 
 			<a name="lista"></a>
@@ -318,6 +326,9 @@
 						component.
 					</li>
 				</ul>
+
+				<p>The width of the sidebar can be adjusted by dragging its edge with the mouse. pSolver remembers the
+					chosen width in that browser.</p>
 
 				<img class="ui bordered centered image" src="img/pantalla de problema_en.png" width="960"
 					alt="Problem screen" />
@@ -729,7 +740,7 @@
 							d="M888 792H200V168c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v688c0 4.4 3.6 8 8 8h752c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM305.8 637.7c3.1 3.1 8.1 3.1 11.3 0l138.3-137.6L583 628.5c3.1 3.1 8.2 3.1 11.3 0l275.4-275.3c3.1-3.1 3.1-8.2 0-11.3l-39.6-39.6a8.03 8.03 0 00-11.3 0l-230 229.9L461.4 404a8.03 8.03 0 00-11.3 0L266.3 586.7a8.03 8.03 0 000 11.3l39.5 39.7z">
 						</path>
 					</svg>
-					Graphs: Graphs allow you to represent using line graphs the values obtained with the tables. We will
+					Graphs: Graphs allow you to represent using line or bar charts the values obtained with the tables. We will
 					see them in more detail in the section "Solving the problem multiple times".
 				</p>
 
@@ -863,6 +874,24 @@
 
 				<img class="ui bordered centered image" src="img/Editar convergencia_en.png" width="640"
 					alt="Editar parámetros de convergencia" />
+			<h3>While solving</h3>
+				<p>Calculation runs in the background: you can keep using the sheet while the problem is being solved. In
+					problems with tables, the message shows which row is being processed, and the "Cancel" button stops the
+					calculation at any time. pSolver splits the system into the groups of equations that are actually coupled
+					and solves them in order, so a large problem does not require solving all the equations at once.</p>
+
+				<h3>When the problem cannot be solved</h3>
+				<p>If the problem has no solution or none is found, pSolver explains what to check instead of showing a
+					generic message. For example:</p>
+				<ul>
+					<li>which unknown has been left without an equation that determines it;</li>
+					<li>which equations are redundant or repeated (they are not independent of each other);</li>
+					<li>which small group of equations contains the failure, within a large problem, telling apart a group
+						with no unique solution from one that only needs better initial values.</li>
+				</ul>
+				<p>The components involved are marked in red on the sheet. The marks disappear as soon as any component is
+					modified, and they do not prevent solving again. A warning is also shown when an unknown does not appear in
+					any equation, instead of ignoring it.</p>
 			</div>
 
 			<a name="secciones"></a>
@@ -975,6 +1004,10 @@
 					The "Colour", "Symbol" and "Line" properties allow us to customise the appearance of the
 					representation of each of the series, being able to use a secondary axis for the "y".
 				</p>
+
+				<p>The chart type is chosen in its editor: scatter or line, vertical bars, horizontal bars or stacked
+					bars. Bar charts are useful to compare values between cases (for example, the result for each fluid in a
+					table).</p>
 
 				<img class="ui bordered centered image" src="img/Editar grafica_en.png" width="960" alt="Graph edit" />
 				<br>
@@ -1428,9 +1461,20 @@
 
 				<img class="ui bordered centered image" src="img/editor tareas_en.png" width="960" alt="Tasks editor" />
 				<br />
+				<p>In the task editor you can also set a submission <b>deadline</b>. When it passes, the activity is
+					closed for the student: they can no longer save changes or submit it. If "Accept late submissions" is
+					ticked, the student can submit after the deadline, but the submission is flagged as late and its grade
+					may lose the percentage set in "Penalty". Without a deadline, the activity can be submitted at any time.
+					The submission date is set by the server, not by the clock of the student's computer.</p>
+
 				<p>Initially the activities do not include the possibility for the student to self-correct,
 					but using the button "Activate self-correction" we can enable this possibility for all students in
 					the activity table.</p>
+
+				<p>Until self-correction is enabled, the task solution can only be opened by teachers, so students
+					cannot look at it ahead of time. Once enabled, the solution becomes available for students to compare
+					their work with it. For this, the solution must belong to the teacher who enables self-correction; if it
+					belongs to another teacher, pSolver gives a warning.</p>
 
 				<p> The task editor can display two correction tables: one per student and one per variable. These
 					tables are updated
@@ -1451,11 +1495,14 @@
 				<ul>
 					<li>It only allows copy/paste components from the same activity.</li>
 					<li>Third parties are not allowed to make copies or view the activity (they are private).</li>
-					<li>To the right of the problem name is a button to submit the activity. After submission, none of
-						the
-						changes made by the student will be saved. That is, the problem will appear in the state in
-						which it was submitted each time it is reopened.
-					</li>
+					<li>To the right of the name there is a tag with the status of the activity (pending, with its
+						deadline; overdue; closed; submitted or submitted late) and its grade, once the teacher has published
+						it. Clicking it opens the activity management dialog: the task, the deadline and how much time is
+						left, the button to submit it, and the grade with the teacher's comment.</li>
+					<li>Once submitted, the student can no longer modify or delete it: the problem will appear in the state
+						in which it was submitted each time it is reopened. The teacher can still review and save it.</li>
+					<li>If the task has a deadline and does not accept late submissions, the activity is closed when the
+						deadline passes and changes are no longer saved.</li>
 				</ul>
 
 				<img class="ui bordered centered image" src="img/actividad sin entregar_en.png" width="960"
@@ -1499,6 +1546,30 @@
 					</svg>
 					button below we download a file containing the table in a format compatible with any spreadsheet.
 				</p>
+
+				<a name="calificaciones"></a>
+				<h3>Deadlines and grades</h3>
+
+				<p>The table per student shows the <b>status</b> of each one: on time, late, not submitted or no activity.
+					It also includes the students of the course who have not created the activity yet. Above the table there
+					is a summary with how many students are in each status and the average grade.</p>
+
+				<p>pSolver calculates a <b>grade</b> from 0 to 10 for each student from the main variables of the solution.
+					By default they are all worth the same; in the table per variable, the "Weight" column lets some count more
+					than others (or not at all, with weight 0). If the task accepts late submissions with a penalty, the grade
+					of late submissions loses that percentage. A student with no activity gets a 0.</p>
+
+				<p>By selecting a student and clicking the <svg viewBox="64 64 896 896" focusable="false" data-icon="form" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M904 512h-56c-4.4 0-8 3.6-8 8v320H184V184h320c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V520c0-4.4-3.6-8-8-8z"></path><path d="M355.9 534.9L354 653.8c-.1 8.9 7.1 16.2 16 16.2h.4l118-2.9c2-.1 4-.9 5.4-2.3l415.9-415c3.1-3.1 3.1-8.2 0-11.3L785.4 114.3c-1.6-1.6-3.6-2.3-5.7-2.3s-4.1.8-5.7 2.3l-415.8 415a8.3 8.3 0 00-2.3 5.6zm63.5 23.6L779.7 199l45.2 45.1-360.5 359.7-45.7 1.1.7-46.4z"></path></svg> "Grade" button, the teacher sees the calculated grade and
+					can set a different one manually, which replaces the calculated grade, and write a comment for the
+					student.</p>
+
+				<p>Grades and comments are only visible to the teacher until the <svg viewBox="64 64 896 896" focusable="false" data-icon="notification" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M880 112c-3.8 0-7.7.7-11.6 2.3L292 345.9H128c-8.8 0-16 7.4-16 16.6v299c0 9.2 7.2 16.6 16 16.6h101.7c-3.7 11.6-5.7 23.9-5.7 36.4 0 65.9 53.8 119.5 120 119.5 55.4 0 102.1-37.6 115.9-88.4l408.6 164.2c3.9 1.5 7.8 2.3 11.6 2.3 16.9 0 32-14.2 32-33.2V145.2C912 126.2 897 112 880 112zM344 762.3c-26.5 0-48-21.4-48-47.8 0-11.2 3.9-21.9 11-30.4l84.9 34.1c-2 24.6-22.7 44.1-47.9 44.1zm496 58.4L318.8 611.3l-12.9-5.2H184V417.9h121.9l12.9-5.2L840 203.3v617.4z"></path></svg> "Publish grades" button is
+					clicked. From then on, each student sees their grade on the tag of their activity and the comment in the
+					activity management dialog. If anything changes afterwards, publish again. Published grades are marked
+					with ✓ in the table.</p>
+
+				<p>The file downloaded from the table per student includes the status, grade and comment of each student,
+					ready to be taken to the official records or the virtual campus.</p>
 
 				<h3>Activities with questions</h3>
 				<p>Questions are components that can be added to the activities and that allow the teacher

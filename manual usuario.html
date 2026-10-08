@@ -29,7 +29,7 @@
 
 		<div class="ui main container">
 			<h1>Manual de usuario</h1>
-			<h4>Actualizado a la versión 4.60</h4>
+			<h4>Actualizado a la versión 4.86</h4>
 
 			<h2>Índice</h2>
 			<ol style="font-size: 1.2rem; line-height: 1.3">
@@ -45,6 +45,7 @@
 				<li><a href="#expresiones">Expresiones matemáticas</a></li>
 				<li><a href="#correccion">Autocorrección</a></li>
 				<li><a href="#actividades">Actividades</a></li>
+				<li><a href="#calificaciones">Plazos y calificaciones</a></li>
 			</ol>
 
 			<a name="introduccion"></a>
@@ -192,6 +193,14 @@
 					Si quieres cambiar tu tipo de usuario a "Profesor" o aumentar el nº de problemas máximos, debes
 					escribir un correo a psolver@psolver.org solicitándolo.
 				</p>
+
+				<h3>Instalar pSolver como aplicación</h3>
+				<p>pSolver puede instalarse en el ordenador, la tableta o el móvil como una aplicación (aplicación web
+					progresiva o PWA): en Chrome y Edge, con el icono de instalar que aparece en la barra de direcciones; en
+					Safari, con "Compartir" y "Añadir a la pantalla de inicio" (o "Añadir al Dock" en el Mac). Una vez
+					instalada se abre en su propia ventana y funciona también sin conexión a internet: los cambios se guardan
+					en el dispositivo y se sincronizan con la base de datos cuando vuelve la conexión. La aplicación se
+					actualiza sola al publicarse una versión nueva.</p>
 			</div>
 
 			<a name="lista"></a>
@@ -334,6 +343,9 @@
 						componente que tengamos seleccionado.
 					</li>
 				</ul>
+
+				<p>El ancho de la barra lateral se puede ajustar arrastrando su borde con el ratón. pSolver recuerda el
+					ancho elegido en ese navegador.</p>
 
 				<img class="ui bordered centered image" src="img/pantalla de problema.png" width="960"
 					alt="Pantalla de Problema" />
@@ -766,7 +778,7 @@
 							d="M888 792H200V168c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v688c0 4.4 3.6 8 8 8h752c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM305.8 637.7c3.1 3.1 8.1 3.1 11.3 0l138.3-137.6L583 628.5c3.1 3.1 8.2 3.1 11.3 0l275.4-275.3c3.1-3.1 3.1-8.2 0-11.3l-39.6-39.6a8.03 8.03 0 00-11.3 0l-230 229.9L461.4 404a8.03 8.03 0 00-11.3 0L266.3 586.7a8.03 8.03 0 000 11.3l39.5 39.7z">
 						</path>
 					</svg>
-					Gráficas: Las gráficas permiten representar usando gráficas de líneas los valores obtenidos con las
+					Gráficas: Las gráficas permiten representar usando gráficas de líneas o de barras los valores obtenidos con las
 					tablas. Las veremos más detenidamente en el apartado "Resolver múltiples veces el problema".
 				</p>
 
@@ -909,6 +921,24 @@
 
 				<img class="ui bordered centered image" src="img/Editar convergencia.png" width="640"
 					alt="Editar parámetros de convergencia" />
+			<h3>Mientras se resuelve</h3>
+				<p>El cálculo se hace en segundo plano: la hoja se puede seguir usando mientras se resuelve. En los
+					problemas con tablas, el mensaje indica por qué fila va, y el botón "Cancelar" detiene el cálculo en
+					cualquier momento. pSolver parte el sistema en los grupos de ecuaciones que están realmente acopladas y los
+					resuelve en orden, de modo que un problema grande no exige resolver todas las ecuaciones a la vez.</p>
+
+				<h3>Cuando el problema no se resuelve</h3>
+				<p>Si el problema no tiene solución o no se encuentra, pSolver explica qué hay que revisar en lugar de dar
+					un mensaje genérico. Por ejemplo:</p>
+				<ul>
+					<li>qué incógnita se ha quedado sin ecuación que la determine;</li>
+					<li>qué ecuaciones sobran o están repetidas (no son independientes entre sí);</li>
+					<li>en qué grupo pequeño de ecuaciones está el fallo, dentro de un problema grande, distinguiendo si ese
+						grupo no tiene solución única o si solo necesita mejores valores iniciales.</li>
+				</ul>
+				<p>Los componentes implicados se marcan en rojo en la hoja. Las marcas desaparecen en cuanto se modifica
+					cualquier componente, y no impiden volver a resolver. También se avisa cuando una incógnita no aparece en
+					ninguna ecuación, en lugar de ignorarla.</p>
 			</div>
 
 			<a name="secciones"></a>
@@ -1030,6 +1060,10 @@
 					el aspecto de la representación de cada una de
 					las series, pudiendo utilizar un eje secundario para la "y".
 				</p>
+
+				<p>El tipo de gráfica se elige en su editor: de dispersión o líneas, de barras verticales, de barras
+					horizontales o de barras apiladas. Las de barras son útiles para comparar valores entre casos (por
+					ejemplo, el resultado de cada fluido de una tabla).</p>
 
 				<img class="ui bordered centered image" src="img/Editar grafica.png" width="960" alt="Editar gráfica" />
 				<br>
@@ -1498,6 +1532,13 @@
 					alt="Editor de tareas" />
 				<br />
 
+				<p>En el editor de tareas también se puede fijar una <b>fecha límite</b> de entrega. Cuando vence, la
+					actividad se cierra para el alumno: ya no puede guardar cambios ni entregarla. Si se marca "Admitir
+					entregas fuera de plazo", el alumno puede entregar después del plazo, pero la entrega queda señalada como
+					fuera de plazo y su nota puede perder el porcentaje indicado en "Penalización". Sin fecha límite, la
+					actividad se puede entregar en cualquier momento. La fecha de entrega la pone el servidor, no el reloj
+					del ordenador del alumno.</p>
+
 				<p>Inicialmente las actividades no incluyen la posibilidad de que el alumno pueda autocorregirse, pero
 					usando
 					el botón <svg viewBox="64 64 896 896" focusable="false" data-icon="schedule" width="1em"
@@ -1508,6 +1549,11 @@
 					</svg>
 					podemos activar esta posibilidad para todos los alumnos del curso.
 				</p>
+
+				<p>Hasta que se activa la autocorrección, la solución de la tarea solo la pueden abrir los profesores, de
+					modo que los alumnos no pueden consultarla antes de tiempo. Al activarla, la solución queda disponible para
+					que los alumnos se comparen con ella. Para eso la solución tiene que ser del profesor que activa la
+					autocorrección; si es de otro profesor, pSolver lo avisa.</p>
 
 				<p>El editor de tareas puede mostrar dos tablas de corrección: una por alumno y otra por variable. Estas
 					tablas se actualizan
@@ -1529,10 +1575,14 @@
 				<ul>
 					<li>Únicamente permite copiar/pegar componentes desde la misma actividad.</li>
 					<li>No está permitido hacer copias ni ver la actividad por parte de terceros (son privados).</li>
-					<li>A la derecha del nombre del problema aparece un botón para poder entregar la actividad. Tras
-						entregar ninguno de los cambios que el alumno realice se guardarán.
-						Es decir, el problema aparecerá en el estado en el que se entregó cada vez que se reabra.
-					</li>
+					<li>A la derecha del nombre aparece una etiqueta con la situación de la actividad (pendiente, con su
+						fecha límite; plazo vencido; cerrada; entregada o entregada fuera de plazo) y su nota, si el profesor
+						ya la ha publicado. Al pulsarla se abre la gestión de la actividad: la tarea, el plazo y cuánto
+						falta para él, el botón para entregarla y la calificación con el comentario del profesor.</li>
+					<li>Una vez entregada, el alumno ya no puede modificarla ni borrarla: el problema aparecerá en el
+						estado en el que se entregó cada vez que se reabra. El profesor sí puede revisarla y guardarla.</li>
+					<li>Si la tarea tiene fecha límite y no admite entregas fuera de plazo, al vencer la actividad se
+						cierra y ya no se guardan los cambios.</li>
 				</ul>
 
 				<img class="ui bordered centered image" src="img/actividad sin entregar.png" width="960"
@@ -1577,6 +1627,30 @@
 					</svg>
 					descargamos un archivo que contiene la tabla en formato compatible con cualquier hoja de cálculo.
 				</p>
+
+				<a name="calificaciones"></a>
+				<h3>Plazos y calificaciones</h3>
+
+				<p>La tabla por alumno muestra el <b>estado</b> de cada uno: a tiempo, fuera de plazo, sin entregar o sin
+					actividad. Incluye también a los alumnos del curso que todavía no han creado la actividad. Encima de la
+					tabla aparece un resumen con cuántos alumnos hay en cada estado y la nota media.</p>
+
+				<p>pSolver calcula una <b>nota</b> de 0 a 10 para cada alumno a partir de las variables principales de la
+					solución. Por defecto todas valen lo mismo; en la tabla por variable, la columna "Peso" permite que
+					algunas cuenten más que otras (o nada, con peso 0). Si la tarea admite entregas fuera de plazo con
+					penalización, la nota de las entregas tardías pierde ese porcentaje. Un alumno sin actividad tiene un
+					0.</p>
+
+				<p>Seleccionando un alumno y pulsando el botón <svg viewBox="64 64 896 896" focusable="false" data-icon="form" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M904 512h-56c-4.4 0-8 3.6-8 8v320H184V184h320c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V520c0-4.4-3.6-8-8-8z"></path><path d="M355.9 534.9L354 653.8c-.1 8.9 7.1 16.2 16 16.2h.4l118-2.9c2-.1 4-.9 5.4-2.3l415.9-415c3.1-3.1 3.1-8.2 0-11.3L785.4 114.3c-1.6-1.6-3.6-2.3-5.7-2.3s-4.1.8-5.7 2.3l-415.8 415a8.3 8.3 0 00-2.3 5.6zm63.5 23.6L779.7 199l45.2 45.1-360.5 359.7-45.7 1.1.7-46.4z"></path></svg> "Calificar", el profesor ve la nota calculada y
+					puede poner otra a mano, que sustituye a la calculada, y escribir un comentario para el alumno.</p>
+
+				<p>Las notas y los comentarios solo los ve el profesor hasta que pulsa el botón <svg viewBox="64 64 896 896" focusable="false" data-icon="notification" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M880 112c-3.8 0-7.7.7-11.6 2.3L292 345.9H128c-8.8 0-16 7.4-16 16.6v299c0 9.2 7.2 16.6 16 16.6h101.7c-3.7 11.6-5.7 23.9-5.7 36.4 0 65.9 53.8 119.5 120 119.5 55.4 0 102.1-37.6 115.9-88.4l408.6 164.2c3.9 1.5 7.8 2.3 11.6 2.3 16.9 0 32-14.2 32-33.2V145.2C912 126.2 897 112 880 112zM344 762.3c-26.5 0-48-21.4-48-47.8 0-11.2 3.9-21.9 11-30.4l84.9 34.1c-2 24.6-22.7 44.1-47.9 44.1zm496 58.4L318.8 611.3l-12.9-5.2H184V417.9h121.9l12.9-5.2L840 203.3v617.4z"></path></svg> "Publicar
+					calificaciones". A partir de ese momento, cada alumno ve su nota en la etiqueta de su actividad y el
+					comentario en la gestión de la actividad. Si después se cambia algo, hay que volver a publicar. Las
+					calificaciones publicadas se marcan con ✓ en la tabla.</p>
+
+				<p>El archivo descargado de la tabla por alumno incluye el estado, la nota y el comentario de cada
+					alumno, listo para llevar al acta o al campus virtual.</p>
 
 				<h3>Actividades con cuestiones</h3>
 				<p>Las cuestiones son componentes que se pueden añadir a las actividades y que permiten al profesor
