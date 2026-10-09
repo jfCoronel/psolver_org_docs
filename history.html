@@ -37,16 +37,23 @@
 
 			<div class="ui segment">
 				<h3>V 4.87 (9 October 2026)</h3>
-				<p>Self-correction with Private Problems</p>
+				<p>Self-correction with Private Problems and from Tasks</p>
 				<ul>
 					<li>Fixed: since version 4.85 it was not possible to self-correct against a private problem. It works
 						again as before, also with existing problems: others can compare their work with it, but cannot
 						open or copy it. Its author can untick "Activate self-correction" in the problem properties so that
 						nobody else can use it.</li>
-					<li>The checkbox also appears in solutions, and it is the same one set by the "Activate
-						self-correction" button of tasks.</li>
-					<li>If someone tries to compare with a private problem without self-correction enabled, the
-						message explains it.</li>
+					<li>Solutions also have the "Activate self-correction" checkbox in their properties. Unlike private
+						problems, it is unticked until the teacher enables it, so that students cannot read the solution
+						ahead of time.</li>
+					<li>The "Activate self-correction" button of the task editor is replaced by a "Self-correction"
+						switch, which shows whether it is enabled and allows enabling and also disabling it. It changes the
+						checkbox of the solution, so it affects every task that uses that solution.</li>
+					<li>When clicking "Correct" in the self-correction of their activity, the student is compared with the solution the task has at
+						that moment. Before, it only worked for the activities that already existed when the button was
+						clicked; now it also works for those created later, and if the teacher changes the task solution.</li>
+					<li>If someone tries to compare with a private problem or a solution without self-correction
+						enabled, the message explains it, instead of saying "You do not have permission".</li>
 					<li>Fixed: a mistyped problem ID said "You do not have permission" instead of saying that the
 						problem was not found.</li>
 				</ul>

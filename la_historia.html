@@ -36,16 +36,23 @@
 			
 			<div class="ui segment">
 				<h3>V 4.87 (9 de octubre de 2026)</h3>
-				<p>Autocorrección con problemas privados</p>
+				<p>Autocorrección con problemas privados y desde las tareas</p>
 				<ul>
 					<li>Corregido: desde la versión 4.85 no era posible autocorregirse con un problema privado. Vuelve a
 						funcionar como antes, también con los problemas ya creados: los demás pueden compararse con él,
 						pero no abrirlo ni copiarlo. Su autor puede desmarcar "Activar autocorrección" en las
 						propiedades del problema para que nadie más pueda usarlo.</li>
-					<li>La casilla también aparece en las soluciones, y es la misma que marca el botón "Activar
-						autocorrección" de las tareas.</li>
-					<li>Si alguien intenta compararse con un problema privado sin la autocorrección activada, el aviso
-						lo explica.</li>
+					<li>Las soluciones tienen también la casilla "Activar autocorrección" en sus propiedades. A
+						diferencia de los problemas privados, está desmarcada hasta que el profesor la activa, para que
+						los alumnos no puedan leer la solución antes de tiempo.</li>
+					<li>El botón "Activar autocorrección" del editor de tareas se sustituye por un interruptor
+						"Autocorrección", que muestra si está activada y permite activarla y también desactivarla. Cambia
+						la casilla de la solución, así que afecta a todas las tareas que usen esa solución.</li>
+					<li>Al pulsar "Corregir" en la autocorrección de su actividad, el alumno se compara con la solución que tenga la tarea en
+						ese momento. Antes solo funcionaba en las actividades que ya existían cuando se pulsó el botón; ahora
+						vale también para las creadas después, y si el profesor cambia la solución de la tarea.</li>
+					<li>Si alguien intenta compararse con un problema privado o una solución sin la autocorrección
+						activada, el aviso lo explica, en lugar de decir "No tienes permiso".</li>
 					<li>Corregido: un ID de problema mal escrito decía "No tienes permiso" en lugar de que no se
 						encuentra el problema.</li>
 				</ul>
