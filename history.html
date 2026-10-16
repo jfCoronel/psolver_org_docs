@@ -37,7 +37,7 @@
 
 			<div class="ui segment">
 				<h3>V 4.88 (16 October 2026)</h3>
-				<p>Deleting Activities and Task Deadlines</p>
+				<p>Deleting Activities, Task Deadlines and Sending Tasks</p>
 				<ul>
 					<li>Students can no longer delete their activity, before or after submitting it, until the teacher
 						ticks the new "Allow deleting activities" checkbox in the task editor or deletes the task. Before,
@@ -49,6 +49,14 @@
 					<li>The deadline in the task editor looks the same in every browser (Safari showed today's date even
 						when there was none). When empty, it says "No deadline", and to remove the date just click the ✕
 						that appears when hovering over it.</li>
+					<li>Sending a task to the students is much faster: only the missing activities are created, and the
+						results table is updated at the end, including students just added to the course.</li>
+					<li>Fixed: in Safari the application sometimes kept waiting for the server (when sending a task,
+						until leaving the editor; when deleting an activity, the dialog did not respond).</li>
+					<li>Fixed: after updating the results table, "Go to problem" or "Grade" could act on a student other
+						than the selected one.</li>
+					<li>The results table recognises each student even if their email is written with different
+						capitalisation, and a task without a course shows all its activities.</li>
 				</ul>
 			</div>
 

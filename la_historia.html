@@ -36,7 +36,7 @@
 			
 			<div class="ui segment">
 				<h3>V 4.88 (16 de octubre de 2026)</h3>
-				<p>Borrado de actividades y fecha límite de las tareas</p>
+				<p>Borrado de actividades, fecha límite y reparto de las tareas</p>
 				<ul>
 					<li>El alumno ya no puede borrar su actividad, ni antes ni después de entregarla, hasta que el profesor
 						marque la nueva casilla "Permitir borrar las actividades" del editor de tareas o borre la tarea.
@@ -48,6 +48,14 @@
 					<li>La fecha límite del editor de tareas se ve igual en todos los navegadores (Safari mostraba la fecha
 						de hoy aunque no hubiera ninguna). Vacía, dice "Sin fecha límite", y para quitar la fecha basta con
 						pulsar la ✕ que aparece al pasar el ratón por encima.</li>
+					<li>Enviar una tarea a los alumnos es mucho más rápido: solo se crean las actividades que faltan, y
+						la tabla de resultados se actualiza al terminar, con los alumnos recién añadidos al curso.</li>
+					<li>Corregido: en Safari la aplicación se quedaba a veces esperando al servidor (al enviar una tarea,
+						hasta salir del editor; al borrar una actividad, el diálogo no respondía).</li>
+					<li>Corregido: tras actualizar la tabla de resultados, "Ir al problema" o "Calificar" podían actuar
+						sobre un alumno distinto del seleccionado.</li>
+					<li>La tabla de resultados reconoce a cada alumno aunque su correo esté escrito con otras mayúsculas,
+						y una tarea sin curso muestra todas sus actividades.</li>
 				</ul>
 			</div>
 
