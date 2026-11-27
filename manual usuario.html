@@ -423,6 +423,9 @@
 				<br>
 				<p>El check "Resultados a valores iniciales automaticamente tras calcular" permite que los resultados
 					se restablezcan a los valores iniciales después de realizar un cálculo de forma automática.</p>
+				<p>El desplegable "Comprobación de unidades" fija cómo se revisan las unidades del problema (ver "Revisión de
+					unidades"): "Tolerante", la opción por defecto, "Estricta" o "Ninguna". En una tarea, el profesor lo elige en el
+					enunciado y las actividades de los alumnos lo heredan sin poder cambiarlo.</p>
 				<p>
 					Podemos ver también las fechas de creación y última modificación del problema y el ID del problema.
 					El ID es una combinación de letras y números que identifica de forma
@@ -655,6 +658,10 @@
 					matemática para realizar el cambio de unidad (el dato en esta expresión siempre se llamará "x").
 					Por último el botón inferior permite convertir el dato en una incógnita.
 				</p>
+				<p>Para no tener que escribir la expresión, en ese mismo desplegable podemos elegir en "Convertir de ... a:" la unidad
+					final entre las de la misma magnitud (o escribir otra) y la expresión se rellena sola. Debajo, una línea indica
+					si la expresión que hay convierte exactamente entre las dos unidades, si lo hace de forma aproximada o si es
+					incorrecta (con un botón para corregirla), o si es una expresión personalizada.</p>
 
 				<img class="ui bordered centered image" src="img/Editar dato.png" width="860" alt="Editar dato" />
 				<br>
@@ -675,6 +682,9 @@
 					matemática para realizar el cambio de unidad (la incógnita en esta expresión siempre se llamará
 					"y").
 				</p>
+				<p>Como en los datos, la unidad final se puede elegir en "Convertir de ... a:" y la expresión se escribe sola. Si
+					la incógnita no tiene unidad y se puede deducir de una ecuación (por ejemplo Q = m*(h_2 - h_1) con m en kg/s y
+					las entalpías en kJ/kg), al editarla aparece la unidad sugerida, con un botón para usarla.</p>
 				<p>El desplegable "Parámetros de convergencia" lo comentaremos más adelante en la sección sobre
 					convergencia de resultados. Podemos también encontrar un botón para convertir la incógnita en un
 					dato.</p>
@@ -941,6 +951,24 @@
 					problemas con tablas, el mensaje indica por qué fila va, y el botón "Cancelar" detiene el cálculo en
 					cualquier momento. pSolver parte el sistema en los grupos de ecuaciones que están realmente acopladas y los
 					resuelve en orden, de modo que un problema grande no exige resolver todas las ecuaciones a la vez.</p>
+
+				<h3>Revisión de unidades</h3>
+				<p>pSolver comprueba que las unidades de los datos, incógnitas y propiedades cuadran en el problema y marca con un
+					contorno naranja discontinuo los componentes en los que no cuadran. Al seleccionar uno, la barra lateral
+					explica qué pasa. Son avisos: no impiden resolver, y el cálculo es el mismo que sin ellos.</p>
+				<p>Se avisa, por ejemplo, cuando:</p>
+				<ul>
+					<li>los dos lados de una ecuación, o lo que se suma o se resta, no son de la misma magnitud;</li>
+					<li>son de la misma magnitud pero en distinta escala: Q en W igualado a m*(h_2 - h_1) con las entalpías en kJ/kg;</li>
+					<li>el argumento de un fluido o de un aire húmedo no está en la unidad que espera la propiedad (una presión en bar
+						donde se espera kPa, una temperatura en K donde se espera ºC);</li>
+					<li>una temperatura en ºC aparece donde hace falta la temperatura absoluta (dividiendo, o en el COP de Carnot
+						T_E/(T_C - T_E)), o se suma, resta o iguala a otra en K;</li>
+					<li>un cambio de unidad no convierte entre las dos unidades indicadas (de kPa a bar es x/100, no x/1000).</li>
+				</ul>
+				<p>Las variables sin unidad o con una unidad que no se reconoce no se comprueban. En el nivel "Tolerante", un
+					número que multiplica (como el 4.18 de m*4.18*(T_2 - T_1)) puede llevar unidades, así que ese producto no se
+					comprueba; en el nivel "Estricto" los números se consideran adimensionales.</p>
 
 				<h3>Cuando el problema no se resuelve</h3>
 				<p>Si el problema no tiene solución o no se encuentra, pSolver explica qué hay que revisar en lugar de dar

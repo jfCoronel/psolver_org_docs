@@ -396,6 +396,9 @@
 				<br>
 				<p>The check "Automatically set results to initial values after solving" allows the results
 					to be reset to the initial values after performing a calculation automatically.</p>
+				<p>The "Unit checking" drop-down sets how the units of the problem are checked (see "Unit checking"): "Tolerant",
+					the default, "Strict" or "None". In a task, the teacher chooses it in the statement and the students' activities
+					inherit it without being able to change it.</p>
 				<p>
 					We can also see the dates of creation and last modification of the problem and the problem ID. The
 					ID is a combination of letters and numbers that uniquely identifies the problem and which can be
@@ -617,6 +620,10 @@
 					will always be called "x"). Finally, the bottom button allows us to convert the data into an
 					unknown.
 				</p>
+				<p>To avoid writing the expression, in the same drop-down we can choose the final unit in "Convert from ... to:"
+					among the units of the same quantity (or type another one) and the expression is filled in automatically. Below,
+					a line tells whether the current expression converts exactly between both units, approximately, or whether it is
+					wrong (with a button to fix it), or a custom expression.</p>
 
 				<img class="ui bordered centered image" src="img/Editar dato_en.png" width="860" alt="Data edit" />
 				<br>
@@ -635,6 +642,9 @@
 					using the drop-down menu "Change of unit" where we introduce the final unit and the mathematical
 					expression to make the unit change (the unknown in this expression will always be called "y").
 				</p>
+				<p>As with data, the final unit can be chosen in "Convert from ... to:" and the expression is written automatically.
+					If the unknown has no unit and it can be deduced from an equation (for example Q = m*(h_2 - h_1) with m in kg/s and
+					the enthalpies in kJ/kg), the suggested unit appears when editing it, with a button to use it.</p>
 				<p>The "Convergence parameters" drop-down will be discussed later in the section on convergence of
 					results. We can also find a button to convert the unknown to a data.</p>
 
@@ -893,6 +903,24 @@
 					problems with tables, the message shows which row is being processed, and the "Cancel" button stops the
 					calculation at any time. pSolver splits the system into the groups of equations that are actually coupled
 					and solves them in order, so a large problem does not require solving all the equations at once.</p>
+
+				<h3>Unit checking</h3>
+				<p>pSolver checks that the units of data, unknowns and properties are consistent in the problem and marks with a
+					dashed orange outline the components where they are not. Selecting one shows the explanation in the side bar.
+					They are warnings: they do not prevent solving, and the calculation is the same without them.</p>
+				<p>There is a warning, for example, when:</p>
+				<ul>
+					<li>both sides of an equation, or the terms that are added or subtracted, are not the same quantity;</li>
+					<li>they are the same quantity on a different scale: Q in W equated to m*(h_2 - h_1) with the enthalpies in kJ/kg;</li>
+					<li>the argument of a fluid or moist air property is not in the unit the property expects (a pressure in bar where
+						kPa is expected, a temperature in K where ºC is expected);</li>
+					<li>a temperature in ºC appears where the absolute temperature is needed (dividing, or in the Carnot COP
+						T_E/(T_C - T_E)), or is added, subtracted or equated to another one in K;</li>
+					<li>a unit change does not convert between the two given units (from kPa to bar it is x/100, not x/1000).</li>
+				</ul>
+				<p>Variables without a unit or with an unrecognised unit are not checked. With the "Tolerant" level, a number that
+					multiplies (such as the 4.18 in m*4.18*(T_2 - T_1)) may carry units, so that product is not checked; with the
+					"Strict" level numbers are considered dimensionless.</p>
 
 				<h3>When the problem cannot be solved</h3>
 				<p>If the problem has no solution or none is found, pSolver explains what to check instead of showing a
